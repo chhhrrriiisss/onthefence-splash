@@ -1,0 +1,538 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700);
+/*
+
+	~chrisnicholls.co.nz
+
+*/
+@charset 'UTF-8';
+/*
+
+  Less Mixin Library  
+  Lesshat plus extras
+
+  ~ chrisnicholls.co.nz
+
+*/
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes float{ 0%, 20%, 50%, 80%, 100% { top:0px; }	40% { top:-30px;}	60% { top:-15px;} }}
+@-moz-keyframes float{ 0%, 20%, 50%, 80%, 100% { top:0px; }	40% { top:-30px;}	60% { top:-15px;} }}
+@-o-keyframes float{ 0%, 20%, 50%, 80%, 100% { top:0px; }	40% { top:-30px;}	60% { top:-15px;} }}
+@keyframes float{ 0%, 20%, 50%, 80%, 100% { top:0px; }	40% { top:-30px;}	60% { top:-15px;} };
+}
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes slideDown{ 0% { top:-55px;}	100% { top:0px;} }}
+@-moz-keyframes slideDown{ 0% { top:-55px;}	100% { top:0px;} }}
+@-o-keyframes slideDown{ 0% { top:-55px;}	100% { top:0px;} }}
+@keyframes slideDown{ 0% { top:-55px;}	100% { top:0px;} };
+}
+/*
+
+	Typography 
+
+	~	chrisnicholls.co.nz
+
+*/
+@font-face {
+  font-family: 'Otari';
+  src: url('../css/fonts/otari-bold-limited-webfont.eot');
+  src: url('../css/fonts/otari-bold-limited-webfont.eot?#iefix') format('embedded-opentype'), url('../css/fonts/otari-bold-limited-webfont.woff') format('woff'), url('../css/fonts/otari-bold-limited-webfont.ttf') format('truetype'), url('../css/fonts/otari-bold-limited-webfont.svg#otari-bold-limitedregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-size: 100%;
+  font-family: 'Droid Serif', serif;
+  font-weight: 300;
+}
+h1 {
+  font-size: 2.5em;
+  font-family: 'Otari', sans-serif;
+  font-weight: 600;
+}
+h2 {
+  font-size: 2em;
+  font-family: 'Otari', sans-serif;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.5em;
+  font-family: 'Otari', sans-serif;
+  font-weight: 600;
+}
+h4 {
+  font-size: 1.2em;
+  font-family: 'Otari', sans-serif;
+  font-weight: 600;
+}
+h5 {
+  font-size: 1.1em;
+  font-family: 'Otari', sans-serif;
+  font-weight: 600;
+}
+h6 {
+  font-size: 1em;
+  font-family: 'Otari', sans-serif;
+  font-weight: 600;
+}
+p {
+  font-size: 1em;
+  font-family: 'Droid Serif', serif;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+a,
+a:hover,
+a:active,
+a:visited {
+  color: #777;
+  text-decoration: none;
+  font-style: none;
+}
+/*
+
+~chrisnicholls.co.nz
+
+*/
+/*
+	Global Styles
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+/*  
+	Useful Modules
+*/
+.arrow {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin-top: -45px;
+  margin-left: -45px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px #ffffff solid;
+  display: block;
+  -webkit-border-radius: 45px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 45px;
+  -moz-background-clip: padding;
+  border-radius: 45px;
+  background-clip: padding-box;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.arrow:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.arrow:active {
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+.arrow:after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 70%;
+  height: 70%;
+  display: block;
+  margin-top: -45%;
+  margin-left: -35%;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  content: '';
+}
+.arrow.left:after {
+  font-size: 5em;
+  content: '<';
+}
+.arrow.right:after {
+  content: 'TST';
+}
+.plaque {
+  position: relative;
+  max-width: 750px;
+  min-width: 400px;
+  min-height: 80px;
+  width: 100%;
+  padding: 20px;
+  color: #f7f1f1;
+  z-index: 10;
+  text-align: center;
+  text-shadow: 0px -1px 1px #000000;
+  background: url('../img/box-mid.png') repeat-y;
+  font-family: 'Otari', sans-serif;
+  display: block;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.plaque .title {
+  font-family: 'Otari', sans-serif;
+}
+.plaque p {
+  padding: 15px 10px;
+  padding-bottom: 0%;
+  font-family: 'Droid Serif', serif;
+}
+.plaque:after,
+.plaque:before {
+  position: absolute;
+  width: 100%;
+  height: 36px;
+  left: 0px;
+  display: block;
+  content: '';
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.plaque:before {
+  top: -35px;
+  background: url('../img/box-top.png') no-repeat;
+}
+.plaque:after {
+  bottom: -35px;
+  background: url('../img/box-bottom.png') no-repeat;
+  z-index: -1;
+}
+.character {
+  position: relative;
+  display: block;
+}
+.character.cow {
+  width: 800px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -400px;
+  background-size: 100% 100%;
+}
+.character.chicken {
+  width: 150px;
+  height: 180px;
+  margin-top: -90px;
+  margin-left: -75px;
+  background-size: 100% 100%;
+}
+.animated-title {
+  display: block;
+  position: relative;
+  top: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin: 0 auto;
+  text-align: center;
+  height: 200px;
+}
+.animated-title span.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -o-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  font-family: 'Otari', sans-serif;
+  font-size: 2em;
+  display: inline-block;
+  padding: 0px;
+}
+.animated-title span.title img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -o-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  padding: 0;
+}
+.animated-title span.flag {
+  position: absolute;
+  width: 300px;
+  height: 175px;
+  background-size: 100% 100%;
+  background-position: center center;
+  display: inline-block;
+  margin-top: 85px;
+  left: 50%;
+}
+.animated-title span.flag.flag-left {
+  margin-left: -400px;
+  -webkit-animation: float 4s infinite;
+  -moz-animation: float 4s infinite;
+  -o-animation: float 4s infinite;
+  animation: float 4s infinite;
+  background-position: right center;
+}
+.animated-title span.flag.flag-right {
+  margin-left: 100px;
+  -webkit-transform: rotateZ(180deg);
+  -moz-transform: rotateZ(180deg);
+  -o-transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+  -webkit-animation: float 4.3s infinite;
+  -moz-animation: float 4.3s infinite;
+  -o-animation: float 4.3s infinite;
+  animation: float 4.3s infinite;
+  background-position: right center;
+}
+/* 
+	Custom Styles
+*/
+body {
+  background: #90a73e;
+}
+.header-wrapper {
+  width: 100%;
+  height: 55px;
+  display: block;
+  background: #000;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 400;
+  background: #2b160e url('../img/light.png') 50% 0 no-repeat;
+  border-bottom: #555 solid 2px;
+}
+.header-wrapper.stuck {
+  position: fixed !important;
+  -webkit-animation: slideDown 0.5s ease 1;
+  -moz-animation: slideDown 0.5s ease 1;
+  -o-animation: slideDown 0.5s ease 1;
+  animation: slideDown 0.5s ease 1;
+}
+.header-wrapper:before,
+.header-wrapper:after {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  content: '';
+}
+.header-wrapper:before {
+  background: url('../img/twirl.png') repeat-x;
+  z-index: 200;
+}
+.header-wrapper:after {
+  background: url('../img/texture.png') repeat;
+  zoom: 1;
+  filter: alpha(opacity=5000);
+  -webkit-opacity: 50;
+  -moz-opacity: 50;
+  opacity: 50;
+  z-index: 200;
+}
+.header-wrapper #header {
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  min-width: 480px;
+  z-index: 401;
+}
+.header-wrapper #header #nav,
+.header-wrapper #header #social {
+  display: inline-block;
+}
+.header-wrapper #header #nav a,
+.header-wrapper #header #social a {
+  display: inline-block;
+  padding: 20px 15px;
+  height: 100%;
+  font-family: 'Otari', sans-serif;
+  color: #e7a827;
+  text-decoration: none;
+  font-style: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  text-shadow: 0px 0px 2px #000000;
+}
+.header-wrapper #header #nav a:hover,
+.header-wrapper #header #social a:hover,
+.header-wrapper #header #nav a:active,
+.header-wrapper #header #social a:active {
+  color: #f6dfb1;
+  -webkit-transform: translateY(1px);
+  -moz-transform: translateY(1px);
+  -o-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
+}
+.header-wrapper #header #nav {
+  width: 65.5%;
+  height: 100%;
+  text-align: left;
+  margin-right: 1%;
+}
+.header-wrapper #header #nav a:first-child {
+  padding-left: 15px;
+}
+.header-wrapper #header #social {
+  width: 32.5%;
+  height: 100%;
+  float: right;
+  text-align: right;
+}
+.header-wrapper #header #social a:last-child {
+  padding-right: 15px;
+}
+.main-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  display: block;
+  z-index: 100;
+  margin: 0;
+}
+.main-wrapper .center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.main-wrapper section {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  margin: 0;
+  display: block;
+}
+.main-wrapper section .center,
+.main-wrapper section .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.main-wrapper section.tweets {
+  background: #b8ccc8 url('../img/birds.png');
+}
+.main-wrapper section.banner {
+  top: 990px;
+  background-position: center center;
+  background-repeat: repeat-x;
+  background-color: #c5dfdc;
+  z-index: 200;
+}
+.main-wrapper section.banner .animated-title {
+  min-width: 800px;
+}
+.main-wrapper section.banner .arrow {
+  z-index: 201;
+}
+.main-wrapper section.banner .arrow.left {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+}
+.main-wrapper section.banner .arrow.right {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+}
+.main-wrapper section.about {
+  top: 2400px;
+  background: #90a73e;
+  z-index: 201;
+  overflow: visible;
+}
+.main-wrapper section.about .animated-title {
+  margin-top: -250px;
+}
+.main-wrapper section.about .cow {
+  margin-left: -200px;
+}
+.main-wrapper section.play {
+  top: 3600px;
+  background: #90a73e;
+}
+.footer-wrapper {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  display: none;
+  width: 100%;
+  height: 55px;
+  float: left;
+  z-index: 300;
+  background: #2b160e url('../img/light.png') 50% bottom no-repeat;
+  border-top: #333 solid 2px;
+}
+.footer-wrapper:after {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  content: '';
+}
+.footer-wrapper:after {
+  background: url('../img/texture.png') repeat;
+  zoom: 1;
+  filter: alpha(opacity=5000);
+  -webkit-opacity: 50;
+  -moz-opacity: 50;
+  opacity: 50;
+  z-index: 200;
+}

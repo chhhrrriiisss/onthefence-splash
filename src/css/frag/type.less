@@ -1,0 +1,92 @@
+/*
+
+	Typography 
+
+	~	chrisnicholls.co.nz
+
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700);
+
+@font-face {
+    font-family: 'Otari';
+    src: url('../css/fonts/otari-bold-limited-webfont.eot');
+    src: url('../css/fonts/otari-bold-limited-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../css/fonts/otari-bold-limited-webfont.woff') format('woff'),
+         url('../css/fonts/otari-bold-limited-webfont.ttf') format('truetype'),
+         url('../css/fonts/otari-bold-limited-webfont.svg#otari-bold-limitedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@primary-font: 'Otari', sans-serif;
+@secondary-font: 'Droid Serif', serif;
+
+@primary-font-weight:  600;
+@secondary-font-weight: 300;
+
+@global-font-size: 1;
+
+.primaryFontStyle() {
+
+	font-family: @primary-font;
+	font-weight: @primary-font-weight;
+}
+
+.secondaryFontStyle() {
+
+	font-family: @secondary-font;
+	font-weight: @secondary-font-weight;
+}
+
+body {
+	font-size:100%;
+	font-family:@secondary-font;
+	font-weight:@secondary-font-weight;
+
+}
+
+h1 {
+    font-size: @global-font-size * 2.5em;
+    .primaryFontStyle();
+}
+
+h2 {
+    font-size: @global-font-size * 2em;
+    .primaryFontStyle();
+}
+
+h3 {
+    font-size: @global-font-size * 1.5em;
+    .primaryFontStyle();
+}
+
+h4 {
+    font-size: @global-font-size * 1.2em;
+    .primaryFontStyle();
+}
+
+h5 {
+    font-size: @global-font-size * 1.1em;
+    .primaryFontStyle();
+}
+
+h6 {
+    font-size: @global-font-size * 1em;
+    .primaryFontStyle();
+}
+
+p {
+    font-size: @global-font-size  * 1em;
+    .secondaryFontStyle();
+    line-height: @global-font-size  * 0.75em * 2;
+}
+
+a, a:hover, a:active, a:visited {
+
+    color:#777;
+    text-decoration:none;
+    font-style:none;
+}

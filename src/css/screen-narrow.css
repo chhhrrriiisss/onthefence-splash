@@ -1,0 +1,14 @@
+/*
+
+  ~ chrisnicholls.co.nz
+
+*/
+#nav a:first-child {
+  padding-left: 2%;
+}
+#social a:last-child {
+  padding-right: 2%;
+}
+#about .cow {
+  margin-left: -350px;
+}
