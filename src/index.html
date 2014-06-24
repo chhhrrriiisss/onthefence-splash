@@ -9,7 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title></title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
         <link rel="stylesheet" href="css/screen.css">       
 
@@ -20,9 +20,11 @@
                 boxModel: "border",
                 grid: { gutters: 30 },
                 breakpoints: {
-                    wide: { range: "1200-", containers: 1200, grid: { gutters: 50 } },           
-                    narrow: { range: '781-1199', containers: 960 },
-                    mobile: { range: "-780", containers: "fluid", lockViewport: false, grid: { collapse: true } }
+                    wider: { range: "1400-", containers: 1400, grid: { gutters: 50 } },
+                    wide: { range: "1200-1399", containers: 1200, grid: { gutters: 50 } },           
+                    narrow: { range: '981-1199', containers: 930 },
+                    narrow: { range: '481-980', containers: 720 },
+                    mobile: { range: "-480", containers: "fluid", lockViewport: true, grid: { collapse: true } }
                 }
             }
         </script>        
@@ -319,7 +321,7 @@
                                     </span>
 
                                 </div>
-                                <div class="title"><img src="img/titles/otf_2.png" alt="" /></div>
+                                <div class="title image-about_title"></div>
 
                                 <div class="flag flag-right image-flag flush">
                                     
@@ -364,7 +366,7 @@
 
         <div class="footer-wrapper">
             <footer>
-            <a href="#">TEST</a>
+               
             </footer>
         </div>       
 

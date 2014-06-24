@@ -86,11 +86,12 @@ body {
 .plaque {
 	position:relative;
 	top:0px;
+	left:50%;
 	max-width:730px;
 	min-width:320px;
 	width:90%;
 	height:100%;
-	margin:0 5%;
+
 	min-height:80px;
 
 	padding:15px 44px;
@@ -103,6 +104,7 @@ body {
 	font-family: @primary-font;	
 	display:block;
 	.transition(all .3s);
+	.transform(translateX(-50%));
 
 	cursor:pointer;
 
@@ -207,6 +209,7 @@ body {
 			position:absolute;
 			top:66%;
 			right:14%;
+			.size(100%, 20px);
 			text-align:right;
 			color: #56392F;
 			z-index:30;
@@ -391,7 +394,7 @@ article.main-wrapper {
 	margin:0;
 
 	padding-bottom:300px;
-	overflow:hidden;
+	overflow-x:hidden;
 
 	section {
 
