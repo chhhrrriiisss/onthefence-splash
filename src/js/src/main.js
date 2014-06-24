@@ -4,6 +4,8 @@
 */
 
 $(document).ready(function() {
+
+	//$('body').removeClass('loading');
 	
 	$('.header-wrapper').waypoint('sticky', {
 		offset: 300,
