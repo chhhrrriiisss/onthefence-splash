@@ -467,6 +467,7 @@ article.main-wrapper {
   padding: 0;
   margin: 0;
   padding-bottom: 300px;
+  overflow: hidden;
 }
 article.main-wrapper section {
   position: relative;
@@ -476,6 +477,7 @@ article.main-wrapper section {
   min-height: 600px;
   min-width: 320px;
   margin: 0;
+  padding: 0;
   display: block;
 }
 article.main-wrapper section h2 {
