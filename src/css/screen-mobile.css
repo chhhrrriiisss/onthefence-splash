@@ -3,3 +3,18 @@
   ~ chrisnicholls.co.nz
 
 */
+/*
+
+  Less Mixin Library  
+  Lesshat plus extras
+
+  ~ chrisnicholls.co.nz
+
+*/
+.animated-title {
+  -webkit-transform: translateX(-50%) scale(0.75) !important;
+  -moz-transform: translateX(-50%) scale(0.75) !important;
+  -ms-transform: translateX(-50%) scale(0.75) !important;
+  -o-transform: translateX(-50%) scale(0.75) !important;
+  transform: translateX(-50%) scale(0.75) !important;
+}

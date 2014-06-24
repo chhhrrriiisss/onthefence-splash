@@ -4,32 +4,28 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
-    <head>\
+    <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/screen.css">
-
-        
+        <link rel="stylesheet" href="css/screen.css">       
 
         <script src="js/vendor/skel.min.js">
-        {
-            prefix: "css/screen",
-            resetCSS: true,
-            boxModel: "border",
-            grid: { gutters: 30 },
-            breakpoints: {
-                wide: { range: "1200-", containers: 1200, grid: { gutters: 50 } },           
-                narrow: { range: '481-1199', containers: 960 },
-                mobile: { range: "-480", containers: "fluid", lockViewport: true, grid: { collapse: true } }
+            {
+                prefix: "css/screen",
+                resetCSS: true,
+                boxModel: "border",
+                grid: { gutters: 30 },
+                breakpoints: {
+                    wide: { range: "1200-", containers: 1200, grid: { gutters: 50 } },           
+                    narrow: { range: '781-1199', containers: 960 },
+                    mobile: { range: "-780", containers: "fluid", lockViewport: false, grid: { collapse: true } }
+                }
             }
-        }
-        </script>
-
-        
+        </script>        
 
         <noscript>
             <link rel="stylesheet" href="css/no-script-skel.css" />
@@ -39,9 +35,7 @@
 
         <noscript>
             <link href="img/image.fallback.css" rel="stylesheet">
-        </noscript>
-
-        
+        </noscript>        
 
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -52,7 +46,6 @@
     <body>
 
         <!-- Font force preload fix -->
-        <span style="font-family:'Bello'; color:transparent;">Bello</span>
         <span style="font-family:'Otari'; color:transparent;">Otari</span>
         <span style="font-family:'Droid Serif'; color:transparent;">Droid Serif</span>
 
@@ -62,18 +55,29 @@
 
         <div class="header-wrapper" class="sticky-menu">
 
-            <!-- Header -->          
-            <div id="header">
+            <div class="container">
+                <!-- Header -->  
+                <div class="row no-collapse flush">
 
-                <nav id="nav">
-                    <a href="#">About</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Old Version</a>    
-                </nav>    
+                    <div class="6u">
 
-                <div id="social">
-                    <a href="#">Twitter</a>
-                    <a href="#">Facebook</a>  
+                        <nav id="nav">
+                            <a href="#">About</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Old Version</a>    
+                        </nav>  
+
+                    </div>  
+
+                    <div class="6u">
+
+                        <div id="social">
+                            <a href="#">Twitter</a>
+                            <a href="#">Facebook</a>  
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
@@ -84,56 +88,136 @@
 
           <section id="tweets" class="tweets">           
 
-                <div class="container">                
+                <div class="container" style="display:none;">                
                   
-                        <div class="content-title">
+                        <div class="row">
 
-                            <div class="animated-title">
-                                
-                                <div class="flag flag-left image-flag flush"></div>
-                                <div class="title"><img src="img/titles/about_2.png" alt="" /></div>
-                                <div class="flag flag-right image-flag flush"></div>
+                            <div class="12u">
 
-                            </div>    
+                                <div class="animated-title">
+                                    
+                                    <div class="flag flag-left image-flag flush" data-text="TEST">
+                                        
+                                        <span class="text-group">
 
-                        </div>     
+                                            WHAT
 
-                        <div class="clear"></div>
-                        
-                        <div class="content half">      
+                                        </span>
+  
+                                    </div>
+                                    <div class="title"><img src="img/titles/about_2.png" alt="" /></div>
+                                    <div class="flag flag-right image-flag flush" data-text="TEST">
+                                        
+                                        <span class="text-group">
 
-                            <div class="plaque">   
+                                            IS IT?
 
-                                <h3 class="title">ON THE FENCE IS A NIFTY NEW WEB TOOL, DESIGNED TO MAKE YOUR ELECTION VOTE COUNT!</h3>
+                                        </span>
 
-                                <p>Developed as part of an Honours year thesis at Massey University College of Creative Arts, Wellington, researching into the topic of youth voter participation in New Zealand. Our task was to explore what role Visual Communication Design can play in motivating inexperienced voters to interact with politics and vote. We believe this can become a model for future election-based community projects.</p>                       
-                            </div>    
+                                    </div>
+
+                                </div>    
+
+                            </div>            
 
                         </div>
+
+                        <div class="row">
+
+                            <div class="2u">  
+                                &nbsp;
+                            </div>
+
+                            <div class="8u">  
+
+                                <div class="plaque">   
+
+                                    <h3 class="title">ON THE FENCE IS A NIFTY NEW WEB TOOL, DESIGNED TO MAKE YOUR ELECTION VOTE COUNT!</h3>
+
+                                    <p>Developed as part of an Honours year thesis at Massey University College of Creative Arts, Wellington, researching into the topic of youth voter participation in New Zealand. Our task was to explore what role Visual Communication Design can play in motivating inexperienced voters to interact with politics and vote. We believe this can become a model for future election-based community projects.</p>                       
+                                </div>      
+
+                            </div>
+
+                            <div class="2u">  
+                                &nbsp;
+                            </div>
+
+                        </div>
+                            
                 
                 </div>
 
             </section>
 
-            <section id="banner" class="banner image-hills">      
+             <section id="banner" class="banner">      
 
                 <div class="arrow left"></div><div class="arrow right"></div>
 
                 <div class="container">              
 
-                    <div class="content-title">
+                      <div class="row">
 
-                        <div class="animated-title">
-                            
-                            <div class="flag flag-left image-flag flush"></div>
-                            <div class="title"><img src="img/titles/welcome_2.png" alt="" /></div>
-                            <div class="flag flag-right image-flag flush"></div>
-                            
-                        </div> 
+                            <div class="12u">
 
-                    </div>
+                                <div class="animated-title">
+                                    
+                                    <div class="flag flag-left image-flag flush">
+                                        
+                                        <span class="text-group">
+
+                                            KIA ORA
+
+                                        </span>
+
+                                    </div>
+                                    <div class="title"><img src="img/titles/welcome_2.png" alt="" /></div>
+                                    <div class="flag flag-right image-flag flush">
+                                        
+                                         <span class="text-group">
+
+                                            WELCOME
+
+                                        </span>
+
+                                    </div>
+
+                                </div>    
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="2u">
+                                &nbsp;
+                            </div>
+
+                            <div class="8u">
+
+                                <h2 class="welcome">POLITICS AIN'T JUST FOR GROWN UPS, IT'S FOR EVERYONE</h2>
+
+                            </div>
+
+                            <div class="2u">
+                                &nbsp;
+                            </div>
+
+                        </div>
+
+
+
+                    </div>    
     
                 </div>
+
+            </section>
+
+
+            <section id="hill" class="hill image-hills">      
+
 
             </section>
 
@@ -143,94 +227,145 @@
                 
                 <div class="container">
 
-                    <div class="content-title push-right">
-                                      
-                        <div class="animated-title">
-                            
-                            <div class="flag flag-left image-flag flush"></div>
-                            <div class="title"><img src="img/titles/about_2.png" alt="" /></div>
-                            <div class="flag flag-right image-flag flush"></div>
-                            
-                        </div>     
+                    <div class="row">                      
+
+                        <div class="-4u 8u">
+                                          
+                            <div class="animated-title">
+                                
+                                <div class="flag flag-left image-flag flush">
+                                    
+                                    <span class="text-group">
+
+                                       WHAT
+
+                                    </span>
+
+                                </div>
+                                <div class="title"><img src="img/titles/about_2.png" alt="" /></div>
+                                <div class="flag flag-right image-flag flush">
+                                    
+                                    <span class="text-group">
+
+                                        IS IT?
+
+                                    </span>
+
+                                </div>
+                                
+                            </div>     
+
+                        </div>
 
                     </div>
 
-                    <div class="character cow image-cow"></div>
+                    <div class="row">
+
+                        <div class="4u not-mobile">
+
+                            <div class="character cow image-cow"></div>
+
+                            <div class="character chicken image-chicken"></div>
+                            
+                        </div>
+                       
+
+                        <div class="8u">  
+
+                            <div class="plaque">   
+
+                                <h3 class="title">ON THE FENCE IS A NIFTY NEW WEB TOOL, DESIGNED TO MAKE YOUR ELECTION VOTE COUNT!</h3>
+
+                                <p>Developed as part of an Honours year thesis at Massey University College of Creative Arts, Wellington, researching into the topic of youth voter participation in New Zealand. Our task was to explore what role Visual Communication Design can play in motivating inexperienced voters to interact with politics and vote. We believe this can become a model for future election-based community projects.</p>  
+
+                            </div>      
+
+                        </div>
+
+                    </div>
+                <!--     <div class="character cow image-cow"></div>
 
                     <div class="character chicken image-chicken"></div>
-
-                    <div class="plaque">   
+ -->
+<!--                     <div class="plaque">   
 
                         <h3 class="title">ON THE FENCE IS A NIFTY NEW WEB TOOL, DESIGNED TO MAKE YOUR ELECTION VOTE COUNT!</h3>
 
                         <p>Developed as part of an Honours year thesis at Massey University College of Creative Arts, Wellington, researching into the topic of youth voter participation in New Zealand. Our task was to explore what role Visual Communication Design can play in motivating inexperienced voters to interact with politics and vote. We believe this can become a model for future election-based community projects.</p>                       
-                    </div>        
+                    </div>      --> 
+
+                    </div>  
    
             </section>
 
 
-            <section id="play" class="play">    
-
-
+            <section id="play" class="play">   
 
                 <div class="container">
 
                     <div class="row">
-                        
-                        <div class="6u">
 
+  
+                        <div class="8u">
+                                                      
                             <div class="animated-title">
+                                
+                                <div class="flag flag-left image-flag flush">
+                                    
+                                     <span class="text-group">
 
-                                <span class="flag flag-left image-flag flush"></span>
-                                <span class="title"><img src="img/titles/otf_2.png" alt="" /></span>
-                                <span class="flag flag-right image-flag flush"></span>
+                                       OLDIE
 
-                            </div>     
-               
+                                    </span>
+
+                                </div>
+                                <div class="title"><img src="img/titles/otf_2.png" alt="" /></div>
+                                <div class="flag flag-right image-flag flush">
+                                    
+                                     <span class="text-group">
+
+                                       GOODIE
+
+                                    </span>
+                                </div>
+                                
+                            </div>    
+
                         </div>
-
-                        <div class="6u">
-                            &nbsp;                            
-
-                        </div>
-
-
-                    </div>    
+           
+                    </div>
 
                     <div class="row">
 
 
-                        <div class="6u">                        
-
+                        <div class="8u">
+                        
                             <div class="plaque">   
 
-                            <h3 class="title">CAN'T WAIT? &nbsp; WE'VE GOT YOU COVERED</h3>
+                                <h3 class="title">CAN'T WAIT? &nbsp; WE'VE GOT YOU COVERED.</h3>
 
-                            <p>You can try a flash version of the app that we made for the 2011 election. In the meantime be sure to keep an eye on our blog and follow our twitter for updates. </p>
+                                <p>In 2011 we released a desktop-only version of On The Fence that has (and continues to be) helpful for heaps of young voters. We're keeping it available for use while the new version is in development. Aenean eros vel enim auctor adipiscing, enim magna, aenean porta, tincidunt, auctor magna!</p>  
 
-                            </div> 
-
-                        </div>
-
-                        <div class="6u">
-                            &nbsp;                            
+                            </div>      
 
                         </div>
+
+                        
 
                     </div>
 
+
                 </div>
             
-
             </section>
 
         </article>
 
         <div class="footer-wrapper">
             <footer>
-         
+            <a href="#">TEST</a>
             </footer>
-        </div>
+        </div>       
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>

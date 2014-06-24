@@ -12,9 +12,9 @@
 
 */
 .animated-title {
-  -webkit-transform: scale(0.75);
-  -moz-transform: scale(0.75);
-  -o-transform: scale(0.75);
-  -ms-transform: scale(0.75);
-  transform: scale(0.75);
+  -webkit-transform: translateX(-50%) scale(0.85) !important;
+  -moz-transform: translateX(-50%) scale(0.85) !important;
+  -ms-transform: translateX(-50%) scale(0.85) !important;
+  -o-transform: translateX(-50%) scale(0.85) !important;
+  transform: translateX(-50%) scale(0.85) !important;
 }

@@ -35,7 +35,7 @@ h2 {
   font-weight: 600;
 }
 h3 {
-  font-size: 1.5em;
+  font-size: 1.52em;
   font-family: 'Otari', sans-serif;
   font-weight: 600;
 }
@@ -55,10 +55,10 @@ h6 {
   font-weight: 600;
 }
 p {
-  font-size: 1em;
+  font-size: 0.82em;
   font-family: 'Droid Serif', serif;
   font-weight: 300;
-  line-height: 1.5em;
+  line-height: 1.74em;
 }
 a,
 a:hover,
@@ -67,185 +67,6 @@ a:visited {
   color: #777;
   text-decoration: none;
   font-style: none;
-}
-/*
-	Frameless			<http://framelessgrid.com/>
-	by Joni Korpi 		<http://jonikorpi.com/>
-	licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
-*/
-/*@13cols: (13 * (@column + @gutter) - @gutter) / @em;
-@14cols: (14 * (@column + @gutter) - @gutter) / @em;
-@15cols: (15 * (@column + @gutter) - @gutter) / @em;
-@16cols: (16 * (@column + @gutter) - @gutter) / @em;*/
-/*
-	Margin, padding, and border resets
-	except for form elements
-*/
-body,
-div,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-th,
-td,
-article,
-aside,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-/*
-	Consistency fixes
-	adopted from http://necolas.github.com/normalize.css/
-*/
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section,
-audio,
-canvas,
-video {
-  display: block;
-}
-html {
-  height: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-body {
-  min-height: 100%;
-  font-size: 100%;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sup {
-  top: -0.5em;
-}
-sub {
-  bottom: -0.25em;
-}
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-b,
-strong {
-  font-weight: bold;
-}
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-a img,
-img {
-  -ms-interpolation-mode: bicubic;
-  border: 0;
-}
-input,
-textarea,
-button,
-select {
-  margin: 0;
-  font-size: 100%;
-  line-height: normal;
-  vertical-align: baseline;
-}
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  cursor: pointer;
-  -webkit-appearance: button;
-}
-input[type="checkbox"],
-input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
-textarea {
-  overflow: auto;
-}
-/*
-	These are easy to forget
-*/
-::selection {
-  background: red;
-  color: white;
-}
-::-moz-selection {
-  background: red;
-  color: white;
-}
-img::selection {
-  background: transparent;
-}
-img::-moz-selection {
-  background: transparent;
-}
-body {
-  -webkit-tap-highlight-color: rgba(255, 0, 0, 0.62);
-}
-/*
-	Style overrides for IE6-8
-	http://jonikorpi.com/leaving-old-IE-behind/
-*/
-/*
-	An easy way to zoom your entire layout in or out (as long as it's set in ems).
-	Just change the media queries to activate them.
-	Assuming your base font-size is 16:
-	- the first one zooms out by a factor of (16-2)/16 = 0.875
-	- the second one zooms in by a factor of (16+2)/16 = 1.125  
-*/
-@media screen and (max-width: 1px) {
-  body {
-    font-size: -0.0625em;
-  }
-}
-@media screen and (max-width: 1px) {
-  body {
-    font-size: 0.1875em;
-  }
 }
 /*
 
@@ -286,6 +107,7 @@ lesshat-selector {
 }
 body {
   margin: 0;
+  overflow-x: none;
 }
 /*  
 	Useful Modules
@@ -314,15 +136,15 @@ body {
 .arrow:hover {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
-  -o-transform: scale(1.2);
   -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
   transform: scale(1.2);
 }
 .arrow:active {
   -webkit-transform: scale(0.9);
   -moz-transform: scale(0.9);
-  -o-transform: scale(0.9);
   -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
   transform: scale(0.9);
 }
 .arrow:after {
@@ -348,14 +170,19 @@ body {
 }
 .plaque {
   position: relative;
-  max-width: 750px;
-  min-width: 400px;
+  top: 0px;
+  max-width: 730px;
+  min-width: 320px;
+  width: 90%;
+  height: 100%;
+  margin: 0 5%;
   min-height: 80px;
-  width: 100%;
-  padding: 20px;
+  padding: 15px 44px;
   color: #f7f1f1;
   z-index: 10;
   text-align: center;
+  -webkit-text-shadow: 0px -1px 1px #000000;
+  -moz-text-shadow: 0px -1px 1px #000000;
   text-shadow: 0px -1px 1px #000000;
   background: url('../img/box-mid.png') repeat-y;
   font-family: 'Otari', sans-serif;
@@ -368,11 +195,17 @@ body {
 }
 .plaque .title {
   font-family: 'Otari', sans-serif;
+  line-height: 1.25em;
 }
 .plaque p {
-  padding: 15px 10px;
+  padding: 25px 10px;
   padding-bottom: 0%;
   font-family: 'Droid Serif', serif;
+  zoom: 1;
+  filter: alpha(opacity=95);
+  -webkit-opacity: 0.95;
+  -moz-opacity: 0.95;
+  opacity: 0.95;
 }
 .plaque:after,
 .plaque:before {
@@ -401,10 +234,12 @@ body {
   display: block;
 }
 .character.cow {
-  width: 800px;
+  width: 600px;
   height: 400px;
+  top: 50%;
   margin-top: -200px;
-  margin-left: -400px;
+  left: 50%;
+  margin-left: -300px;
   background-size: 100% 100%;
 }
 .character.chicken {
@@ -416,15 +251,22 @@ body {
 }
 .animated-title {
   position: relative;
-  left: 50%;
-  float: left;
   font-family: 'Otari', sans-serif;
   font-size: 2em;
   display: block;
   padding: 20px;
   text-align: center;
   min-width: 1000px;
-  margin-left: -500px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .animated-title div.title {
   margin: 0 auto;
@@ -444,30 +286,80 @@ body {
   background-position: center center;
   display: inline-block;
 }
+.animated-title div.flag .text-group {
+  position: absolute;
+  top: 66%;
+  right: 14%;
+  text-align: right;
+  color: #56392F;
+  z-index: 30;
+  font-family: 'Otari';
+  font-weight: bold;
+  font-size: 0.85em;
+  -webkit-text-shadow: 1px 0px 0px #333333;
+  -moz-text-shadow: 1px 0px 0px #333333;
+  text-shadow: 1px 0px 0px #333333;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+  zoom: 1;
+  filter: alpha(opacity=95);
+  -webkit-opacity: 0.95;
+  -moz-opacity: 0.95;
+  opacity: 0.95;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  text-rendering: optimizeLegibility;
+}
 .animated-title div.flag.flag-left {
-  -webkit-animation: float 4s infinite;
-  -moz-animation: float 4s infinite;
-  -o-animation: float 4s infinite;
-  animation: float 4s infinite;
+  -webkit-animation: float 4s forwards infinite;
+  -moz-animation: float 4s forwards infinite;
+  -o-animation: float 4s forwards infinite;
+  animation: float 4s forwards infinite;
   background-position: right center;
+}
+.animated-title div.flag.flag-left .text-group {
+  -webkit-transform: rotateZ(-2deg);
+  -moz-transform: rotateZ(-2deg);
+  -ms-transform: rotateZ(-2deg);
+  -o-transform: rotateZ(-2deg);
+  transform: rotateZ(-2deg);
 }
 .animated-title div.flag.flag-right {
   -webkit-transform: rotateZ(180deg);
   -moz-transform: rotateZ(180deg);
-  -o-transform: rotateZ(180deg);
   -ms-transform: rotateZ(180deg);
+  -o-transform: rotateZ(180deg);
   transform: rotateZ(180deg);
-  -webkit-animation: float 4.3s infinite;
-  -moz-animation: float 4.3s infinite;
-  -o-animation: float 4.3s infinite;
-  animation: float 4.3s infinite;
+  -webkit-animation: float 4s reverse infinite;
+  -moz-animation: float 4s reverse infinite;
+  -o-animation: float 4s reverse infinite;
+  animation: float 4s reverse infinite;
   background-position: right center;
+}
+.animated-title div.flag.flag-right .text-group {
+  -webkit-transform: rotateZ(182deg);
+  -moz-transform: rotateZ(182deg);
+  -ms-transform: rotateZ(182deg);
+  -o-transform: rotateZ(182deg);
+  transform: rotateZ(182deg);
+  text-align: left;
 }
 /* 
 	Custom Styles
 */
 body {
   background: #90a73e;
+}
+div.sticky-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 200;
 }
 .header-wrapper {
   width: 100%;
@@ -479,7 +371,10 @@ body {
   left: 0px;
   z-index: 400;
   background: #2b160e url('../img/light.png') 50% 0 no-repeat;
-  border-bottom: #555 solid 2px;
+  border-bottom: #555 solid 1px;
+  -webkit-box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.25);
 }
 .header-wrapper.stuck {
   position: fixed !important;
@@ -511,27 +406,16 @@ body {
   opacity: 50;
   z-index: 200;
 }
-.header-wrapper #header {
-  position: absolute;
-  left: 50%;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  max-width: 1600px;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  min-width: 480px;
-  z-index: 401;
-}
-.header-wrapper #header #nav,
-.header-wrapper #header #social {
+.header-wrapper #nav,
+.header-wrapper #social {
   display: inline-block;
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  z-index: 900;
 }
-.header-wrapper #header #nav a,
-.header-wrapper #header #social a {
+.header-wrapper #nav a,
+.header-wrapper #social a {
   display: inline-block;
   padding: 20px 15px;
   height: 100%;
@@ -539,51 +423,52 @@ body {
   color: #e7a827;
   text-decoration: none;
   font-style: none;
-  cursor: pointer;
+  cursor: pointer !important;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  -webkit-text-shadow: 0px 0px 2px #000000;
+  -moz-text-shadow: 0px 0px 2px #000000;
   text-shadow: 0px 0px 2px #000000;
 }
-.header-wrapper #header #nav a:hover,
-.header-wrapper #header #social a:hover,
-.header-wrapper #header #nav a:active,
-.header-wrapper #header #social a:active {
+.header-wrapper #nav a:hover,
+.header-wrapper #social a:hover,
+.header-wrapper #nav a:active,
+.header-wrapper #social a:active {
   color: #f6dfb1;
   -webkit-transform: translateY(1px);
   -moz-transform: translateY(1px);
-  -o-transform: translateY(1px);
   -ms-transform: translateY(1px);
+  -o-transform: translateY(1px);
   transform: translateY(1px);
 }
-.header-wrapper #header #nav {
-  width: 65.5%;
+.header-wrapper #nav {
+  width: 100%;
   height: 100%;
   text-align: left;
+  float: left;
   margin-right: 1%;
 }
-.header-wrapper #header #nav a:first-child {
-  padding-left: 15px;
-}
-.header-wrapper #header #social {
-  width: 32.5%;
+.header-wrapper #social {
+  width: 100%;
   height: 100%;
   float: right;
   text-align: right;
 }
-.header-wrapper #header #social a:last-child {
+.header-wrapper #social a:last-child {
   padding-right: 15px;
 }
 article.main-wrapper {
-  position: absolute;
+  position: relative;
   top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
+  width: 100%;
+  height: 100%;
   display: block;
   z-index: 100;
+  padding: 0;
   margin: 0;
+  padding-bottom: 300px;
 }
 article.main-wrapper section {
   position: relative;
@@ -595,63 +480,38 @@ article.main-wrapper section {
   margin: 0;
   display: block;
 }
+article.main-wrapper section h2 {
+  line-height: 1.18em;
+  font-size: 2em;
+  color: #222222;
+  -webkit-text-shadow: 0px 1px 0px #ffffff;
+  -moz-text-shadow: 0px 1px 0px #ffffff;
+  text-shadow: 0px 1px 0px #ffffff;
+}
 article.main-wrapper section .container {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-}
-article.main-wrapper section .container div.clear {
-  display: block;
-  height: 1px;
-  clear: both;
-  width: 100%;
-  float: left;
-}
-article.main-wrapper section .container div.content {
-  margin: 0px auto;
-  display: block;
-  position: relative;
-  /* Sizes */
-  /* Positioning */
-}
-article.main-wrapper section .container div.content:first-child {
-  margin-left: 0 !important;
-}
-article.main-wrapper section .container div.content:last-child {
-  margin-right: 0 !important;
-}
-article.main-wrapper section .container div.content.half {
-  width: 50%;
-}
-article.main-wrapper section .container div.content.third {
-  width: 33%;
-}
-article.main-wrapper section .container div.content.full {
-  width: 100%;
-}
-article.main-wrapper section .container div.content-title {
-  float: left;
-  width: 100%;
-}
-article.main-wrapper section .container div.content-title.push-right {
-  float: right;
-  text-align: right;
-  width: 50%;
-}
-article.main-wrapper section .container div.content-title.push-left {
-  float: left;
-  text-align: left;
-  width: 50%;
+  min-height: 600px;
+  max-height: 1000px;
+  /* Debug */
+  /*			
+			div {
+				background:rgba(0,0,0,.3);
+			}*/
 }
 article.main-wrapper section.tweets {
   background: #b8ccc8 url('../img/birds.png');
+  z-index: 201;
+  height: 100%;
 }
 article.main-wrapper section.banner {
+  height: 600px;
   background-position: center center;
   background-repeat: repeat-x;
   background-color: #c5dfdc;
@@ -670,22 +530,38 @@ article.main-wrapper section.banner .arrow.right {
   top: 50%;
   right: 15%;
 }
+article.main-wrapper section.banner .welcome {
+  text-align: center;
+  width: 85%;
+  margin: 0 auto;
+}
+article.main-wrapper section.hill {
+  top: -300px;
+  height: 600px;
+  background-position: center center;
+  background-repeat: repeat-x;
+  background-color: #c5dfdc;
+  z-index: 199;
+}
 article.main-wrapper section.about {
+  top: -300px;
+  height: 800px;
   background: #90a73e;
   z-index: 201;
   overflow: visible;
 }
 article.main-wrapper section.about .cow {
-  margin-left: -200px;
+  margin-top: -300px;
+  margin-left: -420px;
 }
 article.main-wrapper section.play {
   background: #90a73e;
+  height: 600px;
 }
 .footer-wrapper {
   position: relative;
   top: 0px;
-  left: 0px;
-  display: none;
+  display: block;
   width: 100%;
   height: 55px;
   float: left;
