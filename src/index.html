@@ -23,8 +23,8 @@
                     wider: { range: "1400-", containers: 1400, grid: { gutters: 50 } },
                     wide: { range: "1200-1399", containers: 1200, grid: { gutters: 50 } },           
                     narrow: { range: '981-1199', containers: 930 },
-                    narrow: { range: '481-980', containers: 720 },
-                    mobile: { range: "-480", containers: "fluid", lockViewport: true, grid: { collapse: true } }
+                    narrower: { range: '601-980', containers: 720 },
+                    mobile: { range: "-600", containers: "fluid", lockViewport: false, grid: { collapse: true } }
                 }
             }
         </script>        
@@ -57,30 +57,22 @@
 
         <div class="header-wrapper" class="sticky-menu">
 
-            <div class="container">
-                <!-- Header -->  
-                <div class="row no-collapse flush">
+            <div id="header">
+                <!-- Header -->       
 
-                    <div class="6u">
+                <nav id="nav">
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Old Version</a>    
+                </nav>  
+      
 
-                        <nav id="nav">
-                            <a href="#">About</a>
-                            <a href="#">Blog</a>
-                            <a href="#">Old Version</a>    
-                        </nav>  
-
-                    </div>  
-
-                    <div class="6u">
-
-                        <div id="social">
-                            <a href="#">Twitter</a>
-                            <a href="#">Facebook</a>  
-                        </div>
-
-                    </div>
-
+                <div id="social">
+                    <a href="#">Twitter</a>
+                    <a href="#">Facebook</a>  
                 </div>
+
+                
 
             </div>
 
@@ -345,7 +337,7 @@
                         
                             <div class="plaque">   
 
-                                <h3 class="title">CAN'T WAIT? &nbsp; WE'VE GOT YOU COVERED.</h3>
+                                <h3 class="title">CAN'T WAIT? &nbsp;WE'VE GOT YOU COVERED</h3>
 
                                 <p>In 2011 we released a desktop-only version of On The Fence that has (and continues to be) helpful for heaps of young voters. We're keeping it available for use while the new version is in development. Aenean eros vel enim auctor adipiscing, enim magna, aenean porta, tincidunt, auctor magna!</p>  
 
