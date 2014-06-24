@@ -46,4 +46,19 @@
 	background-image: url('flag.png');
 	background-repeat: no-repeat;
 }
+ 
+.image-hi_title {
+	background-image: url('hi_title.png');
+	background-repeat: no-repeat;
+}
+ 
+.image-about_title {
+	background-image: url('about_title.png');
+	background-repeat: no-repeat;
+}
+
+.image-about_title {
+	background-image: url('/about_title.png');
+	background-repeat: no-repeat;
+}
 
