@@ -10,8 +10,6 @@ module.exports = function(grunt) {
         'grunt-contrib-less',
         'grunt-contrib-copy',
         'grunt-contrib-concat',
-        'grunt-grunticon',
-        'grunt-svgmin',
         'grunt-contrib-watch'  
     ].forEach(function(task) { grunt.loadNpmTasks(task); });
 
@@ -45,6 +43,7 @@ module.exports = function(grunt) {
 
         },
 
+      
         less: {
 
             dev: {  

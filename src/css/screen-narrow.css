@@ -3,12 +3,18 @@
   ~ chrisnicholls.co.nz
 
 */
-#nav a:first-child {
-  padding-left: 2%;
-}
-#social a:last-child {
-  padding-right: 2%;
-}
-#about .cow {
-  margin-left: -350px;
+/*
+
+  Less Mixin Library  
+  Lesshat plus extras
+
+  ~ chrisnicholls.co.nz
+
+*/
+.animated-title {
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  -o-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
 }

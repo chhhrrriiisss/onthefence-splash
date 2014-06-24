@@ -3,10 +3,3 @@
   ~ chrisnicholls.co.nz
 
 */
-#about .cow {
-  margin-left: -380px;
-}
-.animated-title span.flag.flag-left,
-.animated-title span.flag.flag-right {
-  background-size: 75% 75%;
-}

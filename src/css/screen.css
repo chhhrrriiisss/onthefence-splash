@@ -7,28 +7,6 @@
 @charset 'UTF-8';
 /*
 
-  Less Mixin Library  
-  Lesshat plus extras
-
-  ~ chrisnicholls.co.nz
-
-*/
-lesshat-selector {
-  -lh-property: 0; } 
-@-webkit-keyframes float{ 0%, 20%, 50%, 80%, 100% { top:0px; }	40% { top:-30px;}	60% { top:-15px;} }}
-@-moz-keyframes float{ 0%, 20%, 50%, 80%, 100% { top:0px; }	40% { top:-30px;}	60% { top:-15px;} }}
-@-o-keyframes float{ 0%, 20%, 50%, 80%, 100% { top:0px; }	40% { top:-30px;}	60% { top:-15px;} }}
-@keyframes float{ 0%, 20%, 50%, 80%, 100% { top:0px; }	40% { top:-30px;}	60% { top:-15px;} };
-}
-lesshat-selector {
-  -lh-property: 0; } 
-@-webkit-keyframes slideDown{ 0% { top:-55px;}	100% { top:0px;} }}
-@-moz-keyframes slideDown{ 0% { top:-55px;}	100% { top:0px;} }}
-@-o-keyframes slideDown{ 0% { top:-55px;}	100% { top:0px;} }}
-@keyframes slideDown{ 0% { top:-55px;}	100% { top:0px;} };
-}
-/*
-
 	Typography 
 
 	~	chrisnicholls.co.nz
@@ -91,6 +69,207 @@ a:visited {
   font-style: none;
 }
 /*
+	Frameless			<http://framelessgrid.com/>
+	by Joni Korpi 		<http://jonikorpi.com/>
+	licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
+*/
+/*@13cols: (13 * (@column + @gutter) - @gutter) / @em;
+@14cols: (14 * (@column + @gutter) - @gutter) / @em;
+@15cols: (15 * (@column + @gutter) - @gutter) / @em;
+@16cols: (16 * (@column + @gutter) - @gutter) / @em;*/
+/*
+	Margin, padding, and border resets
+	except for form elements
+*/
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/*
+	Consistency fixes
+	adopted from http://necolas.github.com/normalize.css/
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+audio,
+canvas,
+video {
+  display: block;
+}
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  min-height: 100%;
+  font-size: 100%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+b,
+strong {
+  font-weight: bold;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a img,
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+}
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  font-size: 100%;
+  line-height: normal;
+  vertical-align: baseline;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+textarea {
+  overflow: auto;
+}
+/*
+	These are easy to forget
+*/
+::selection {
+  background: red;
+  color: white;
+}
+::-moz-selection {
+  background: red;
+  color: white;
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+body {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0.62);
+}
+/*
+	Style overrides for IE6-8
+	http://jonikorpi.com/leaving-old-IE-behind/
+*/
+/*
+	An easy way to zoom your entire layout in or out (as long as it's set in ems).
+	Just change the media queries to activate them.
+	Assuming your base font-size is 16:
+	- the first one zooms out by a factor of (16-2)/16 = 0.875
+	- the second one zooms in by a factor of (16+2)/16 = 1.125  
+*/
+@media screen and (max-width: 1px) {
+  body {
+    font-size: -0.0625em;
+  }
+}
+@media screen and (max-width: 1px) {
+  body {
+    font-size: 0.1875em;
+  }
+}
+/*
+
+  Less Mixin Library  
+  Lesshat plus extras
+
+  ~ chrisnicholls.co.nz
+
+*/
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes float{ 0%, 20%, 50%, 80%, 100% { top:0px; }	40% { top:-30px;}	60% { top:-15px;} }}
+@-moz-keyframes float{ 0%, 20%, 50%, 80%, 100% { top:0px; }	40% { top:-30px;}	60% { top:-15px;} }}
+@-o-keyframes float{ 0%, 20%, 50%, 80%, 100% { top:0px; }	40% { top:-30px;}	60% { top:-15px;} }}
+@keyframes float{ 0%, 20%, 50%, 80%, 100% { top:0px; }	40% { top:-30px;}	60% { top:-15px;} };
+}
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes slideDown{ 0% { top:-55px;}	100% { top:0px;} }}
+@-moz-keyframes slideDown{ 0% { top:-55px;}	100% { top:0px;} }}
+@-o-keyframes slideDown{ 0% { top:-55px;}	100% { top:0px;} }}
+@keyframes slideDown{ 0% { top:-55px;}	100% { top:0px;} };
+}
+/*
 
 ~chrisnicholls.co.nz
 
@@ -98,7 +277,9 @@ a:visited {
 /*
 	Global Styles
 */
-* {
+*,
+*:after,
+*:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -179,11 +360,6 @@ body {
   background: url('../img/box-mid.png') repeat-y;
   font-family: 'Otari', sans-serif;
   display: block;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -239,64 +415,43 @@ body {
   background-size: 100% 100%;
 }
 .animated-title {
-  display: block;
   position: relative;
-  top: 0px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  margin: 0 auto;
-  text-align: center;
-  height: 200px;
-}
-.animated-title span.title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-  -moz-transform: translateY(-50%) translateX(-50%);
-  -o-transform: translateY(-50%) translateX(-50%);
-  -ms-transform: translateY(-50%) translateX(-50%);
-  transform: translateY(-50%) translateX(-50%);
+  float: left;
   font-family: 'Otari', sans-serif;
   font-size: 2em;
+  display: block;
+  padding: 20px;
+  text-align: center;
+  min-width: 1000px;
+  margin-left: -500px;
+}
+.animated-title div.title {
+  margin: 0 auto;
   display: inline-block;
-  padding: 0px;
 }
-.animated-title span.title img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-  -moz-transform: translateY(-50%) translateX(-50%);
-  -o-transform: translateY(-50%) translateX(-50%);
-  -ms-transform: translateY(-50%) translateX(-50%);
-  transform: translateY(-50%) translateX(-50%);
+.animated-title div.title img {
+  position: relative;
   padding: 0;
+  margin: 0;
 }
-.animated-title span.flag {
-  position: absolute;
+.animated-title div.flag {
+  position: inherit;
+  margin-top: 45px;
   width: 300px;
-  height: 175px;
+  height: 180px;
   background-size: 100% 100%;
   background-position: center center;
   display: inline-block;
-  margin-top: 85px;
-  left: 50%;
 }
-.animated-title span.flag.flag-left {
-  margin-left: -400px;
+.animated-title div.flag.flag-left {
   -webkit-animation: float 4s infinite;
   -moz-animation: float 4s infinite;
   -o-animation: float 4s infinite;
   animation: float 4s infinite;
   background-position: right center;
 }
-.animated-title span.flag.flag-right {
-  margin-left: 100px;
+.animated-title div.flag.flag-right {
   -webkit-transform: rotateZ(180deg);
   -moz-transform: rotateZ(180deg);
   -o-transform: rotateZ(180deg);
@@ -420,7 +575,7 @@ body {
 .header-wrapper #header #social a:last-child {
   padding-right: 15px;
 }
-.main-wrapper {
+article.main-wrapper {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -430,31 +585,17 @@ body {
   z-index: 100;
   margin: 0;
 }
-.main-wrapper .center {
+article.main-wrapper section {
   position: relative;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-.main-wrapper section {
-  position: absolute;
   left: 0px;
   width: 100%;
   height: 100%;
   min-height: 600px;
+  min-width: 320px;
   margin: 0;
   display: block;
 }
-.main-wrapper section .center,
-.main-wrapper section .container {
+article.main-wrapper section .container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -464,46 +605,80 @@ body {
   -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-.main-wrapper section.tweets {
+article.main-wrapper section .container div.clear {
+  display: block;
+  height: 1px;
+  clear: both;
+  width: 100%;
+  float: left;
+}
+article.main-wrapper section .container div.content {
+  margin: 0px auto;
+  display: block;
+  position: relative;
+  /* Sizes */
+  /* Positioning */
+}
+article.main-wrapper section .container div.content:first-child {
+  margin-left: 0 !important;
+}
+article.main-wrapper section .container div.content:last-child {
+  margin-right: 0 !important;
+}
+article.main-wrapper section .container div.content.half {
+  width: 50%;
+}
+article.main-wrapper section .container div.content.third {
+  width: 33%;
+}
+article.main-wrapper section .container div.content.full {
+  width: 100%;
+}
+article.main-wrapper section .container div.content-title {
+  float: left;
+  width: 100%;
+}
+article.main-wrapper section .container div.content-title.push-right {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+article.main-wrapper section .container div.content-title.push-left {
+  float: left;
+  text-align: left;
+  width: 50%;
+}
+article.main-wrapper section.tweets {
   background: #b8ccc8 url('../img/birds.png');
 }
-.main-wrapper section.banner {
-  top: 990px;
+article.main-wrapper section.banner {
   background-position: center center;
   background-repeat: repeat-x;
   background-color: #c5dfdc;
   z-index: 200;
 }
-.main-wrapper section.banner .animated-title {
-  min-width: 800px;
-}
-.main-wrapper section.banner .arrow {
+article.main-wrapper section.banner .arrow {
   z-index: 201;
 }
-.main-wrapper section.banner .arrow.left {
+article.main-wrapper section.banner .arrow.left {
   position: absolute;
   top: 50%;
   left: 15%;
 }
-.main-wrapper section.banner .arrow.right {
+article.main-wrapper section.banner .arrow.right {
   position: absolute;
   top: 50%;
   right: 15%;
 }
-.main-wrapper section.about {
-  top: 2400px;
+article.main-wrapper section.about {
   background: #90a73e;
   z-index: 201;
   overflow: visible;
 }
-.main-wrapper section.about .animated-title {
-  margin-top: -250px;
-}
-.main-wrapper section.about .cow {
+article.main-wrapper section.about .cow {
   margin-left: -200px;
 }
-.main-wrapper section.play {
-  top: 3600px;
+article.main-wrapper section.play {
   background: #90a73e;
 }
 .footer-wrapper {
