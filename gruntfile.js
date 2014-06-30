@@ -5,6 +5,7 @@ module.exports = function(grunt) {
     // load tasks
     [
         'grunt-processhtml',
+        'grunt-svgmin',
         'grunt-grunticon',
         'grunt-contrib-clean',
         'grunt-lesslint',        
@@ -101,19 +102,32 @@ module.exports = function(grunt) {
     
         },
 
+        svgmin: {
+            dev: {                     // Target
+                files: [{               // Dictionary of files                  
+                    cwd: '<%= pkg.sourceFolder %>/img/svgsrc',
+                    src: ['**/*.svg'],  // Actual pattern(s) to match.
+                    dest: '<%= pkg.sourceFolder %>/img/svgmin',       // Destination path prefix.
+                    ext: '.svg'     // Dest filepaths will have this extension.
+                    // ie: optimise img/src/branding/logo.svg and store it in img/branding/logo.min.svg
+                }]
+            }
+
+        },
+
         grunticon: {
             dev: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= pkg.sourceFolder %>/img/src',
-                    src: ['*.svg', '*.png'],
+                files: [{  
+                    expand: true,         
+                    cwd: '<%= pkg.sourceFolder %>/img/svgsrc',
+                    src: ['*.svg'],
                     dest: "<%= pkg.sourceFolder %>/img"
                 }],
                 options: {
                     cssprefix: ".image-",
-                    datasvgcss:"images.data.svg.css",
-                    datapngcss:"images.data.png.css",
-                    urlpngcss:"images.fallback.css"                    
+                    datasvgcss: "images.data.svg.css",
+                    datapngcss: "images.data.png.css",
+                    urlpngcss: "images.fallback.css"                    
                 }
             }
 
@@ -145,7 +159,7 @@ module.exports = function(grunt) {
         watch: {
 
             svgs: {
-                files: ['<%= pkg.sourceFolder %>/img/svg/**'],
+                files: ['<%= pkg.sourceFolder %>/img/svgsrc/**'],
                 tasks: ['defaultSVG'],
                 options: {
                     debounceDelay: 1000

@@ -365,6 +365,20 @@ body {
   margin-left: -75px;
   background-size: 100% 100%;
 }
+.static {
+  z-index: 198;
+}
+.static.image-hill_center {
+  position: absolute;
+  top: 1550px;
+  left: 50%;
+  margin-left: -600px;
+  background-position: center bottom;
+  width: 100%;
+  max-width: 1200px;
+  height: 1600px;
+  display: block;
+}
 /* 	Animated content titles */
 .animated-title {
   position: relative;
@@ -391,6 +405,9 @@ body {
   background-size: 100% 100%;
   margin: 0 auto;
   display: inline-block;
+}
+.animated-title div.title.image-onthefence_title {
+  width: 300px;
 }
 .animated-title div.flag {
   position: inherit;
@@ -600,6 +617,7 @@ article.main-wrapper {
   margin: 0;
   padding-bottom: 300px;
   overflow-x: hidden;
+  z-index: 199;
 }
 article.main-wrapper section {
   position: relative;
@@ -678,8 +696,8 @@ article.main-wrapper section.hill {
 article.main-wrapper section.about {
   top: -300px;
   height: 800px;
-  background: #90a73e;
-  z-index: 201;
+  /*background:#90a73e;*/
+  z-index: 202;
   overflow: visible;
 }
 article.main-wrapper section.about .cow {
@@ -691,7 +709,7 @@ article.main-wrapper section.about .chicken {
   margin-top: -50px;
 }
 article.main-wrapper section.play {
-  background: #90a73e;
+  /*background:#90a73e;*/
   height: 600px;
 }
 .footer-wrapper {

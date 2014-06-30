@@ -263,6 +263,7 @@
 
             <section id="about" class="about">
 
+               
                 
                 <div class="container">
 
@@ -358,7 +359,7 @@
                                     </span>
 
                                 </div>
-                                <div class="title image-about_title"></div>
+                                <div class="title image-onthefence_title"></div>
 
                                 <div class="flag flag-right image-flag flush">
                                     
@@ -380,7 +381,7 @@
 
                         <div class="8u">
                         
-                            <div class="plaque2">   
+                            <div class="plaque2" style="display:none;">   
                                 <span class="top"></span><span class="bottom"></span>
 
                                 <h3 class="title">CAN'T WAIT? &nbsp;WE'VE GOT YOU COVERED</h3>
@@ -401,6 +402,10 @@
             </section>
 
         </article>
+
+
+         <div class="static image-hill_center"></div>
+        
 
         <div class="footer-wrapper">
             <footer>
