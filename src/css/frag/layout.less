@@ -282,20 +282,32 @@ body {
 
 .static {
 	z-index:198;
+	overflow:visible;
 
 	&.image-hill_center {
 		position:absolute;
-		top:1550px;
+		top:1050px;
 		left:50%;
 		margin-left:-600px;
-		background-position:center bottom;
-		width:100%;
-		max-width:1200px;
+		background-position:0px 0px;
+		width:1200px;
 		height:1600px;
 		display:block;
+		z-index:201;
+	}
 
-		
-
+	&.image-clouds {
+		position:absolute;
+		top:0px;
+		left:0px;
+		background-repeat:repeat;
+		background-color:#c5dfdc;
+		width:100%;
+		height:1200px;
+		display:block;
+		z-index:198;
+		.cssPerformance();
+		.animation(loopBackground 80s linear infinite);
 	}
 }
 
@@ -402,6 +414,8 @@ body {
 
 body {
 	background: #90a73e;
+	overflow-x:hidden;
+	overflow-y:auto;
 
 	&.loading {
 		overflow:hidden !important;
@@ -579,10 +593,11 @@ article.main-wrapper {
 		}
 
 		&.tweets {
-
-			background: #b8ccc8 url('../img/birds.png');
-			z-index:201;
-			height:100%;
+	/*		background-color:#c5dfdc;*/
+			background-repeat:repeat;
+			z-index:202;
+			height:200px;
+			min-height:200px;
 
 		}
 
@@ -591,17 +606,22 @@ article.main-wrapper {
 			height:600px;
 			background-position:center center;
 			background-repeat:repeat-x;
-			background-color:#c5dfdc;
-			z-index:200;
+/*			background-color:#c5dfdc;*/
+			
+			.container {
+				z-index:205;			
+			}
 
 			.arrow {
-				z-index:201;
+				z-index:206;
 			}
+		
 
 			.arrow.left {
 				position:absolute;
 				top:50%;
 				left:15%;
+
 			}
 
 			.arrow.right {
@@ -618,21 +638,25 @@ article.main-wrapper {
 		}
 
 		&.hill {
-			top:-300px;
-			height:600px;
+			top:-200px;
+			height:800px;
 			background-position:center center;
 			background-repeat:repeat-x;
-			background-color:#c5dfdc;
-			z-index:199;
+			/*background-color:#c5dfdc;*/
+			z-index:200;
 
 		}
 
 		&.about {
-			top:-300px;
+			top:-500px;
 			height:800px;
 			/*background:#90a73e;*/
-			z-index:202;
+
 			overflow:visible;
+
+			.container {
+				z-index:205;
+			}
 
 			.cow {
 				margin-top:-250px;
@@ -642,7 +666,7 @@ article.main-wrapper {
 			.chicken {
 				margin-left:150px;
 				margin-top:-50px;
-			}
+			}	
 	
 		}
 

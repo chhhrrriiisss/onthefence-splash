@@ -49,7 +49,28 @@
             -->
         <!-- /build -->
 
+        <!-- Icons -->
+        <link rel="shortcut icon" href="img/icons/favicon.ico?v=5" type="image/x-icon" />
+        <!-- Apple Touch Icons -->
+        <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="img/icons/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="img/icons/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-touch-icon-152x152.png" />
+        <!-- Windows 8 Tile Icons -->
+        <meta name="msapplication-square70x70logo" content="img/iconssmalltile.png" />
+        <meta name="msapplication-square150x150logo" content="img/iconsmediumtile.png" />
+        <meta name="msapplication-wide310x150logo" content="img/iconswidetile.png" />
+        <meta name="msapplication-square310x310logo" content="img/iconslargetile.png" />
+
         <link rel="stylesheet" href="css/screen.css">    
+
+        <!-- Load web fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 
         <script src="js/vendor/skel.min.js">
             {
@@ -125,7 +146,12 @@
 
         <article class="main-wrapper">
 
-          <section id="tweets" class="tweets">           
+        <div class="static image-clouds"></div>        
+        <div class="static image-hill_center"></div>       
+
+          <section id="tweets" class="tweets">   
+
+
 
                 <div class="container" style="display:none;">                
                   
@@ -263,7 +289,7 @@
 
             <section id="about" class="about">
 
-               
+
                 
                 <div class="container">
 
@@ -403,9 +429,7 @@
 
         </article>
 
-
-         <div class="static image-hill_center"></div>
-        
+    
 
         <div class="footer-wrapper">
             <footer>
