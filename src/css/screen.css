@@ -374,9 +374,9 @@ body {
 .static {
   z-index: 198;
   overflow: visible;
+  position: absolute;
 }
 .static.image-hill_center {
-  position: absolute;
   top: 1100px;
   left: 50%;
   margin-left: -600px;
@@ -387,7 +387,6 @@ body {
   z-index: 203;
 }
 .static.image-clouds {
-  position: absolute;
   top: 0px;
   left: 0px;
   background-repeat: repeat;
@@ -416,15 +415,59 @@ body {
   animation: loopBackground 80s linear infinite;
 }
 .static.image-sheep_fence {
-  position: absolute;
   top: 850px;
   left: 50%;
-  margin-left: -250px;
-  background-repeat: n-repeat;
+  background-repeat: no-repeat;
+  margin-left: -50px;
   width: 800px;
   height: 400px;
   display: block;
   z-index: 202;
+}
+.static.image-signpost {
+  top: 730px;
+  left: 50%;
+  margin-left: -520px;
+  width: 30px;
+  height: 340px;
+  display: block;
+  z-index: 206;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  cursor: pointer;
+}
+.static.image-signpost .image-enrol_sign {
+  position: absolute;
+  left: 50%;
+  top: -35px;
+  width: 135px;
+  height: 80px;
+  z-index: 203;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  -o-transform-origin: 0% 100%;
+  -ms-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  cursor: pointer;
+}
+.static.image-signpost .image-enrol_sign:hover {
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  transform: rotate(3deg);
 }
 /* 	Animated content titles */
 .animated-title {
@@ -655,8 +698,48 @@ div.sticky-wrapper {
   float: right;
   text-align: right;
 }
+.header-wrapper #social a {
+  padding: 0;
+}
 .header-wrapper #social a:last-child {
   padding-right: 15px;
+}
+.header-wrapper #social a .image-twitter_button,
+.header-wrapper #social a .image-facebook_button {
+  width: 75px;
+  height: 95px;
+  -webkit-transform: translateY(-3px);
+  -moz-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  -o-transform: translateY(-3px);
+  transform: translateY(-3px);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform-origin: 50% 0%;
+  -moz-transform-origin: 50% 0%;
+  -o-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-perspective: 3000px;
+  -moz-perspective: 3000px;
+  perspective: 3000px;
+  z-index: 199;
+}
+.header-wrapper #social a:hover {
+  -webkit-transform: translateY(3px);
+  -moz-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  -o-transform: translateY(3px);
+  transform: translateY(3px);
+}
+.header-wrapper #social a:active {
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  transform: scale(0.95);
 }
 article.main-wrapper {
   position: relative;

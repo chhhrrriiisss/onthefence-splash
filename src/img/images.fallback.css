@@ -8,6 +8,10 @@
 
 .image-cow { background-image: url('png/cow.png'); background-repeat: no-repeat; }
 
+.image-enrol_sign { background-image: url('png/enrol_sign.png'); background-repeat: no-repeat; }
+
+.image-facebook_button { background-image: url('png/facebook_button.png'); background-repeat: no-repeat; }
+
 .image-fence { background-image: url('png/fence.png'); background-repeat: no-repeat; }
 
 .image-flag { background-image: url('png/flag.png'); background-repeat: no-repeat; }
@@ -27,4 +31,8 @@
 .image-sheep { background-image: url('png/sheep.png'); background-repeat: no-repeat; }
 
 .image-sheep_fence { background-image: url('png/sheep_fence.png'); background-repeat: no-repeat; }
+
+.image-signpost { background-image: url('png/signpost.png'); background-repeat: no-repeat; }
+
+.image-twitter_button { background-image: url('png/twitter_button.png'); background-repeat: no-repeat; }
 

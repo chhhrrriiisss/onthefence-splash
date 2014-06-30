@@ -283,9 +283,10 @@ body {
 .static {
 	z-index:198;
 	overflow:visible;
+	position:absolute;
 
 	&.image-hill_center {
-		position:absolute;
+
 		top:1100px;
 		left:50%;
 		margin-left:-600px;
@@ -297,7 +298,7 @@ body {
 	}
 
 	&.image-clouds {
-		position:absolute;
+
 		top:0px;
 		left:0px;
 		background-repeat:repeat;
@@ -311,16 +312,50 @@ body {
 	}
 
 	&.image-sheep_fence {
-		position:absolute;
+		
 		top:850px;
 		left:50%;
-		margin-left:-250px;
-		background-repeat:n-repeat;
-
+	
+		background-repeat:no-repeat;
+		margin-left:-50px;
 		width:800px;
 		height:400px;
 		display:block;
 		z-index:202;
+
+	}
+
+	&.image-signpost {
+		
+		top:730px;
+		left:50%;
+		margin-left:-520px;
+		width:30px;
+		height:340px;
+		display:block;
+		z-index:206;
+		.transform(rotate(-3deg));
+		.transform-origin(50% 100%);
+
+		cursor:pointer;
+
+	
+		.image-enrol_sign {
+			position:absolute;
+			left:50%;
+			top:-35px;
+			width:135px;
+			height:80px;
+			z-index:203;
+			.transition(all .2s);
+			.transform-origin(0% 100%);
+			cursor:pointer;
+
+			&:hover {
+				.transform(rotate(3deg));
+			}
+
+		}
 
 	}
 }
@@ -522,6 +557,8 @@ div.sticky-wrapper {
 				color: lighten(#e7a827, 30%);
 				.transform(translateY(1px));
 			}
+
+			
 		}			 
 	}
 
@@ -544,8 +581,30 @@ div.sticky-wrapper {
 		text-align:right;
 
 		a {
+			padding:0;
+
 			&:last-child {
 				padding-right:15px;
+			}
+
+			.image-twitter_button, .image-facebook_button {
+
+				width:75px;
+				height:95px;
+				.transform(translateY(-3px));
+				.transition(all .3s);
+				.transform-origin(50% 0%);
+				.perspective(3000);
+				z-index:199;
+			}
+
+			&:hover {
+				
+				.transform(translateY(3px));
+			}
+
+			&:active {
+				.transform(scale(0.95));
 			}
 		}
 	}

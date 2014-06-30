@@ -132,8 +132,8 @@
                     <div class="6u">
           
                         <div id="social">
-                            <a href="#">Twitter</a>
-                            <a href="#">Facebook</a>  
+                            <a href="#" id="test"><div class="image-twitter_button"></div></a>
+                            <a href="#"><div class="image-facebook_button"></div></a>  
                         </div>
 
                     </div>
@@ -148,7 +148,10 @@
 
         <div class="static image-clouds"></div>        
         <div class="static image-hill_center"></div>       
-        <div class="static image-sheep_fence"></div>       
+        <div class="static image-sheep_fence"></div>   
+        <div class="static image-signpost">
+            <div class="static image-enrol_sign"></div>
+        </div>        
 
           <section id="tweets" class="tweets">   
 
