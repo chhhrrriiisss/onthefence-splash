@@ -7,14 +7,12 @@ $(document).ready(function() {
 
 	$('body').removeClass('loading');
 	
-	$('.header-wrapper').waypoint('sticky', {
-		offset: 300,
-		direction: 'down right',
-		stuckClass: 'stuck',
-		wrapper: '<div class="sticky-wrapper" />'
-	});
-
-
+	// $('.header-wrapper').waypoint('sticky', {
+	// 	offset: 300,
+	// 	direction: 'down right',
+	// 	stuckClass: 'stuck',
+	// 	wrapper: '<div class="sticky-wrapper" />'
+	// });
 
 	$('body').flowtype({
 		minimum   : 500,

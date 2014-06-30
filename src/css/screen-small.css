@@ -18,6 +18,9 @@
   -o-transform: translateX(-50%) scale(0.8) !important;
   transform: translateX(-50%) scale(0.8) !important;
 }
+.plaque-wrapper .content {
+  padding: 20px 30px;
+}
 .static.image-sheep_fence {
   margin-left: -380px;
 }

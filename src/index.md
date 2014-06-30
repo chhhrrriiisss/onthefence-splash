@@ -152,7 +152,11 @@
         <div class="static image-sheep_fence"></div>   
 
         <div id="bl1" class="static image-bluebird"></div>   
-        <div id="br1" class="static image-brownbird"></div>   
+        <div id="br1" class="static image-brownbird"></div> 
+
+        <div id="gr1" class="static image-grass"></div> 
+
+        <div class="static image-sheep_seedy"></div>  
 
         <div class="static image-signpost">
             <div class="static image-enrol_sign"></div>
@@ -217,6 +221,8 @@
                                         <h3 class="title">ON THE FENCE IS A NIFTY NEW WEB TOOL, DESIGNED TO MAKE YOUR ELECTION VOTE COUNT!</h3>
 
                                         <p>Developed as part of an Honours year thesis at Massey University College of Creative Arts, Wellington, researching into the topic of youth voter participation in New Zealand. Our task was to explore what role Visual Communication Design can play in motivating inexperienced voters to interact with politics and vote. We believe this can become a model for future election-based community projects.</p>  
+
+                                        
 
                                     </div>
 
@@ -288,7 +294,7 @@
 
                             <div class="8u">
 
-                                <h2 class="welcome">POLITICS AIN'T JUST FOR GROWN UPS, <br /> IT'S FOR EVERYONE.</h2>
+                                <h2 class="welcome">POLITICS AIN'T JUST FOR GROWN UPS, IT'S FOR EVERYONE.</h2>
 
                             </div>
 
@@ -357,7 +363,11 @@
 
                             <div class="character cow image-cow"></div>
 
-                            <div class="character chicken image-chicken"></div>
+                            <div class="character chicken image-chicken">
+                                
+                                <div class="static image-vote_box"></div>
+
+                            </div>
                             
                         </div>
                        
@@ -378,6 +388,8 @@
                                     <h3 class="title">ON THE FENCE IS A NIFTY NEW WEB TOOL, DESIGNED TO MAKE YOUR ELECTION VOTE COUNT!</h3>
 
                                     <p>The original concept was developed as part of an Honours year thesis at Massey University College of Creative Arts, Wellington, researching into the topic of youth voter participation in New Zealand. Our task was to explore what role Visual Communication Design can play in motivating inexperienced voters to interact with politics and vote. We believe this can become a model for future election-based community projects.</p>  
+
+                                    <div class="image-shell left"></div><div class="image-shell right"></div><div class="image-decoration center"></div>
 
                                 </div>
 
@@ -482,6 +494,11 @@
 
                         </div>
 
+                        <div class="4u not-mobile not-small">
+
+                            
+                                                    
+                        </div>
                         
 
                     </div>
@@ -496,9 +513,30 @@
     
 
         <div class="footer-wrapper">
-            <footer>
-               
-            </footer>
+            <div class="container center">
+
+                <div class="row flush no-collapse">
+
+                    <div class="4u">
+                       
+                        <a href="#">Authorised by someone important. Kieran Stowers, Museum Building, Buckle St. Wellington, New Zealand.</a>    
+
+                    </div>    
+                    <div class="4u">
+                       
+                        &nbsp;
+
+                    </div>   
+                    <div class="4u">
+                       
+                        <a href="#">feeedbaaack@onthefence.co.nz</a>    
+
+                    </div>   
+                 
+                </div>
+
+            </div>
+
         </div>       
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

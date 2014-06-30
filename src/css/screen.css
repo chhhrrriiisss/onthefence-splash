@@ -91,10 +91,10 @@ lesshat-selector {
 }
 lesshat-selector {
   -lh-property: 0; } 
-@-webkit-keyframes loopBackground{ 0% { background-position:0%;}	100% { background-position:100%;} }}
-@-moz-keyframes loopBackground{ 0% { background-position:0%;}	100% { background-position:100%;} }}
-@-o-keyframes loopBackground{ 0% { background-position:0%;}	100% { background-position:100%;} }}
-@keyframes loopBackground{ 0% { background-position:0%;}	100% { background-position:100%;} };
+@-webkit-keyframes loopBackground{ 0% { background-position:0px top;}	100% { background-position:800px top; } }}
+@-moz-keyframes loopBackground{ 0% { background-position:0px top;}	100% { background-position:800px top; } }}
+@-o-keyframes loopBackground{ 0% { background-position:0px top;}	100% { background-position:800px top; } }}
+@keyframes loopBackground{ 0% { background-position:0px top;}	100% { background-position:800px top; } };
 }
 /*
 
@@ -268,7 +268,7 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  /*
+  /*	
 		&:after {
 			.woodTexture();
 		}*/
@@ -297,6 +297,37 @@ body {
   -webkit-opacity: 0.95;
   -moz-opacity: 0.95;
   opacity: 0.95;
+}
+.plaque-wrapper .content .image-decoration,
+.plaque-wrapper .content .image-shell {
+  margin: 25px auto;
+  margin-bottom: 0px;
+}
+.plaque-wrapper .content .image-decoration {
+  display: block;
+  overflow: auto;
+  width: 350px;
+  background-repeat: no-repeat;
+  height: 40px;
+}
+.plaque-wrapper .content .image-shell {
+  width: 45px;
+  height: 40px;
+  position: relative;
+  display: block;
+}
+.plaque-wrapper .content .image-shell.left {
+  float: left;
+  left: 0px;
+}
+.plaque-wrapper .content .image-shell.right {
+  float: right;
+  right: 0px;
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 .plaque-wrapper span.image-bar {
   position: relative;
@@ -393,6 +424,14 @@ body {
   overflow: visible;
   position: absolute;
 }
+.static.image-sheep_seedy {
+  top: 2100px;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  height: 300px;
+  z-index: 203;
+}
 .static.image-bluebird,
 .static.image-brownbird {
   top: 300px;
@@ -418,6 +457,10 @@ body {
 .static.image-brownbird#br2 {
   margin-left: 300px;
 }
+.static.image-vote_box {
+  width: 300px;
+  height: 200px;
+}
 .static.image-hill_center {
   left: 50%;
   background-position: 0px 0px;
@@ -442,7 +485,7 @@ body {
 .static.image-clouds {
   top: 0px;
   left: 0px;
-  background-repeat: repeat;
+  background-repeat: repeat-x;
   background-color: #c5dfdc;
   width: 100%;
   height: 1200px;
@@ -546,6 +589,12 @@ body {
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .animated-title div.title {
   width: 200px;
@@ -881,7 +930,7 @@ article.main-wrapper section.banner .arrow.right {
 }
 article.main-wrapper section.banner .welcome {
   text-align: center;
-  width: 85%;
+  width: 550px;
   margin: 0 auto;
 }
 article.main-wrapper section.hill {
@@ -906,6 +955,11 @@ article.main-wrapper section.about .chicken {
   margin-left: 150px;
   margin-top: -50px;
 }
+article.main-wrapper section.about .chicken .image-vote_box {
+  z-index: -1;
+  margin-top: 170px;
+  margin-left: -20px;
+}
 article.main-wrapper section.play {
   /*background:#90a73e;*/
   height: 600px;
@@ -913,29 +967,44 @@ article.main-wrapper section.play {
 .footer-wrapper {
   position: relative;
   top: 0px;
-  display: none;
+  margin-top: -120px;
+  display: block;
   width: 100%;
-  height: 55px;
+  height: 120px;
   float: left;
   z-index: 300;
-  background: #2b160e url('../img/light.png') 50% bottom no-repeat;
-  border-top: #333 solid 2px;
 }
-.footer-wrapper:after {
+.footer-wrapper .container {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  border-top: rgba(0, 0, 0, 0.1) solid 1px;
+}
+.footer-wrapper .container .row a {
+  color: rgba(0, 0, 0, 0.3);
+  font-family: 'Otari', sans-serif;
+  font-size: 0.8em;
+  display: inline-block;
   width: 100%;
   height: 100%;
-  display: block;
-  content: '';
+  line-height: 1.35em;
+  cursor: pointer;
+  text-align: left;
+  padding-top: 25px;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
 }
-.footer-wrapper:after {
-  background: url('../img/texture.png') repeat;
-  zoom: 1;
-  filter: alpha(opacity=5000);
-  -webkit-opacity: 50;
-  -moz-opacity: 50;
-  opacity: 50;
-  z-index: 200;
+.footer-wrapper .container .row a:hover,
+.footer-wrapper .container .row a:active {
+  color: rgba(0, 0, 0, 0.7);
+}
+.footer-wrapper .container .row div:last-child a {
+  text-align: right;
 }

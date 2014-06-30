@@ -26,6 +26,8 @@
 
 .image-flag { background-image: url('png/flag.png'); background-repeat: no-repeat; }
 
+.image-grass { background-image: url('png/grass.png'); background-repeat: no-repeat; }
+
 .image-highlight { background-image: url('png/highlight.png'); background-repeat: no-repeat; }
 
 .image-hills { background-image: url('png/hills.png'); background-repeat: no-repeat; }
@@ -42,9 +44,15 @@
 
 .image-sheep_fence { background-image: url('png/sheep_fence.png'); background-repeat: no-repeat; }
 
+.image-sheep_seedy { background-image: url('png/sheep_seedy.png'); background-repeat: no-repeat; }
+
+.image-shell { background-image: url('png/shell.png'); background-repeat: no-repeat; }
+
 .image-signpost { background-image: url('png/signpost.png'); background-repeat: no-repeat; }
 
 .image-twirl { background-image: url('png/twirl.png'); background-repeat: no-repeat; }
 
 .image-twitter_button { background-image: url('png/twitter_button.png'); background-repeat: no-repeat; }
+
+.image-vote_box { background-image: url('png/vote_box.png'); background-repeat: no-repeat; }
 
