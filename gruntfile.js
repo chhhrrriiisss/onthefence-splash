@@ -4,6 +4,7 @@ module.exports = function(grunt) {
 
     // load tasks
     [
+        'grunt-processhtml',
         'grunt-contrib-clean',
         'grunt-lesslint',        
         'grunt-contrib-uglify',
@@ -17,13 +18,39 @@ module.exports = function(grunt) {
     grunt.initConfig({
 
         pkg: grunt.file.readJSON('package.json'),
-       
+        
+        processhtml: {
+            options: {
+                data: {
+                    title: '<%= pkg.meta.title %>',
+                    description: '<%= pkg.meta.description %>',
+                    name: '<%= pkg.meta.name %>',
+                    author: '<%= pkg.meta.name %>',
+                    keywords: '<%= pkg.meta.keywords %>',
+                    thumbnail: {
+                        src: '<%= pkg.meta.thumbnail %>',
+                        width: '300',
+                        height: '300'
+                    },
+                    analytics: '<%= pkg.meta.analytics %>',
+                    date: grunt.template.today('yyyy-mm-dd@hh:mm:ss TMZ'),
+                    url: '<%= pkg.homepage %>'
+                }
+            },
+            dev: {
+                files: {
+                    '<%= pkg.sourceFolder %>/index.html': ['<%= pkg.sourceFolder %>/index.md']
+                }
+            }
+        },
+
+
         clean: {
             build: ["<%= pkg.distFolder %>/"],
         },
 
         uglify: {
-            dev: {
+            dev: {  
                 files: {
                     '<%= pkg.sourceFolder %>/js/main.js': ['<%= pkg.sourceFolder %>/js/src/main.js'],
                     '<%= pkg.sourceFolder %>/js/plugins.js': ['<%= pkg.sourceFolder %>/js/src/plugins.js']
@@ -133,7 +160,7 @@ module.exports = function(grunt) {
             },
 
             html: {
-                files: ['<%= pkg.sourceFolder %>*.html'],
+                files: ['<%= pkg.sourceFolder %>/*.html', '<%= pkg.sourceFolder %>/*.md', 'package.json'],
                 tasks: ['default'],
                 options: {
                     debounceDelay: 1000
@@ -153,7 +180,7 @@ module.exports = function(grunt) {
 
     });
 
-    grunt.registerTask('default', ['less:dev', 'uglify:dev']);
+    grunt.registerTask('default', ['processhtml:dev', 'less:dev', 'uglify:dev']);
     grunt.registerTask('defaultCSS', ['less:dev']);
     grunt.registerTask('defaultJS', ['uglify:dev']);
     grunt.registerTask('defaultSVG', ['grunticon:dev']);

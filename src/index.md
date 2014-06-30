@@ -8,38 +8,47 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">        
         
-        <!-- Defaults -->
-        <title>On The Fence  |   Don't be a sheep this election</title>
-        <meta name="description" content="It's a nifty new web tool, designed to make your election vote count.">
-        <meta name="keywords" content="fence, on the fence, election, nz, onthefence">
-        <meta name="copyright" content="Copyright © 2014 Chris Nicholls">  
-        <meta name="author" content="Chris Nicholls"> 
-        <meta name="last-modified" content="2014-06-30@02:06:21 P53GMT+1200"> 
-        <meta name="viewport" content="initial-scale=1, user-scalable=no">
-        <!-- Facebook Opengraph -->
-        <meta property="og:title" content="On The Fence  |   Don't be a sheep this election"/>
-        <meta property="og:type" content="app"/>
-        <meta property="og:url" content="" />
-        <meta property="og:description" content="It's a nifty new web tool, designed to make your election vote count.">
-        <meta property="og:image" content="apple-touch-icon-precomposed.png" />
-        <meta property="og:image:width" content="300" />
-        <meta property="og:image:height" content="300" />
-        <!-- Google pagemaps -->
-        <!--
-        <PageMap>
-        <DataObject type="document">
-        <Attribute name="title">On The Fence  |   Don't be a sheep this election</Attribute>
-        <Attribute name="author">Chris Nicholls</Attribute>
-        <Attribute name="description">It's a nifty new web tool, designed to make your election vote count.</Attribute>
-        <Attribute name="last_update">2014-06-30@02:06:21 P53GMT+1200</Attribute>
-        </DataObject>
-        <DataObject type="thumbnail">
-        <Attribute name="src" value="apple-touch-icon-precomposed.png" />
-        <Attribute name="width" value="300" />
-        <Attribute name="height" value="300" />
-        </DataObject>
-        </PageMap>
-        -->
+        <!-- build:template -->           
+            
+            <!-- Defaults -->
+
+            <title><%= title %></title>
+
+            <meta name="description" content="<%= description %>">
+            <meta name="keywords" content="<%= keywords %>">
+            <meta name="copyright" content="Copyright © 2014 <%= name %>">  
+            <meta name="author" content="<%= name %>"> 
+            <meta name="last-modified" content="<%= date %>"> 
+            <meta name="viewport" content="initial-scale=1, user-scalable=no">
+
+            <!-- Facebook Opengraph -->
+            <meta property="og:title" content="<%= title %>"/>
+            <meta property="og:type" content="app"/>
+            <meta property="og:url" content="<% url %>" />
+            <meta property="og:description" content="<%= description %>">
+            <meta property="og:image" content="<%= thumbnail.src %>" />
+            <meta property="og:image:width" content="<%= thumbnail.width %>" />
+            <meta property="og:image:height" content="<%= thumbnail.height %>" />
+
+            <!-- Google pagemaps -->
+
+            <!--
+            <PageMap>
+                <DataObject type="document">
+                    <Attribute name="title"><%= title %></Attribute>
+                    <Attribute name="author"><%= name %></Attribute>
+                    <Attribute name="description"><%= description %></Attribute>
+                    <Attribute name="last_update"><%= date %></Attribute>
+                    </DataObject>
+                    <DataObject type="thumbnail">
+                    <Attribute name="src" value="<%= thumbnail.src %>" />
+                    <Attribute name="width" value="<%= thumbnail.width %>" />
+                    <Attribute name="height" value="<%= thumbnail.height %>" />
+                </DataObject>
+            </PageMap>
+            -->
+
+        <!-- /build -->
 
         <link rel="stylesheet" href="css/screen.css">    
 
@@ -396,14 +405,16 @@
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 
+        <!-- build:template -->
         <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-3051020-4');ga('send','pageview');
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','<%= analytics %>');ga('send','pageview');
         </script>
+        <!-- /build -->   
 
         <!-- build:remove:dist -->
         <script src="http://localhost:35729/livereload.js"></script>
