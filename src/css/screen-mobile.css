@@ -18,3 +18,9 @@
   -o-transform: translateX(-50%) scale(0.75) !important;
   transform: translateX(-50%) scale(0.75) !important;
 }
+.static.image-sheep_fence {
+  margin-left: -360px;
+}
+.static.image-signpost {
+  display: none;
+}

@@ -82,7 +82,7 @@
                     wider: { range: "1400-", containers: 1400, grid: { gutters: 50 } },
                     wide: { range: "1200-1399", containers: 1200, grid: { gutters: 50 } },           
                     narrow: { range: '981-1199', containers: 930 },
-                    narrower: { range: '601-980', containers: 720, lockViewport: false, grid: { collapse: true } },
+                    small: { range: '601-980', containers: 720, lockViewport: false, grid: { collapse: true } },
                     mobile: { range: "-600", containers: "fluid", lockViewport: false, grid: { collapse: true } }
                 }
             }
@@ -149,6 +149,10 @@
         <div class="static image-clouds"></div>        
         <div class="static image-hill_center"></div>       
         <div class="static image-sheep_fence"></div>   
+
+        <div id="bl1" class="static image-bluebird"></div>   
+        <div id="br1" class="static image-brownbird"></div>   
+
         <div class="static image-signpost">
             <div class="static image-enrol_sign"></div>
         </div>        
@@ -221,7 +225,7 @@
 
              <section id="banner" class="banner">      
 
-                <div class="arrow left"></div><div class="arrow right"></div>
+                <div class="arrow image-arrow left"></div><div class="arrow image-arrow right"></div>
 
                 <div class="container">              
 
