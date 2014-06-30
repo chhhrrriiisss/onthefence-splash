@@ -148,6 +148,7 @@
 
         <div class="static image-clouds"></div>        
         <div class="static image-hill_center"></div>       
+        <div class="static image-sheep_fence"></div>       
 
           <section id="tweets" class="tweets">   
 

@@ -286,14 +286,14 @@ body {
 
 	&.image-hill_center {
 		position:absolute;
-		top:1050px;
+		top:1100px;
 		left:50%;
 		margin-left:-600px;
 		background-position:0px 0px;
 		width:1200px;
 		height:1600px;
 		display:block;
-		z-index:201;
+		z-index:203;
 	}
 
 	&.image-clouds {
@@ -308,6 +308,20 @@ body {
 		z-index:198;
 		.cssPerformance();
 		.animation(loopBackground 80s linear infinite);
+	}
+
+	&.image-sheep_fence {
+		position:absolute;
+		top:850px;
+		left:50%;
+		margin-left:-250px;
+		background-repeat:n-repeat;
+
+		width:800px;
+		height:400px;
+		display:block;
+		z-index:202;
+
 	}
 }
 
@@ -455,6 +469,10 @@ div.sticky-wrapper {
 
 	.box-shadow(0px 3px 20px rgba(0,0,0,.25));
 
+	&.stuck {
+		position:fixed;
+	}
+
 	&:before, &:after {
 		position:absolute;
 		top:0px;
@@ -585,6 +603,7 @@ article.main-wrapper {
 			min-height:600px;
 			max-height:1000px;
 
+			z-index:205;
 			/* Debug */
 			/*			
 			div {
@@ -608,9 +627,7 @@ article.main-wrapper {
 			background-repeat:repeat-x;
 /*			background-color:#c5dfdc;*/
 			
-			.container {
-				z-index:205;			
-			}
+
 
 			.arrow {
 				z-index:206;
@@ -654,9 +671,6 @@ article.main-wrapper {
 
 			overflow:visible;
 
-			.container {
-				z-index:205;
-			}
 
 			.cow {
 				margin-top:-250px;
