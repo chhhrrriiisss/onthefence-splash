@@ -47,7 +47,6 @@
                 </DataObject>
             </PageMap>
             -->
-
         <!-- /build -->
 
         <link rel="stylesheet" href="css/screen.css">    
@@ -68,12 +67,12 @@
             }
         </script>        
 
-        <!-- Skel.js fallback -->
+        <!-- Fallbacks -->
         <noscript>
             <link rel="stylesheet" href="css/no-script-skel.css" />
             <link rel="stylesheet" href="css/screen.css" />
             <link rel="stylesheet" href="css/screen-wide.css" />
-            <link href="img/image.fallback.css" rel="stylesheet">
+            <link href="img/icons.fallback.css" rel="stylesheet">
         </noscript>        
 
         <!--[if lt IE 9]>
@@ -92,21 +91,32 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="header-wrapper" class="sticky-menu">
+        <div class="header-wrapper">
 
-            <div id="header">
-                <!-- Header -->       
+            <div class="container">         
 
-                <nav id="nav">
-                    <a href="#">About</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Old Version</a>    
-                </nav>  
-      
+                <div class="row flush">
+                    <!-- Header -->       
 
-                <div id="social">
-                    <a href="#">Twitter</a>
-                    <a href="#">Facebook</a>  
+                    <div class="6u">
+
+                        <nav id="nav">
+                            <a href="#">About</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Old Version</a>    
+                        </nav> 
+
+                    </div> 
+
+                    <div class="6u">
+          
+                        <div id="social">
+                            <a href="#">Twitter</a>
+                            <a href="#">Facebook</a>  
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
@@ -226,7 +236,7 @@
 
                             <div class="8u">
 
-                                <h2 class="welcome">DON'T BE A SHEEP THIS ELECTION</h2>
+                                <h2 class="welcome">POLITICS AIN'T JUST FOR GROWN UPS, <br /> IT'S FOR EVERYONE.</h2>
 
                             </div>
 
@@ -370,7 +380,8 @@
 
                         <div class="8u">
                         
-                            <div class="plaque">   
+                            <div class="plaque2">   
+                                <span class="top"></span><span class="bottom"></span>
 
                                 <h3 class="title">CAN'T WAIT? &nbsp;WE'VE GOT YOU COVERED</h3>
 

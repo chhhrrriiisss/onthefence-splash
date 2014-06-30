@@ -5,6 +5,7 @@ module.exports = function(grunt) {
     // load tasks
     [
         'grunt-processhtml',
+        'grunt-grunticon',
         'grunt-contrib-clean',
         'grunt-lesslint',        
         'grunt-contrib-uglify',
@@ -47,6 +48,7 @@ module.exports = function(grunt) {
 
         clean: {
             build: ["<%= pkg.distFolder %>/"],
+            svg: ["<%= pkg.sourceFolder %>/img/grunticon.loader.js", "<%= pkg.sourceFolder %>/img/preview.html"]
         },
 
         uglify: {
@@ -103,28 +105,19 @@ module.exports = function(grunt) {
             dev: {
                 files: [{
                     expand: true,
-                    cwd: '<%= pkg.sourceFolder %>/img/svg',
+                    cwd: '<%= pkg.sourceFolder %>/img/src',
                     src: ['*.svg', '*.png'],
                     dest: "<%= pkg.sourceFolder %>/img"
                 }],
                 options: {
-                    prefix: ".image-",
-                    pngcrush: false // < here
-                }
-            },
-
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= pkg.sourceFolder %>/img/svg/min',
-                    src: ['*.svg'],
-                    dest: "<%= pkg.sourceFolder %>/img"
-                }],
-                options: {
-                    prefix: ".image-",
-                    pngcrush: false // < here
+                    cssprefix: ".image-",
+                    datasvgcss:"images.data.svg.css",
+                    datapngcss:"images.data.png.css",
+                    urlpngcss:"images.fallback.css"                    
                 }
             }
+
+            
         },
 
         copy: {
@@ -150,6 +143,14 @@ module.exports = function(grunt) {
         },
 
         watch: {
+
+            svgs: {
+                files: ['<%= pkg.sourceFolder %>/img/svg/**'],
+                tasks: ['defaultSVG'],
+                options: {
+                    debounceDelay: 1000
+                },
+            },
 
             scripts: {
                 files: ['<%= pkg.sourceFolder %>/js/**'],
@@ -183,7 +184,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['processhtml:dev', 'less:dev', 'uglify:dev']);
     grunt.registerTask('defaultCSS', ['less:dev']);
     grunt.registerTask('defaultJS', ['uglify:dev']);
-    grunt.registerTask('defaultSVG', ['grunticon:dev']);
+    grunt.registerTask('defaultSVG', ['grunticon:dev', 'clean:svg']);
     grunt.registerTask('dist', ['clean', 'less:dist', 'uglify:dist', 'copy:dist']);
    
 };

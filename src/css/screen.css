@@ -112,6 +112,7 @@ body {
 /*  
 	Useful Modules
 */
+/* 	Navigation buttons */
 .arrow {
   position: relative;
   width: 90px;
@@ -168,6 +169,7 @@ body {
 .arrow.right:after {
   content: 'TST';
 }
+/* 	Expandable wooden plaque content area */
 .plaque {
   position: relative;
   top: 0px;
@@ -234,6 +236,115 @@ body {
   background: url('../img/box-bottom.png') no-repeat;
   z-index: -1;
 }
+/* V2 */
+.plaque2 {
+  position: relative;
+  padding: 40px 20px;
+  min-height: 700px;
+  z-index: 10;
+  display: block;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background-position: center -25px;
+  cursor: pointer;
+}
+.plaque2:after {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: #7e5537;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #7e5537 0%, #a87f55 2%, #51311e 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7e5537), color-stop(2%, #a87f55), color-stop(100%, #51311e));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #7e5537 0%, #a87f55 2%, #51311e 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #7e5537 0%, #a87f55 2%, #51311e 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #7e5537 0%, #a87f55 2%, #51311e 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #7e5537 0%, #a87f55 2%, #51311e 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7e5537', endColorstr='#51311e', GradientType=0);
+  /* IE6-9 */
+  z-index: 10;
+}
+.plaque2:before {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: url('../img/texture.png');
+  background-repeat: repeat;
+  border: 4px #3e271b inset;
+  border-bottom: 0px;
+  border-top: 0px;
+  z-index: 11;
+}
+.plaque2 .title,
+.plaque2 p {
+  position: relative;
+  z-index: 12;
+  -webkit-text-shadow: 0px -1px 0px #000000;
+  -moz-text-shadow: 0px -1px 0px #000000;
+  text-shadow: 0px -1px 0px #000000;
+  color: #f7f1f1;
+  text-align: center;
+  font-family: 'Otari', sans-serif;
+}
+.plaque2 .title {
+  font-family: 'Otari', sans-serif;
+  line-height: 1.25em;
+}
+.plaque2 p {
+  padding: 25px 10px;
+  padding-bottom: 0%;
+  font-family: 'Droid Serif', serif;
+  zoom: 1;
+  filter: alpha(opacity=95);
+  -webkit-opacity: 0.95;
+  -moz-opacity: 0.95;
+  opacity: 0.95;
+}
+.plaque2 span.top,
+.plaque2 span.bottom {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  left: 0px;
+  display: block;
+  content: '';
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  z-index: 13;
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+.plaque2 span.top {
+  top: 0px;
+  background: #000;
+}
+.plaque2 span.bottom {
+  bottom: 0px;
+  margin-top: -40px;
+  background: #000;
+}
+/* 	Containers for SVG images */
 .character {
   position: relative;
   display: block;
@@ -254,6 +365,7 @@ body {
   margin-left: -75px;
   background-size: 100% 100%;
 }
+/* 	Animated content titles */
 .animated-title {
   position: relative;
   font-family: 'Otari', sans-serif;
@@ -405,13 +517,6 @@ div.sticky-wrapper {
   -moz-box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.25);
 }
-.header-wrapper.stuck {
-  position: fixed !important;
-  -webkit-animation: slideDown 0.5s ease 1;
-  -moz-animation: slideDown 0.5s ease 1;
-  -o-animation: slideDown 0.5s ease 1;
-  animation: slideDown 0.5s ease 1;
-}
 .header-wrapper:before,
 .header-wrapper:after {
   position: absolute;
@@ -435,22 +540,14 @@ div.sticky-wrapper {
   opacity: 50;
   z-index: 200;
 }
-.header-wrapper #header {
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  min-width: 400px;
-}
-.header-wrapper #header #nav,
-.header-wrapper #header #social {
+.header-wrapper #nav,
+.header-wrapper #social {
   display: inline-block;
   position: relative;
   z-index: 900;
 }
-.header-wrapper #header #nav a,
-.header-wrapper #header #social a {
+.header-wrapper #nav a,
+.header-wrapper #social a {
   display: inline-block;
   padding: 20px 15px;
   height: 100%;
@@ -467,10 +564,10 @@ div.sticky-wrapper {
   -moz-text-shadow: 0px 0px 2px #000000;
   text-shadow: 0px 0px 2px #000000;
 }
-.header-wrapper #header #nav a:hover,
-.header-wrapper #header #social a:hover,
-.header-wrapper #header #nav a:active,
-.header-wrapper #header #social a:active {
+.header-wrapper #nav a:hover,
+.header-wrapper #social a:hover,
+.header-wrapper #nav a:active,
+.header-wrapper #social a:active {
   color: #f6dfb1;
   -webkit-transform: translateY(1px);
   -moz-transform: translateY(1px);
@@ -478,18 +575,18 @@ div.sticky-wrapper {
   -o-transform: translateY(1px);
   transform: translateY(1px);
 }
-.header-wrapper #header #nav {
+.header-wrapper #nav {
   min-width: 250px;
   margin-right: 2%;
   text-align: left;
   float: left;
 }
-.header-wrapper #header #social {
+.header-wrapper #social {
   min-width: 200px;
   float: right;
   text-align: right;
 }
-.header-wrapper #header #social a:last-child {
+.header-wrapper #social a:last-child {
   padding-right: 15px;
 }
 article.main-wrapper {
