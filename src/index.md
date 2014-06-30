@@ -147,7 +147,8 @@
         <article class="main-wrapper">
 
         <div class="static image-clouds"></div>        
-        <div class="static image-hill_center"></div>       
+        <div id="center1" class="static image-hill_center"></div>       
+        <div id="center2" class="static image-hill_center"></div>   
         <div class="static image-sheep_fence"></div>   
 
         <div id="bl1" class="static image-bluebird"></div>   
@@ -203,12 +204,29 @@
 
                             <div class="8u">  
 
-                                <div class="plaque">   
+                                <div class="plaque-wrapper">   
+                                
+                                    <span class="image-corner top left"></span>   
+                                    <span class="image-corner top right"></span>
+                                    <span class="image-bar image-twirl top">
+                                        <span class="image-twirl"></span>
+                                    </span>
 
-                                    <h3 class="title">ON THE FENCE IS A NIFTY NEW WEB TOOL, DESIGNED TO MAKE YOUR ELECTION VOTE COUNT!</h3>
+                                    <div class="content">
+                                    
+                                        <h3 class="title">ON THE FENCE IS A NIFTY NEW WEB TOOL, DESIGNED TO MAKE YOUR ELECTION VOTE COUNT!</h3>
 
-                                    <p>Developed as part of an Honours year thesis at Massey University College of Creative Arts, Wellington, researching into the topic of youth voter participation in New Zealand. Our task was to explore what role Visual Communication Design can play in motivating inexperienced voters to interact with politics and vote. We believe this can become a model for future election-based community projects.</p>                       
-                                </div>      
+                                        <p>Developed as part of an Honours year thesis at Massey University College of Creative Arts, Wellington, researching into the topic of youth voter participation in New Zealand. Our task was to explore what role Visual Communication Design can play in motivating inexperienced voters to interact with politics and vote. We believe this can become a model for future election-based community projects.</p>  
+
+                                    </div>
+
+                                    <span class="image-bar image-twirl bottom">
+                                        <span class="image-twirl"></span>
+                                    </span>
+                                    <span class="image-corner bottom left"></span>       
+                                    <span class="image-corner bottom right"></span>
+
+                                </div>   
 
                             </div>
 
@@ -346,13 +364,32 @@
 
                         <div class="8u">  
 
-                            <div class="plaque">   
 
-                                <h3 class="title">ON THE FENCE IS A NIFTY NEW WEB TOOL, DESIGNED TO MAKE YOUR ELECTION VOTE COUNT!</h3>
+                            <div class="plaque-wrapper">   
+                                
+                                <span class="image-corner top left"></span>   
+                                <span class="image-corner top right"></span>
+                                <span class="image-bar image-twirl top">
+                                    <span class="image-twirl"></span>
+                                </span>
 
-                                <p>Developed as part of an Honours year thesis at Massey University College of Creative Arts, Wellington, researching into the topic of youth voter participation in New Zealand. Our task was to explore what role Visual Communication Design can play in motivating inexperienced voters to interact with politics and vote. We believe this can become a model for future election-based community projects.</p>  
+                                <div class="content">
+                                
+                                    <h3 class="title">ON THE FENCE IS A NIFTY NEW WEB TOOL, DESIGNED TO MAKE YOUR ELECTION VOTE COUNT!</h3>
 
-                            </div>      
+                                    <p>The original concept was developed as part of an Honours year thesis at Massey University College of Creative Arts, Wellington, researching into the topic of youth voter participation in New Zealand. Our task was to explore what role Visual Communication Design can play in motivating inexperienced voters to interact with politics and vote. We believe this can become a model for future election-based community projects.</p>  
+
+                                </div>
+
+
+
+                                <span class="image-bar image-twirl bottom">
+                                    <span class="image-twirl"></span>
+                                </span>
+                                <span class="image-corner bottom left"></span>       
+                                <span class="image-corner bottom right"></span>
+
+                            </div>     
 
                         </div>
 
@@ -418,25 +455,26 @@
                             <div class="plaque-wrapper">   
 
                                 
-                                <span class="image-corner top left"></span>       
-                                                   
+                                <span class="image-corner top left"></span>   
                                 <span class="image-corner top right"></span>
-
-
-                                <span class="image-bar image-twirl top"><span class="image-twirl"></span></span>
+                                <span class="image-bar image-twirl top">
+                                    <span class="image-twirl"></span>
+                                </span>
 
                                 <div class="content">
                                 
-                                    <h3 class="title">CAN'T WAIT? &nbsp;WE'VE GOT YOU COVERED</h3>
+                                    <h3 class="title">CAN'T WAIT? &nbsp;WE'VE GOT YOU COVERED.</h3>
 
-                                    <p>In 2011 we released a desktop-only version of On The Fence that has (and continues to be) helpful for heaps of young voters. We're keeping it available for use while the new version is in development. Aenean eros vel enim auctor adipiscing, enim magna, aenean porta, tincidunt, auctor magna!</p>  
+                                    <p>In 2011 we released a desktop-only version of On The Fence that has (and continues to be) helpful for heaps of young voters. We're keeping it available for use while the new version is in development and because our sheep is seemingly always hungry. Be sure to check our blog for updates, flick us a message on twitter and facebook or email us at feedbaaack@onthefence.co.nz.</p>  
 
                                 </div>
 
-                                <span class="image-bar image-twirl bottom"><span class="image-twirl"></span></span>
+                                <span class="image-shell"></span>
 
+                                <span class="image-bar image-twirl bottom">
+                                    <span class="image-twirl"></span>
+                                </span>
                                 <span class="image-corner bottom left"></span>       
-                                                             
                                 <span class="image-corner bottom right"></span>
 
 
