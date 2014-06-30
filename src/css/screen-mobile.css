@@ -12,11 +12,11 @@
 
 */
 .animated-title {
-  -webkit-transform: translateX(-50%) scale(0.75) !important;
-  -moz-transform: translateX(-50%) scale(0.75) !important;
-  -ms-transform: translateX(-50%) scale(0.75) !important;
-  -o-transform: translateX(-50%) scale(0.75) !important;
-  transform: translateX(-50%) scale(0.75) !important;
+  -webkit-transform: translateX(-50%) scale(0.5) !important;
+  -moz-transform: translateX(-50%) scale(0.5) !important;
+  -ms-transform: translateX(-50%) scale(0.5) !important;
+  -o-transform: translateX(-50%) scale(0.5) !important;
+  transform: translateX(-50%) scale(0.5) !important;
 }
 .static.image-sheep_fence {
   margin-left: -360px;

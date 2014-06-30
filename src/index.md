@@ -418,9 +418,12 @@
                             <div class="plaque-wrapper">   
 
                                 
-                                <span class="image-corner top left"></span>                                
+                                <span class="image-corner top left"></span>       
+                                                   
                                 <span class="image-corner top right"></span>
 
+
+                                <span class="image-bar image-twirl top"><span class="image-twirl"></span></span>
 
                                 <div class="content">
                                 
@@ -430,7 +433,10 @@
 
                                 </div>
 
-                                <span class="image-corner bottom left"></span>                                
+                                <span class="image-bar image-twirl bottom"><span class="image-twirl"></span></span>
+
+                                <span class="image-corner bottom left"></span>       
+                                                             
                                 <span class="image-corner bottom right"></span>
 
 
