@@ -81,7 +81,7 @@ module.exports = function(grunt) {
                     '<%= pkg.sourceFolder %>/css/screen.css': '<%= pkg.sourceFolder %>/css/frag/screen.less',
                     '<%= pkg.sourceFolder %>/css/screen-mobile.css': '<%= pkg.sourceFolder %>/css/frag/screen-mobile.less',
                     '<%= pkg.sourceFolder %>/css/screen-narrow.css': '<%= pkg.sourceFolder %>/css/frag/screen-narrow.less',
-                    '<%= pkg.sourceFolder %>/css/screen-narrower.css': '<%= pkg.sourceFolder %>/css/frag/screen-narrower.less',
+                    '<%= pkg.sourceFolder %>/css/screen-small.css': '<%= pkg.sourceFolder %>/css/frag/screen-small.less',
                     '<%= pkg.sourceFolder %>/css/screen-wide.css': '<%= pkg.sourceFolder %>/css/frag/screen-wide.less',               
                     '<%= pkg.sourceFolder %>/css/screen-wider.css': '<%= pkg.sourceFolder %>/css/frag/screen-wider.less'
                 }

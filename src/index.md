@@ -178,7 +178,7 @@
                                         </span>
   
                                     </div>
-                                    <div class="title"><img src="img/titles/about_2.png" alt="" /></div>
+                                    <div class="title image-about_title"></div>
                                     <div class="flag flag-right image-flag flush" data-text="TEST">
                                         
                                         <span class="text-group">
@@ -229,7 +229,7 @@
 
                 <div class="container">              
 
-                      <div class="row">
+                      <div class="row flush">
 
                             <div class="12u">
 
@@ -335,7 +335,7 @@
 
                     <div class="row">
 
-                        <div class="4u not-mobile not-narrower">
+                        <div class="4u not-mobile not-small">
 
                             <div class="character cow image-cow"></div>
 
@@ -415,12 +415,24 @@
 
                         <div class="8u">
                         
-                            <div class="plaque2" style="display:none;">   
-                                <span class="top"></span><span class="bottom"></span>
+                            <div class="plaque-wrapper">   
 
-                                <h3 class="title">CAN'T WAIT? &nbsp;WE'VE GOT YOU COVERED</h3>
+                                
+                                <span class="image-corner top left"></span>                                
+                                <span class="image-corner top right"></span>
 
-                                <p>In 2011 we released a desktop-only version of On The Fence that has (and continues to be) helpful for heaps of young voters. We're keeping it available for use while the new version is in development. Aenean eros vel enim auctor adipiscing, enim magna, aenean porta, tincidunt, auctor magna!</p>  
+
+                                <div class="content">
+                                
+                                    <h3 class="title">CAN'T WAIT? &nbsp;WE'VE GOT YOU COVERED</h3>
+
+                                    <p>In 2011 we released a desktop-only version of On The Fence that has (and continues to be) helpful for heaps of young voters. We're keeping it available for use while the new version is in development. Aenean eros vel enim auctor adipiscing, enim magna, aenean porta, tincidunt, auctor magna!</p>  
+
+                                </div>
+
+                                <span class="image-corner bottom left"></span>                                
+                                <span class="image-corner bottom right"></span>
+
 
                             </div>      
 

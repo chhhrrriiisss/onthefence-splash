@@ -240,21 +240,86 @@ body {
   z-index: -1;
 }
 /* V2 */
-.plaque2 {
+.plaque-wrapper {
   position: relative;
-  padding: 40px 20px;
-  min-height: 700px;
+  min-height: 300px;
   z-index: 10;
   display: block;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  background-position: center -25px;
-  cursor: pointer;
+  /*	span.top {
+		position:relative;
+		display:inline-block;
+		width:100%;
+		height:40px;
+		background:#000;
+	}*/
 }
-.plaque2:after {
-  display: block;
+.plaque-wrapper .content {
+  background: #1e5799;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #1e5799 0%, #a2784c 0%, #52321e 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1e5799), color-stop(0%, #a2784c), color-stop(100%, #52321e));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #1e5799 0%, #a2784c 0%, #52321e 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #1e5799 0%, #a2784c 0%, #52321e 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #1e5799 0%, #a2784c 0%, #52321e 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #1e5799 0%, #a2784c 0%, #52321e 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799', endColorstr='#52321e', GradientType=0);
+  /* IE6-9 */
+  border: 7px #3e271b solid;
+  border-bottom: 0px;
+  border-top: 0px;
+  min-height: 200px;
+  position: relative;
+  top: 40px;
+}
+.plaque-wrapper .content .title,
+.plaque-wrapper .content p {
+  position: relative;
+  z-index: 12;
+  -webkit-text-shadow: 0px -1px 0px #000000;
+  -moz-text-shadow: 0px -1px 0px #000000;
+  text-shadow: 0px -1px 0px #000000;
+  color: #f7f1f1;
+  text-align: center;
+  font-family: 'Otari', sans-serif;
+}
+.plaque-wrapper .content .title {
+  font-family: 'Otari', sans-serif;
+  line-height: 1.25em;
+}
+.plaque-wrapper .content p {
+  padding: 25px 10px;
+  padding-bottom: 0%;
+  font-family: 'Droid Serif', Georgia, serif;
+  zoom: 1;
+  filter: alpha(opacity=95);
+  -webkit-opacity: 0.95;
+  -moz-opacity: 0.95;
+  opacity: 0.95;
+}
+.plaque-wrapper .content:before {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: url('../img/texture_inv.png');
+  background-repeat: repeat;
+  z-index: 11;
+}
+.plaque-wrapper:after {
+  display: none;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -279,49 +344,53 @@ body {
   /* IE6-9 */
   z-index: 10;
 }
-.plaque2:before {
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  content: '';
-  background: url('../img/texture.png');
-  background-repeat: repeat;
-  border: 4px #3e271b inset;
-  border-bottom: 0px;
-  border-top: 0px;
-  z-index: 11;
-}
-.plaque2 .title,
-.plaque2 p {
+.plaque-wrapper span.image-twirl {
   position: relative;
-  z-index: 12;
-  -webkit-text-shadow: 0px -1px 0px #000000;
-  -moz-text-shadow: 0px -1px 0px #000000;
-  text-shadow: 0px -1px 0px #000000;
-  color: #f7f1f1;
-  text-align: center;
-  font-family: 'Otari', sans-serif;
 }
-.plaque2 .title {
-  font-family: 'Otari', sans-serif;
-  line-height: 1.25em;
-}
-.plaque2 p {
-  padding: 25px 10px;
-  padding-bottom: 0%;
-  font-family: 'Droid Serif', Georgia, serif;
-  zoom: 1;
-  filter: alpha(opacity=95);
-  -webkit-opacity: 0.95;
-  -moz-opacity: 0.95;
-  opacity: 0.95;
-}
-.plaque2 span.top,
-.plaque2 span.bottom {
+.plaque-wrapper span.image-corner {
+  width: 40px;
+  height: 40px;
   position: absolute;
+}
+.plaque-wrapper span.image-corner.top {
+  top: 0px;
+}
+.plaque-wrapper span.image-corner.top.right {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.plaque-wrapper span.image-corner.bottom {
+  position: relative !important;
+  top: 40px;
+  display: inline-block;
+}
+.plaque-wrapper span.image-corner.bottom.left {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.plaque-wrapper span.image-corner.bottom.right {
+  float: right;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.plaque-wrapper span.image-corner.left {
+  left: 0px;
+}
+.plaque-wrapper span.image-corner.right {
+  right: 0px;
+}
+.plaque-wrapper div.top,
+.plaque-wrapper div.bottom {
+  position: relative;
   width: 100%;
   height: 40px;
   left: 0px;
@@ -338,13 +407,30 @@ body {
   -moz-opacity: 0.5;
   opacity: 0.5;
 }
-.plaque2 span.top {
+.plaque-wrapper div.top:before,
+.plaque-wrapper div.bottom:before,
+.plaque-wrapper div.top:after,
+.plaque-wrapper div.bottom:after {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
   top: 0px;
+  content: '';
+  background: #fff;
+}
+.plaque-wrapper div.top:before,
+.plaque-wrapper div.bottom:before {
+  left: 0px;
+}
+.plaque-wrapper div.top:after,
+.plaque-wrapper div.bottom:after {
+  right: 0px;
+}
+.plaque-wrapper div.top {
   background: #000;
 }
-.plaque2 span.bottom {
-  bottom: 0px;
-  margin-top: -40px;
+.plaque-wrapper div.bottom {
   background: #000;
 }
 /* 	Containers for SVG images */
