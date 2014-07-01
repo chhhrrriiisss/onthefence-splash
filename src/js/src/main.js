@@ -117,9 +117,10 @@ $(document).ready(function() {
 					$s.next();
 				}
 			},
-			threshold:100
+			threshold:100,
+			allowPageScroll: 'vertical'
 		});
-		
+
         return $s;
 
     }
