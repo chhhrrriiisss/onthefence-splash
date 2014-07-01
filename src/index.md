@@ -30,23 +30,7 @@
             <meta property="og:image:width" content="<%= thumbnail.width %>" />
             <meta property="og:image:height" content="<%= thumbnail.height %>" />
 
-            <!-- Google pagemaps -->
-
-            <!--
-            <PageMap>
-                <DataObject type="document">
-                    <Attribute name="title"><%= title %></Attribute>
-                    <Attribute name="author"><%= name %></Attribute>
-                    <Attribute name="description"><%= description %></Attribute>
-                    <Attribute name="last_update"><%= date %></Attribute>
-                    </DataObject>
-                    <DataObject type="thumbnail">
-                    <Attribute name="src" value="<%= thumbnail.src %>" />
-                    <Attribute name="width" value="<%= thumbnail.width %>" />
-                    <Attribute name="height" value="<%= thumbnail.height %>" />
-                </DataObject>
-            </PageMap>
-            -->
+           
         <!-- /build -->
 
         <!-- Icons -->
@@ -61,12 +45,8 @@
         <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-touch-icon-120x120.png" />
         <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-76x76.png" />
         <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-touch-icon-152x152.png" />
-        <!-- Windows 8 Tile Icons -->
-        <meta name="msapplication-square70x70logo" content="img/iconssmalltile.png" />
-        <meta name="msapplication-square150x150logo" content="img/iconsmediumtile.png" />
-        <meta name="msapplication-wide310x150logo" content="img/iconswidetile.png" />
-        <meta name="msapplication-square310x310logo" content="img/iconslargetile.png" />
 
+        <!-- Main Stylesheet -->
         <link rel="stylesheet" href="css/screen.css">    
 
         <!-- Load web fonts -->
@@ -93,7 +73,7 @@
             <link rel="stylesheet" href="css/no-script-skel.css" />
             <link rel="stylesheet" href="css/screen.css" />
             <link rel="stylesheet" href="css/screen-wide.css" />
-            <link href="img/icons.fallback.css" rel="stylesheet">
+            <link href="img/icons.fallback.css" rel="stylesheet" />
         </noscript>        
 
         <!--[if lt IE 9]>
@@ -152,7 +132,7 @@
         <div class="static image-sheep_fence"></div>   
 
         <div id="bl1" class="static image-bluebird"></div>   
-        <div id="br1" class="static image-brownbird"></div> 
+<!--         <div id="br1" class="static image-brownbird"></div>  -->
 
         <div id="gr1" class="static image-grass"></div> 
 
@@ -162,109 +142,23 @@
             <div class="static image-enrol_sign"></div>
         </div>        
 
-          <section id="tweets" class="tweets">   
+        <section id="banner" class="banner">      
 
+                <div class="arrow image-arrow left" id="slider-prev"></div><div class="arrow image-arrow right" id="slider-next"></div>
 
+                <div class="slide-wrapper">
 
-                <div class="container" style="display:none;">                
-                  
-                        <div class="row">
+                    <div class="container active-slide-left slide" id="slide1">              
 
-                            <div class="12u">
-
-                                <div class="animated-title">
-                                    
-                                    <div class="flag flag-left image-flag flush" data-text="TEST">
-                                        
-                                        <span class="text-group">
-
-                                            WHAT
-
-                                        </span>
-  
-                                    </div>
-                                    <div class="title image-about_title"></div>
-                                    <div class="flag flag-right image-flag flush" data-text="TEST">
-                                        
-                                        <span class="text-group">
-
-                                            IS IT?
-
-                                        </span>
-
-                                    </div>
-
-                                </div>    
-
-                            </div>            
-
-                        </div>
-
-                        <div class="row">
-
-                            <div class="2u">  
-                                &nbsp;
-                            </div>
-
-                            <div class="8u">  
-
-                                <div class="plaque-wrapper">   
-                                
-                                    <span class="image-corner top left"></span>   
-                                    <span class="image-corner top right"></span>
-                                    <span class="image-bar image-twirl top">
-                                        <span class="image-twirl"></span>
-                                    </span>
-
-                                    <div class="content">
-                                    
-                                        <h3 class="title">ON THE FENCE IS A NIFTY NEW WEB TOOL, DESIGNED TO MAKE YOUR ELECTION VOTE COUNT!</h3>
-
-                                        <p>Developed as part of an Honours year thesis at Massey University College of Creative Arts, Wellington, researching into the topic of youth voter participation in New Zealand. Our task was to explore what role Visual Communication Design can play in motivating inexperienced voters to interact with politics and vote. We believe this can become a model for future election-based community projects.</p>  
-
-                                        
-
-                                    </div>
-
-                                    <span class="image-bar image-twirl bottom">
-                                        <span class="image-twirl"></span>
-                                    </span>
-                                    <span class="image-corner bottom left"></span>       
-                                    <span class="image-corner bottom right"></span>
-
-                                </div>   
-
-                            </div>
-
-                            <div class="2u">  
-                                &nbsp;
-                            </div>
-
-                        </div>
-                            
-                
-                </div>
-
-            </section>
-
-             <section id="banner" class="banner">      
-
-                <div class="arrow image-arrow left"></div><div class="arrow image-arrow right"></div>
-
-                <div class="container">              
-
-                      <div class="row flush">
+                        <div class="row flush">
 
                             <div class="12u">
 
-                                <div class="animated-title">
-                                    
+                                <div class="animated-title">                                    
                                     <div class="flag flag-left image-flag flush">
                                         
                                         <span class="text-group">
-
                                             KIA ORA
-
                                         </span>
 
                                     </div>
@@ -272,19 +166,15 @@
                                     <div class="flag flag-right image-flag flush">
                                         
                                          <span class="text-group">
-
                                             WELCOME
-
                                         </span>
 
                                     </div>
-
                                 </div>    
 
                             </div>
 
                         </div>
-
 
                         <div class="row">
 
@@ -293,9 +183,7 @@
                             </div>
 
                             <div class="8u">
-
                                 <h2 class="welcome">POLITICS AIN'T JUST FOR GROWN UPS, IT'S FOR EVERYONE.</h2>
-
                             </div>
 
                             <div class="2u">
@@ -304,10 +192,84 @@
 
                         </div>
 
-
-
                     </div>    
-    
+
+                    <div class="container slide" id="slide2">                         
+
+                        <div class="row flush">
+
+                            <div class="12u">
+
+                                <div class="animated-title">                                    
+                                    <div class="flag flag-left image-flag flush">
+                                        
+                                        <span class="text-group">
+                                            BLAH
+                                        </span>
+
+                                    </div>
+                                    <div class="title image-about_title"></div>
+                                    <div class="flag flag-right image-flag flush">
+                                        
+                                         <span class="text-group">
+                                            BLAH
+                                        </span>
+
+                                    </div>
+                                </div>    
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="2u">
+                                &nbsp;
+                            </div>
+
+                            <div class="8u">
+                                <h2 class="welcome">AN ADDITIONAL TITLE.</h2>
+                            </div>
+
+                            <div class="2u">
+                                &nbsp;
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="container slide" id="slide3">   
+                        
+                        <div class="row flush">
+
+                            <div class="12u">
+
+                                <div class="animated-title">                                    
+                                    <div class="flag flag-left image-flag flush">
+                                        
+                                        <span class="text-group">
+                                            KIA ORA
+                                        </span>
+
+                                    </div>
+                                    <div class="title image-onthefence_title"></div>
+                                    <div class="flag flag-right image-flag flush">
+                                        
+                                         <span class="text-group">
+                                            WELCOME
+                                        </span>
+
+                                    </div>
+                                </div>    
+
+                            </div>
+
+                        </div>
+                       
+                    </div>
+
                 </div>
 
             </section>
@@ -320,10 +282,8 @@
 
 
             <section id="about" class="about">
-
-
                 
-                <div class="container">
+                <div class="container center">
 
                     <div class="row">                      
 
@@ -406,25 +366,15 @@
                         </div>
 
                     </div>
-                <!--     <div class="character cow image-cow"></div>
 
-                    <div class="character chicken image-chicken"></div>
- -->
-<!--                     <div class="plaque">   
-
-                        <h3 class="title">ON THE FENCE IS A NIFTY NEW WEB TOOL, DESIGNED TO MAKE YOUR ELECTION VOTE COUNT!</h3>
-
-                        <p>Developed as part of an Honours year thesis at Massey University College of Creative Arts, Wellington, researching into the topic of youth voter participation in New Zealand. Our task was to explore what role Visual Communication Design can play in motivating inexperienced voters to interact with politics and vote. We believe this can become a model for future election-based community projects.</p>                       
-                    </div>      --> 
-
-                    </div>  
+                </div>  
    
             </section>
 
 
             <section id="play" class="play">   
 
-                <div class="container">
+                <div class="container center">
 
                     <div class="row">
 
@@ -543,7 +493,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/src/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 

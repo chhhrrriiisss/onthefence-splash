@@ -6,6 +6,21 @@
   ~ chrisnicholls.co.nz
 
 */
+
+/* Custom mixin for delayed animation stacks */
+
+.iterateDelay(@n, @anim, @s, @i: 0) when (@i =< @n) {
+
+  @steps: 0.2;
+  @delay: @s + (@i*@steps);
+
+  .row:nth-child(@{i}) {
+    .animation(~'@{anim} @{delay}s ease 1');
+  }
+
+  .iterateDelay(@n, @anim, @s, (@i + 1));   // next iteration
+}
+
 .no-select() {
          -webkit-touch-callout: none;
         -webkit-user-select:none;

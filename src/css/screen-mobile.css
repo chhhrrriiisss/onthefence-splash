@@ -11,6 +11,7 @@
   ~ chrisnicholls.co.nz
 
 */
+/* Custom mixin for delayed animation stacks */
 .animated-title {
   -webkit-transform: translateX(-50%) scale(0.75) !important;
   -moz-transform: translateX(-50%) scale(0.75) !important;
