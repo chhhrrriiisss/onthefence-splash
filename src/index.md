@@ -10,25 +10,25 @@
         
         <!-- build:template -->           
             
-            <!-- Defaults -->
+        <!-- Defaults -->
 
-            <title><%= title %></title>
+        <title><%= title %></title>
 
-            <meta name="description" content="<%= description %>">
-            <meta name="keywords" content="<%= keywords %>">
-            <meta name="copyright" content="Copyright © 2014 <%= name %>">  
-            <meta name="author" content="<%= name %>"> 
-            <meta name="last-modified" content="<%= date %>"> 
-            <meta name="viewport" content="initial-scale=1, user-scalable=no">
+        <meta name="description" content="<%= description %>">
+        <meta name="keywords" content="<%= keywords %>">
+        <meta name="copyright" content="Copyright © 2014 <%= name %>">  
+        <meta name="author" content="<%= name %>"> 
+        <meta name="last-modified" content="<%= date %>"> 
+        <meta name="viewport" content="initial-scale=1, user-scalable=no">
 
-            <!-- Facebook Opengraph -->
-            <meta property="og:title" content="<%= title %>"/>
-            <meta property="og:type" content="app"/>
-            <meta property="og:url" content="<% url %>" />
-            <meta property="og:description" content="<%= description %>">
-            <meta property="og:image" content="<%= thumbnail.src %>" />
-            <meta property="og:image:width" content="<%= thumbnail.width %>" />
-            <meta property="og:image:height" content="<%= thumbnail.height %>" />
+        <!-- Facebook Opengraph -->
+        <meta property="og:title" content="<%= title %>"/>
+        <meta property="og:type" content="app"/>
+        <meta property="og:url" content="<% url %>" />
+        <meta property="og:description" content="<%= description %>">
+        <meta property="og:image" content="<%= thumbnail.src %>" />
+        <meta property="og:image:width" content="<%= thumbnail.width %>" />
+        <meta property="og:image:height" content="<%= thumbnail.height %>" />
 
            
         <!-- /build -->
@@ -53,19 +53,19 @@
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 
         <script src="js/vendor/skel.min.js">
-            {
-                prefix: "css/screen",
-                resetCSS: true,
-                boxModel: "border",
-                grid: { gutters: 30 },
-                breakpoints: {
-                    wider: { range: "1400-", containers: 1400, grid: { gutters: 50 } },
-                    wide: { range: "1200-1399", containers: 1200, grid: { gutters: 50 } },           
-                    narrow: { range: '981-1199', containers: 930 },
-                    small: { range: '601-980', containers: 720, lockViewport: false, grid: { collapse: true } },
-                    mobile: { range: "-600", containers: "fluid", lockViewport: false, grid: { collapse: true } }
-                }
+        {
+            prefix: "css/screen",
+            resetCSS: true,
+            boxModel: "border",
+            grid: { gutters: 30 },
+            breakpoints: {
+                wider: { range: "1400-", containers: 1400, grid: { gutters: 50 } },
+                wide: { range: "1200-1399", containers: 1200, grid: { gutters: 50 } },           
+                narrow: { range: '981-1199', containers: 930 },
+                small: { range: '601-980', containers: 720, lockViewport: false, grid: { collapse: true } },
+                mobile: { range: "-600", containers: "fluid", lockViewport: false, grid: { collapse: true } }
             }
+        }
         </script>        
 
         <!-- Fallbacks -->
@@ -85,8 +85,8 @@
     <body class="loading">
 
         <!-- Font force preload fix -->
-        <span style="font-family:'Otari'; color:transparent;">Otari</span>
-        <span style="font-family:'Droid Serif'; color:transparent;">Droid Serif</span>
+        <span class="preload" style="font-family:'Otari'; color:transparent;">Otari</span>
+        <span class="preload" style="font-family:'Droid Serif'; color:transparent;">Droid Serif</span>
 
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -129,18 +129,18 @@
         <div class="static image-clouds"></div>        
         <div id="center1" class="static image-hill_center"></div>       
         <div id="center2" class="static image-hill_center"></div>   
-        <div class="static image-sheep_fence"></div>   
+       
 
         <div id="bl1" class="static image-bluebird"></div>   
 <!--         <div id="br1" class="static image-brownbird"></div>  -->
 
         <div id="gr1" class="static image-grass"></div> 
 
-        <div class="static image-sheep_seedy"></div>  
+  
 
-        <div class="static image-signpost">
+<!--         <div class="static image-signpost">
             <div class="static image-enrol_sign"></div>
-        </div>        
+        </div>       -->  
 
         <section id="banner" class="banner">      
 
@@ -277,6 +277,7 @@
 
             <section id="hill" class="hill image-hills">      
 
+                 <div class="static image-sheep_fence"></div>   
 
             </section>
 
@@ -371,6 +372,12 @@
    
             </section>
 
+            <section id="spacer" class="spacer">   
+
+                <div class="static image-sheep_seedy"></div>  
+
+            </section>
+
 
             <section id="play" class="play">   
 
@@ -405,15 +412,6 @@
                                 
                             </div>    
 
-                        </div>
-           
-                    </div>
-
-                    <div class="row">
-
-
-                        <div class="8u">
-                        
                             <div class="plaque-wrapper">   
 
                                 
@@ -489,8 +487,8 @@
 
         </div>       
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
         
         <!-- build:remove:dist -->
         <script src="js/src/plugins.js"></script>

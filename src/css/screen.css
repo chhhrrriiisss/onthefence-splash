@@ -512,7 +512,7 @@ body {
   z-index: 203;
 }
 .static.image-hill_center#center1 {
-  top: 1100px;
+  top: 1150px;
   margin-left: -600px;
 }
 .static.image-hill_center#center2 {
@@ -553,14 +553,9 @@ body {
   animation: cloudLoop 80s linear infinite;
 }
 .static.image-sheep_fence {
-  top: 850px;
-  left: 50%;
-  background-repeat: no-repeat;
-  margin-left: -50px;
   width: 800px;
   height: 400px;
   display: block;
-  z-index: 202;
 }
 .static.image-signpost {
   top: 730px;
@@ -754,6 +749,9 @@ body.loading:after {
   height: 100%;
   content: '';
 }
+body span.preload {
+  position: absolute;
+}
 div.sticky-wrapper {
   position: absolute;
   top: 0px;
@@ -903,7 +901,7 @@ article.main-wrapper {
   z-index: 100;
   padding: 0;
   margin: 0;
-  padding-bottom: 300px;
+  padding-bottom: 150px;
   overflow: hidden;
   z-index: 199;
 }
@@ -945,6 +943,8 @@ article.main-wrapper section.tweets {
   min-height: 200px;
 }
 article.main-wrapper section.banner {
+  margin-top: 0px;
+  top: 55px;
   height: 600px;
 }
 article.main-wrapper section.banner .arrow {
@@ -966,18 +966,25 @@ article.main-wrapper section.banner .welcome {
   margin: 0 auto;
 }
 article.main-wrapper section.hill {
-  top: -200px;
-  height: 800px;
+  top: 0px;
+  height: 600px;
   background-position: center center;
   background-repeat: repeat-x;
   /*background-color:#c5dfdc;*/
   z-index: 200;
 }
+article.main-wrapper section.hill .image-sheep_fence {
+  position: relative;
+  top: 200px;
+  left: 50%;
+  background-repeat: no-repeat;
+  margin-left: -200px;
+  z-index: 202;
+}
 article.main-wrapper section.about {
-  top: -500px;
+  top: 0px;
   height: 800px;
-  /*background:#90a73e;*/
-  overflow: visible;
+  background: #90a73e;
 }
 article.main-wrapper section.about .cow {
   margin-top: -250px;
@@ -992,9 +999,13 @@ article.main-wrapper section.about .chicken .image-vote_box {
   margin-top: 170px;
   margin-left: -20px;
 }
+article.main-wrapper section.spacer {
+  height: 400px;
+}
 article.main-wrapper section.play {
   /*background:#90a73e;*/
-  height: 600px;
+  top: 0px;
+  height: 700px;
 }
 .footer-wrapper {
   position: relative;
