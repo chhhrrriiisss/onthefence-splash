@@ -14,7 +14,7 @@
         <meta name="keywords" content="fence, on the fence, election, nz, onthefence">
         <meta name="copyright" content="Copyright © 2014 Chris Nicholls">  
         <meta name="author" content="Chris Nicholls"> 
-        <meta name="last-modified" content="2014-07-02@03:07:34 P53GMT+1200"> 
+        <meta name="last-modified" content="2014-07-08@01:07:03 A9GMT+1200"> 
         <meta name="viewport" content="initial-scale=1, user-scalable=no">
         <!-- Facebook Opengraph -->
         <meta property="og:title" content="On The Fence  |   Don't be a sheep this election"/>
@@ -44,8 +44,8 @@
         <!-- Load web fonts -->
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 
-        <script src="js/vendor/skel.min.js">
-        {
+        <script>
+        window._skel_config = {
             prefix: "css/screen",
             resetCSS: true,
             boxModel: "border",
@@ -57,6 +57,11 @@
                 small: { range: '601-980', containers: 720, lockViewport: false, grid: { collapse: true } },
                 mobile: { range: "-600", containers: "fluid", lockViewport: false, grid: { collapse: true } }
             }
+        };
+
+        window.load = function() {
+
+            skel.init();
         }
         </script>        
 
@@ -76,6 +81,8 @@
     </head>
     <body class="loading">
 
+        
+
         <!-- Font force preload fix -->
         <span class="preload" style="font-family:'Otari'; color:transparent;">Otari</span>
         <span class="preload" style="font-family:'Droid Serif'; color:transparent;">Droid Serif</span>
@@ -84,7 +91,9 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="header-wrapper">
+        <div id="nav-header" class="header-wrapper">
+
+            
 
             <div class="container">         
 
@@ -94,9 +103,11 @@
                     <div class="6u">
 
                         <nav id="nav">
-                            <a href="#">About</a>
-                            <a href="#">Blog</a>
-                            <a href="#">Old Version</a>    
+                            <a href="#" id="nav-toggle" class="toggle">Menu</a>
+                              
+                            <a href="#about">About</a> 
+                            <a href="#play">2011 Version</a>          
+                            <a href="http://designdemocracy.ac.nz/onthefence" target="_new">Dev Blog</a>                     
                         </nav> 
 
                     </div> 
@@ -118,21 +129,13 @@
 
         <article class="main-wrapper">
 
+        <a name="top" class="anchor"></a>
+
         <div class="static image-clouds"></div>        
         <div id="center1" class="static image-hill_center"></div>       
         <div id="center2" class="static image-hill_center"></div>   
        
-
-        <div id="bl1" class="static image-bluebird"></div>   
-<!--         <div id="br1" class="static image-brownbird"></div>  -->
-
-        <div id="gr1" class="static image-grass"></div> 
-
-  
-
-<!--         <div class="static image-signpost">
-            <div class="static image-enrol_sign"></div>
-        </div>       -->  
+        <div id="gr1" class="static image-grass"></div>    
 
         <section id="banner" class="banner">      
 
@@ -140,129 +143,137 @@
 
                 <div class="slide-wrapper">
 
-                    <div class="container active-slide-left slide" id="slide1">              
+                        <div class="container active-slide-left slide" id="slide1">     
 
-                        <div class="row flush">
+                            <div class="row">
 
-                            <div class="12u">
+                                <div class="-3u 6u">
 
-                                <div class="animated-title">                                    
-                                    <div class="flag flag-left image-flag flush">
-                                        
-                                        <span class="text-group">
-                                            KIA ORA
-                                        </span>
+                                                      
+                                <div class="flag_banner image-flag_banner">                                       
+                                    <h4>COMING SOON</h4>
+                                </div>
 
-                                    </div>
-                                    <div class="title image-hi_title"></div>
-                                    <div class="flag flag-right image-flag flush">
-                                        
-                                         <span class="text-group">
-                                            WELCOME
-                                        </span>
+                                <div class="title image-onthefence_logo"></div>                              
+                                                                              
 
-                                    </div>
-                                </div>    
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="-2u 8u">
+                                    <h2 class="welcome" style="max-width:600px">A NIFTY NEW WEB TOOL, DESIGNED TO MAKE YOUR ELECTION VOTE COUNT.</h2>
+                                </div>
+
+                            </div>
+                            
+                        </div>    
+
+                        <div class="container slide" id="slide2">                         
+
+                            <div class="row flush">
+
+                                <div class="12u">
+
+                                    <div class="animated-title">                                    
+                                        <div class="flag flag-left image-flag flush">
+                                            
+                                            <span class="text-group">
+                                                KIA ORA
+                                            </span>
+
+                                        </div>
+                                        <div class="title image-hi_title"></div>
+                                        <div class="flag flag-right image-flag flush">
+                                            
+                                             <span class="text-group">
+                                                WELCOME
+                                            </span>
+
+                                        </div>
+                                    </div>    
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="-2u 8u">
+                                    <h2 class="welcome" style="max-width:550px">POLITICS AIN'T JUST FOR GROWN UPS, IT'S FOR EVERYONE.</h2>
+                                </div>
 
                             </div>
 
                         </div>
 
-                        <div class="row">
+                        <div class="container slide" id="slide3">   
+                            
+                            <div class="row">
 
-                            <div class="2u">
-                                &nbsp;
+                                <div class="-2u 8u">
+
+                                    <img src="img/designdemocracy_logo.png" alt="Design &amp; Democracy" style="max-width:500px; margin: 0 auto;"/>
+                                </div>
+
                             </div>
 
-                            <div class="8u">
-                                <h2 class="welcome">POLITICS AIN'T JUST FOR GROWN UPS, IT'S FOR EVERYONE.</h2>
-                            </div>
+                            <div class="row flush">
 
-                            <div class="2u">
-                                &nbsp;
-                            </div>
+                                <div class="-3u 6u">
+                                    
+                                    <h3 style="max-width:650px">ENHANCING PARTICIPATION AND CONVERSATION ON SOCIAL ISSUES THROUGH DESIGN.</h3>
 
+                                    <p style="max-width:650px;">The Design &amp; Democracy Project is a strategic research unit established within Massey University’s College of Creative Arts to enhance the role that design and design thinking has to play in dealing with social issues. The Project’s focus is on further developing and launching two previously successful online voter facilitation web tools, On the Fence and Ask Away for the 2014 New Zealand General Election.</p>
+
+                                </div>       
+
+                            </div>                
+               
                         </div>
 
-                    </div>    
+                        <div class="container slide" id="slide4">                           
 
-                    <div class="container slide" id="slide2">                         
+                             <div class="row flush">
 
-                        <div class="row flush">
+                                <div class="12u">
+                                   
+                                    <div class="plaque-wrapper">   
 
-                            <div class="12u">
-
-                                <div class="animated-title">                                    
-                                    <div class="flag flag-left image-flag flush">
-                                        
-                                        <span class="text-group">
-                                            BLAH
+                                        <span class="image-corner top left"></span>   
+                                        <span class="image-corner top right"></span>
+                                        <span class="image-bar image-twirl top">
+                                        <span class="image-twirl"></span>
                                         </span>
 
-                                    </div>
-                                    <div class="title image-about_title"></div>
-                                    <div class="flag flag-right image-flag flush">
-                                        
-                                         <span class="text-group">
-                                            BLAH
+                                        <div class="content flush">
+
+                                        <img src="img/designdemocracy_logo.png" alt="Design &amp; Democracy" style="max-width:500px; margin: 0 auto;"/>
+
+                                        <h3 class="title" style="max-width:600px; margin:0 auto;">A STRATEGIC RESEARCH UNIT WITHIN MASSEY UNIVERSITY'S COLLEGE OF CREATIVE ARTS</h3>
+
+                                        <p>The Design &amp; Democracy Project aims to enhance the role that design and design thinking has to play in dealing with social issues. The Project’s focus is on further developing and launching two previously successful online voter facilitation web tools, On The Fence and Ask Away for the 2014 New Zealand General Election. See <a class="link" href="http://designdemocracy.ac.nz" target="_new">designdemocracy.ac.nz.</a></p>       
+
+                                        </div>
+
+                                        <span class="image-bar image-twirl bottom">
+                                        <span class="image-twirl"></span>
                                         </span>
+                                        <span class="image-corner bottom left"></span>       
+                                        <span class="image-corner bottom right"></span>
 
-                                    </div>
-                                </div>    
+                                    </div>                                
+                                    
 
-                            </div>
+                                </div>
 
-                        </div>
+                            </div>  
 
-                        <div class="row">
+                        </div>  
 
-                            <div class="2u">
-                                &nbsp;
-                            </div>
-
-                            <div class="8u">
-                                <h2 class="welcome">AN ADDITIONAL TITLE.</h2>
-                            </div>
-
-                            <div class="2u">
-                                &nbsp;
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="container slide" id="slide3">   
-                        
-                        <div class="row flush">
-
-                            <div class="12u">
-
-                                <div class="animated-title">                                    
-                                    <div class="flag flag-left image-flag flush">
-                                        
-                                        <span class="text-group">
-                                            KIA ORA
-                                        </span>
-
-                                    </div>
-                                    <div class="title image-onthefence_title"></div>
-                                    <div class="flag flag-right image-flag flush">
-                                        
-                                         <span class="text-group">
-                                            WELCOME
-                                        </span>
-
-                                    </div>
-                                </div>    
-
-                            </div>
-
-                        </div>
-                       
-                    </div>
-
-                </div>
+                    </div>            
 
             </section>
 
@@ -275,7 +286,9 @@
 
 
             <section id="about" class="about">
-                
+
+                <a name="play" class="anchor"></a>
+
                 <div class="container center">
 
                     <div class="row">                      
@@ -327,7 +340,6 @@
 
                         <div class="8u">  
 
-
                             <div class="plaque-wrapper">   
                                 
                                 <span class="image-corner top left"></span>   
@@ -340,7 +352,13 @@
                                 
                                     <h3 class="title">ON THE FENCE IS A NIFTY NEW WEB TOOL, DESIGNED TO MAKE YOUR ELECTION VOTE COUNT!</h3>
 
-                                    <p>The original concept was developed as part of an Honours year thesis at Massey University College of Creative Arts, Wellington, researching into the topic of youth voter participation in New Zealand. Our task was to explore what role Visual Communication Design can play in motivating inexperienced voters to interact with politics and vote. We believe this can become a model for future election-based community projects.</p>  
+                                    <p>Originally developed as part of a student project at Massey University’s College of Creative Arts, On the Fence is a non-partisan online tool that educates and guides inexperienced voters to find a best match from New Zealand’s political parties.</p>
+
+                                    <P>Our interactive tool matches the your values with the values of different political parties, as assessed by a panel of experts. Our hi-tech boffins then calculate to narrow down the options to present the most compatible parties to your values. We don’t tell a user how to vote or specifically who to vote for, but we put trainer wheels on the future for many young people who believe that politics has no shaping influence in their lives.</p>
+
+                                    <p> We'll be back with a better, faster, stronger On the Fence web tool in early August, but for more information on what we're up to <a class="link" href="#" target="_new">follow us on twitter,</a> <a class="link" href="#" target="_new">check our facebook page</a>or for the latest developments and updates follow our blog.</p>    
+
+                                    <p><div class="button large yellow"><a href="http://designdemocracy.ac.nz/onthefence" target="_new">VIEW BLOG</a></div></p>    
 
                                     <div class="image-shell left"></div><div class="image-shell right"></div><div class="image-decoration center"></div>
 
@@ -370,8 +388,9 @@
 
             </section>
 
-
             <section id="play" class="play">   
+
+                <a name="play" class="anchor"></a>
 
                 <div class="container center">
 
@@ -417,7 +436,15 @@
                                 
                                     <h3 class="title">CAN'T WAIT? &nbsp;WE'VE GOT YOU COVERED.</h3>
 
-                                    <p>In 2011 we released a desktop-only version of On The Fence that has (and continues to be) helpful for heaps of young voters. We're keeping it available for use while the new version is in development and because our sheep is seemingly always hungry. Be sure to check our blog for updates, flick us a message on twitter and facebook or email us at feedbaaack@onthefence.co.nz.</p>  
+                                    <p>In 2011 we released a desktop-only version of On The Fence that has (and continues to be) helpful for heaps of young voters. We're keeping it available for use while the new version is in development and because our sheep is seemingly always hungry.</p>
+
+                                    <p><div class="button large green"><a id="launch-button" href="app/loader.html">LAUNCH OLD VERSION</a></div></p>
+
+                    <!--                  <p>Be sure to check our development blog for updates, flick us a message on twitter and facebook, or alternatively email us at <a class="link" href="#" target="_new">&#102;&#101;&#101;&#100;&#098;&#097;&#097;&#097;&#099;&#107;&#064;&#111;&#110;&#116;&#104;&#101;&#102;&#101;&#110;&#099;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a></p> -->
+
+                                   
+
+                                    
 
                                 </div>
 
@@ -436,17 +463,27 @@
 
                         <div class="4u not-mobile not-small">
 
+                        <div class="static image-sheep_debris"></div>                        
                             
-                                                    
                         </div>
                         
 
                     </div>
 
-
                 </div>
             
             </section>
+
+
+            <section id="spacer2" class="spacer not-mobile not-narrow">   
+
+            
+
+            </section>
+
+
+    
+
 
         </article>
 
@@ -459,17 +496,17 @@
 
                     <div class="4u">
                        
-                        <a href="#">Authorised by someone important. Kieran Stowers, Museum Building, Buckle St. Wellington, New Zealand.</a>    
+                        <a class="null" href="#" style="max-width:340px;">Authorised by Kieran Stowers, Design &amp; Democracy Project, Te Ara Hihiko, Wellington.</a>    
 
-                    </div>    
+                    </div>
+
                     <div class="4u">
-                       
                         &nbsp;
-
-                    </div>   
+                    </div>
+                    
                     <div class="4u">
                        
-                        <a href="#">feeedbaaack@onthefence.co.nz</a>    
+                        <a class="link" href="#">&#102;&#101;&#101;&#100;&#098;&#097;&#099;&#107;&#064;<span class="obfuscate">null</span>&#111;&#110;&#116;&#104;&#101;&#102;&#101;&#110;&#099;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a>
 
                     </div>   
                  
@@ -479,8 +516,8 @@
 
         </div>       
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
         
         <!-- build:remove:dist -->
         <script src="js/src/plugins.js"></script>

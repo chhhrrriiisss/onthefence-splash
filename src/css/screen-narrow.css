@@ -25,6 +25,9 @@
 .plaque-wrapper .content .image-decoration {
   width: 175px;
 }
+article.main-wrapper section.play .image-sheep_debris {
+  margin-left: -350px;
+}
 .static.image-sheep_fence {
   margin-left: -200px;
 }

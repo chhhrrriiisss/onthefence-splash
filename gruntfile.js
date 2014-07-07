@@ -43,13 +43,20 @@ module.exports = function(grunt) {
                 files: {
                     '<%= pkg.sourceFolder %>/index.html': ['<%= pkg.sourceFolder %>/index.md']
                 }
+            },
+            dist: {
+                files: {
+                    '<%= pkg.distFolder %>/index.html': ['<%= pkg.sourceFolder %>/index.md']
+                }
             }
         },
 
 
         clean: {
-            build: ["<%= pkg.distFolder %>/"],
-            svg: ["<%= pkg.sourceFolder %>/img/grunticon.loader.js", "<%= pkg.sourceFolder %>/img/preview.html"]
+
+            svgdev: ["<%= pkg.sourceFolder %>/img/grunticon.loader.js", "<%= pkg.sourceFolder %>/img/preview.html"],
+            svgdist: ["<%= pkg.distFolder %>/img/grunticon.loader.js", "<%= pkg.distFolder %>/img/preview.html"],
+            dist: ["<%= pkg.distFolder %>"]
         },
 
         uglify: {
@@ -62,15 +69,17 @@ module.exports = function(grunt) {
 
             dist: {
                 files: {
-                    '<%= pkg.distFolder %>/js/main.js': ['<%= pkg.sourceFolder %>/js/src/main.js'],
-                    '<%= pkg.distFolder %>/js/plugins.js': ['<%= pkg.sourceFolder %>/js/src/plugins.js']
+                    '<%= pkg.distFolder %>/js/script.min.js': ['<%= pkg.sourceFolder %>/js/script.js']
                 }
             }
         },
 
         concat: {
-
-
+      
+            dist: {
+                    src: ['<%= pkg.sourceFolder %>/js/src/main.js', '<%= pkg.sourceFolder %>/js/src/plugins.js'],
+                    dest: '<%= pkg.sourceFolder %>/js/script.js'
+            },
         },
 
       
@@ -93,22 +102,61 @@ module.exports = function(grunt) {
                     compress: true
                 },
                 files: {
-                    '<%= pkg.distFolder %>/css/screen.css': '<%= pkg.sourceFolder %>/css/frag/screen.less',
+                   '<%= pkg.distFolder %>/css/screen.css': '<%= pkg.sourceFolder %>/css/frag/screen.less',
                     '<%= pkg.distFolder %>/css/screen-mobile.css': '<%= pkg.sourceFolder %>/css/frag/screen-mobile.less',
                     '<%= pkg.distFolder %>/css/screen-narrow.css': '<%= pkg.sourceFolder %>/css/frag/screen-narrow.less',
-                    '<%= pkg.distFolder %>/css/screen-wide.css': '<%= pkg.sourceFolder %>/css/frag/screen-wide.less'
+                    '<%= pkg.distFolder %>/css/screen-small.css': '<%= pkg.sourceFolder %>/css/frag/screen-small.less',
+                    '<%= pkg.distFolder %>/css/screen-wide.css': '<%= pkg.sourceFolder %>/css/frag/screen-wide.less',               
+                    '<%= pkg.distFolder %>/css/screen-wider.css': '<%= pkg.sourceFolder %>/css/frag/screen-wider.less'
                 }
             }
     
         },
 
         svgmin: {
-            dev: {                     // Target
-                files: [{               // Dictionary of files                  
-                    cwd: '<%= pkg.sourceFolder %>/img/svgsrc',
+
+            dev: {       
+                options: {
+                     plugins: [
+                        { cleanupAttrs: true },
+                        { cleanupEnableBackground: true },
+                        { cleanupIDs: true },
+                        { cleanupNumericValues: true },
+                        { collapseGroups: true },
+                        { convertColors: true },
+                        { convertPathData: true },
+                        { convertShapeToPath: true },
+                        { convertStyleToAttrs: true },
+                        { convertTransform: true },
+                        { mergePaths: true },
+                        { moveElemsAttrsToGroup: true },
+                        { moveGroupAttrsToElems: true },
+                        { removeComments: true },
+                        { removeDoctype: true },
+                        { removeEditorsNSData: true },
+                        { removeEmptyAttrs: true },
+                        { removeEmptyContainers: true },
+                        { removeEmptyText: true },
+                        { removeHiddenElems: true },
+                        { removeMetadata: true },
+                        { removeNonInheritableGroupAttrs: true },
+                        { removeRasterImages: false }, //Keep raster images with the svg
+                        { removeTitle: true },
+                        { removeUnknownsAndDefaults: true },
+                        { removeUnusedNS: true },
+                        { removeUselessStrokeAndFill: false }, //Enabling this may case small details to be removed
+                        { removeViewBox: false }, //I keep the view box because that's where illustrator hides the SVG dimensions
+                        { removeXMLProcInst: false }, //Enabling this breaks grunticon because it removes the XML header
+                        { sortAttrs: true },
+                        { transformsWithOnePath: false } //Enabling this breaks Illustrator SVGs with complex text?
+                    ]
+                },                              // Target
+                files: [{               // Dictionary of files
+                    expand: true,       // Enable dynamic expansion.
+                    cwd: '<%= pkg.sourceFolder %>/img/svgsrc',     // Src matches are relative to this path.
                     src: ['**/*.svg'],  // Actual pattern(s) to match.
-                    dest: '<%= pkg.sourceFolder %>/img/svgmin',       // Destination path prefix.
-                    ext: '.svg'     // Dest filepaths will have this extension.
+                    dest: '<%= pkg.sourceFolder %>/img/svgmin',    // Destination path prefix.
+                    ext: '.svg'
                     // ie: optimise img/src/branding/logo.svg and store it in img/branding/logo.min.svg
                 }]
             }
@@ -120,8 +168,23 @@ module.exports = function(grunt) {
                 files: [{  
                     expand: true,         
                     cwd: '<%= pkg.sourceFolder %>/img/svgsrc',
-                    src: ['*.svg'],
+                    src: ['**/*.svg'],
                     dest: "<%= pkg.sourceFolder %>/img"
+                }],
+                options: {
+                    cssprefix: ".image-",
+                    datasvgcss: "images.data.svg.css",
+                    datapngcss: "images.data.png.css",
+                    urlpngcss: "images.fallback.css"                    
+                }
+            },
+
+            dist: {
+                files: [{  
+                    expand: true,         
+                    cwd: '<%= pkg.sourceFolder %>/img/svgmin',
+                    src: ['**/*.svg'],
+                    dest: "<%= pkg.distFolder %>/img"
                 }],
                 options: {
                     cssprefix: ".image-",
@@ -142,8 +205,17 @@ module.exports = function(grunt) {
                   // css
                   {expand: true, cwd: '<%= pkg.sourceFolder %>/', src: ['css/**.css'], dest: '<%= pkg.distFolder %>/css', filter: 'isFile', flatten: true},
 
+                  // images/png
+                  {expand: true, cwd: '<%= pkg.sourceFolder %>/', src: ['css/fonts/*'], dest: '<%= pkg.distFolder %>/css/fonts', filter: 'isFile', flatten: true},
+
                   // images 
                   {expand: true, cwd: '<%= pkg.sourceFolder %>/', src: ['img/*'], dest: '<%= pkg.distFolder %>/img', filter: 'isFile', flatten: true},
+
+                  // images/png
+                  {expand: true, cwd: '<%= pkg.sourceFolder %>/', src: ['img/png/*'], dest: '<%= pkg.distFolder %>/img/png', filter: 'isFile', flatten: true},
+
+                  // images/png
+                  {expand: true, cwd: '<%= pkg.sourceFolder %>/', src: ['img/icons/*'], dest: '<%= pkg.distFolder %>/img/icons', filter: 'isFile', flatten: true},
 
                   // vendor js 
                   {expand: true, cwd: '<%= pkg.sourceFolder %>/', src: ['js/vendor/**.js'], dest: '<%= pkg.distFolder %>/js/vendor', flatten: true},
@@ -176,7 +248,7 @@ module.exports = function(grunt) {
 
             html: {
                 files: ['<%= pkg.sourceFolder %>/*.html', '<%= pkg.sourceFolder %>/*.md', 'package.json'],
-                tasks: ['default'],
+                tasks: ['defaultHTML'],
                 options: {
                     debounceDelay: 1000
                 },
@@ -195,11 +267,12 @@ module.exports = function(grunt) {
 
     });
 
-    grunt.registerTask('default', ['processhtml:dev', 'less:dev', 'uglify:dev']);
+    grunt.registerTask('default', ['defaultSVG', 'defaultHTML', 'defaultCSS', 'defaultJS']);
+    grunt.registerTask('defaultHTML', ['processhtml:dev']);
     grunt.registerTask('defaultCSS', ['less:dev']);
     grunt.registerTask('defaultJS', ['uglify:dev']);
-    grunt.registerTask('defaultSVG', ['grunticon:dev', 'clean:svg']);
-    grunt.registerTask('dist', ['clean', 'less:dist', 'uglify:dist', 'copy:dist']);
+    grunt.registerTask('defaultSVG', ['svgmin:dev', 'grunticon:dev', 'clean:svgdev']);
+    grunt.registerTask('dist', ['clean:dist', 'grunticon:dist', 'clean:svgdist', 'copy:dist', 'processhtml:dist', 'concat:dist', 'uglify:dist', 'less:dist']);
    
 };
 

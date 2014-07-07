@@ -19,8 +19,48 @@
   -o-transform: translateX(-50%) scale(0.75) !important;
   transform: translateX(-50%) scale(0.75) !important;
 }
+.header-wrapper {
+  min-width: 320px;
+}
+.header-wrapper #nav {
+  min-width: 100px;
+  width: 100px;
+}
+.header-wrapper #nav a {
+  display: none !important;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.header-wrapper #nav a.toggle.toggle {
+  display: block !important;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
 article.main-wrapper section.banner .welcome {
   width: 300px;
+}
+article.main-wrapper section.banner .arrow.left,
+article.main-wrapper section.banner .arrow.right {
+  top: 50%;
+}
+article.main-wrapper section.banner .arrow.left {
+  left: 25px;
+}
+article.main-wrapper section.banner .arrow.right {
+  right: 25px;
+}
+article.main-wrapper section.hill .image-sheep_fence {
+  margin-left: -360px;
 }
 .footer-wrapper .container .row a {
   text-align: center;
@@ -28,9 +68,6 @@ article.main-wrapper section.banner .welcome {
 .plaque-wrapper .content .image-decoration,
 .plaque-wrapper .content .image-shell {
   display: none;
-}
-.static.image-sheep_fence {
-  margin-left: -360px;
 }
 .static.image-signpost {
   display: none;

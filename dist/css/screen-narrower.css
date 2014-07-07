@@ -1,0 +1,26 @@
+/*
+
+  ~ chrisnicholls.co.nz
+
+*/
+/*
+
+  Less Mixin Library  
+  Lesshat plus extras
+
+  ~ chrisnicholls.co.nz
+
+*/
+.animated-title {
+  -webkit-transform: translateX(-50%) scale(0.8) !important;
+  -moz-transform: translateX(-50%) scale(0.8) !important;
+  -ms-transform: translateX(-50%) scale(0.8) !important;
+  -o-transform: translateX(-50%) scale(0.8) !important;
+  transform: translateX(-50%) scale(0.8) !important;
+}
+.static.image-sheep_fence {
+  margin-left: -380px;
+}
+.static.image-signpost {
+  display: none;
+}

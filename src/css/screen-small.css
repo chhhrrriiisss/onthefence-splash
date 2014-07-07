@@ -22,8 +22,18 @@
 .plaque-wrapper .content {
   padding: 20px 30px;
 }
-.static.image-sheep_fence {
-  margin-left: -380px;
+article.main-wrapper section.banner .arrow.left,
+article.main-wrapper section.banner .arrow.right {
+  top: 50%;
+}
+article.main-wrapper section.banner .arrow.left {
+  left: 25px;
+}
+article.main-wrapper section.banner .arrow.right {
+  right: 25px;
+}
+article.main-wrapper section.hill .image-sheep_fence {
+  margin-left: -360px;
 }
 .static.image-signpost {
   display: none;
