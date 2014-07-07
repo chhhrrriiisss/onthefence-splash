@@ -1,3 +1,5 @@
+.image-404 { background-image: url('png/404.png'); background-repeat: no-repeat; }
+
 .image-about_title { background-image: url('png/about_title.png'); background-repeat: no-repeat; }
 
 .image-arrow { background-image: url('png/arrow.png'); background-repeat: no-repeat; }
@@ -9,6 +11,8 @@
 .image-brownbird { background-image: url('png/brownbird.png'); background-repeat: no-repeat; }
 
 .image-chicken { background-image: url('png/chicken.png'); background-repeat: no-repeat; }
+
+.image-close { background-image: url('png/close.png'); background-repeat: no-repeat; }
 
 .image-clouds { background-image: url('png/clouds.png'); background-repeat: no-repeat; }
 

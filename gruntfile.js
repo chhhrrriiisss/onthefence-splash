@@ -202,6 +202,10 @@ module.exports = function(grunt) {
             dist: {
 
                 files: [
+
+                // css
+                  {expand: true, cwd: '<%= pkg.sourceFolder %>/', src: ['app/**.*'], dest: '<%= pkg.distFolder %>/app'},
+
                   // css
                   {expand: true, cwd: '<%= pkg.sourceFolder %>/', src: ['css/**.css'], dest: '<%= pkg.distFolder %>/css', filter: 'isFile', flatten: true},
 
@@ -221,7 +225,7 @@ module.exports = function(grunt) {
                   {expand: true, cwd: '<%= pkg.sourceFolder %>/', src: ['js/vendor/**.js'], dest: '<%= pkg.distFolder %>/js/vendor', flatten: true},
 
                   // stock html
-                  {expand: true, cwd: '<%= pkg.sourceFolder %>/', src: ['*.*'], dest: '<%= pkg.distFolder %>/', filter: 'isFile'}
+                  {expand: true, cwd: '<%= pkg.sourceFolder %>/', src: ['*.*', '!*.md'], dest: '<%= pkg.distFolder %>/', filter: 'isFile'}
 
                 ]
             }

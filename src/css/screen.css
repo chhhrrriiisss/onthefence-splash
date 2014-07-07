@@ -897,10 +897,8 @@ div.flag_banner.image-flag_banner {
   margin: 0 auto;
   margin-top: 120px;
   margin-left: -400px;
-  -webkit-animation: float 4s forwards infinite;
-  -moz-animation: float 4s forwards infinite;
-  -o-animation: float 4s forwards infinite;
-  animation: float 4s forwards infinite;
+  /*
+		.animation(float 4s forwards infinite);*/
 }
 div.flag_banner h4 {
   margin-top: 26px;

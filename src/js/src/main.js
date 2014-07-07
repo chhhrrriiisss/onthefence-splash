@@ -3,6 +3,11 @@
 	~chrisnicholls.co.nz
 */
 
+$(window).load(function() {
+	// Body loaded, lets fade everything in
+	$('body').removeClass('loading');
+});
+
 $(document).ready(function() {
 
 
@@ -12,7 +17,6 @@ $(document).ready(function() {
 
 
 	// Overlay box trigger
-
 	$("#launch-button").colorbox({
 		iframe:true, 
 		width:"980", 
@@ -59,12 +63,6 @@ $(document).ready(function() {
 		}
 	});
 
-
-
-	// Body loaded, lets fade everything in
-	$('body').removeClass('loading');
-
-	$('html,body').scrollTop(0);
 
 	// Prevent null links from going anywhere or doing dodgy things
 	$('a.null').click(function(e) {
