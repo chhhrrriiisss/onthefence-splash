@@ -421,7 +421,7 @@
 
                                     <p>In 2011 we released a desktop-only version of On The Fence that has (and continues to be) helpful for heaps of young voters. We're keeping it available for use while the new version is in development and because our sheep is seemingly always hungry.</p>
 
-                                    <p><div class="button large green"><a id="launch-button" href="app/loader.html">LAUNCH OLD VERSION</a></div></p>
+                                    <p><div class="button large green"><a id="launch-button" href="app/loader.html">LAUNCH 2011 VERSION</a></div></p>
 
                     <!--                  <p>Be sure to check our development blog for updates, flick us a message on twitter and facebook, or alternatively email us at <a class="link" href="#" target="_new">&#102;&#101;&#101;&#100;&#098;&#097;&#097;&#097;&#099;&#107;&#064;&#111;&#110;&#116;&#104;&#101;&#102;&#101;&#110;&#099;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a></p> -->
 
