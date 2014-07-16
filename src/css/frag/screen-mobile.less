@@ -20,18 +20,22 @@
 		min-width:100px;
 		width:100px;
 
+		.toggle {
+			display:block !important;
+			.opacity(1);					
+		}
+
+		.menu {
+			display:none;
+			.opacity(0);
+		}
+
 		a {
 			display:none !important;
 			.opacity(0);
 			.transition(opacity .4s);
 
-			&.toggle {
-				&.toggle {
-					display:block !important;
-					.opacity(1);
-					
-				}
-			}
+			
 		}
 	}
 }

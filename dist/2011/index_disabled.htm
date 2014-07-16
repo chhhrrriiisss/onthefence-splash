@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        
+<title>On the Fence | Don&#039;t be a sheep this election.</title>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        
+        <meta name="description" content="Don't be a sheep this election. On the Fence is a nifty new web tool designed to make your election vote count." />
+
+<meta name="keywords" content="fence, on the fence, election, nz, onthefence," />
+
+<meta name="robot" content="index,follow" />
+
+<meta name="author" content="PC United" />
+
+<meta name="language" content="English" />
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+        <script type="text/javascript" src="js/jquery-latest.min.js"></script>
+
+		<link rel="shortcut icon" href="favicon.png" />
+
+       
+<script type="text/javascript" src="http://platform.twitter.com/anywhere.js?id&#61;akzPZxSf6sr30votc95ySQ&amp;v&#61;1"></script>
+
+<!-- CSS Stylesheets -->
+<link href="css/twitter.css" rel="stylesheet" type="text/css" media="screen" />
+
+<!-- jQuery / JavaScript -->
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script type="text/javascript" src="js/twitter-widget.js"></script>
+        
+		<link href='css/fonts/chunkfive/stylesheet.css' rel='stylesheet' type='text/css' />
+		
+        <!-- Site CSS Files -->
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+        
+
+        <!-- jQuery JavaScript script -->
+
+
+       
+        
+		<script type="text/javascript" src="js/thickbox.js"></script>
+        
+        <link href="css/thickbox.css" rel="stylesheet" type="text/css"/>                    
+        
+        <link href="css/twitter.css" rel="stylesheet" type="text/css" media="screen" />
+
+        <script type="text/javascript">
+
+
+  var _gaq = _gaq || [];
+
+  _gaq.push(['_setAccount', 'UA-3051020-4']);
+
+  _gaq.push(['_trackPageview']);
+
+
+
+  (function() {
+
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+  })();
+
+
+
+</script>
+
+ <script type="text/javascript">
+	   function openFeedback() {
+window.open("app/feedback.php", "On The Fence | Feedback", "width=580,height=390,toolbar=no,scrollbars=no");
+}
+ function openDisclaimer() {
+window.open("app/disclaimer.htm", "On The Fence | Disclaimer", "width=675,height=400,toolbar=no,scrollbars=no");
+}
+ function openTutorial() {
+window.open("app/tutorial.htm", "On The Fence | Tutorial", "width=996,height=617,toolbar=no,scrollbars=no");
+}
+ function openApp() {
+window.open("app/index.html", "On The Fence | Tutorial", "width=980,height=600,toolbar=no,scrollbars=no");
+}
+</script>
+
+<script type='text/javascript'>
+		$(document).ready(function () {
+			init_vimeo();
+		});
+		
+		
+		// Change this to your username to load in your clips
+		var vimeoUserName = 'nzonthefence';
+		
+		// Tell Vimeo what function to call
+		var userInfoCallback = 'userInfo';
+		var clipsCallback = 'showThumbs';
+		
+		// Set up the URLs
+		var userInfoUrl = 'http://www.vimeo.com/api/' + vimeoUserName + '/user_info.json?callback=' + userInfoCallback;
+		var clipsUrl = 'http://www.vimeo.com/api/' + vimeoUserName + '/clips.json?callback=' + clipsCallback;
+		
+		// This function goes through the clips and puts them on the page
+		function showThumbs(clips) {
+			var thumbs = document.getElementById('thumbs');
+			thumbs.innerHTML = '';
+			
+			var ul = document.createElement('ul');
+			thumbs.appendChild(ul);
+			thumbs.setAttribute('class', 'container_vim');
+			
+			for (var i = 0; i < 3; i++) {
+				var thumb = document.createElement('img');
+				thumb.setAttribute('src', clips[i].thumbnail_small);
+				thumb.setAttribute('alt', clips[i].title);
+				thumb.setAttribute('title', clips[i].title);
+				thumb.setAttribute('class', 'thumb_vim fade');
+				
+				
+				var a = document.createElement('a');
+				a.setAttribute('href', clips[i].url);
+				a.setAttribute('target', clips[i], '_blank');
+				a.appendChild(thumb);
+				
+				var li = document.createElement('li');
+				li.appendChild(a);
+				ul.appendChild(li);
+			}
+		}
+		
+		// This function loads the data from Vimeo
+		function init_vimeo() {
+			var head = document.getElementsByTagName('head').item(0);
+			
+			var userJs = document.createElement('script');
+			userJs.setAttribute('type', 'text/javascript');
+			// userJs.setAttribute('src', userInfoUrl);
+			head.appendChild(userJs);
+			
+			var clipsJs = document.createElement('script');
+			clipsJs.setAttribute('type', 'text/javascript');
+			clipsJs.setAttribute('src', clipsUrl);
+			head.appendChild(clipsJs);
+		}	
+</script>
+
+
+    </head>
+    <body>
+    <div id="fb-root"></div>
+    
+<div id="fb-root"></div>
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '313265985350347', // App ID
+      channelURL : 'http://www.facebook.com/NZonthefence', // Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      oauth      : true, // enable OAuth 2.0
+      xfbml      : true  // parse XFBML
+    });
+
+    // Additional initialization code here
+  };
+
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     d.getElementsByTagName('head')[0].appendChild(js);
+   }(document));
+</script>
+
+    <script type="text/javascript">
+    twttr.anywhere(function (T) {
+       T.bind("authComplete", function (e, user) {
+          // triggered when auth completed successfully
+        });
+
+	   T.bind("signOut", function (e) {
+          // triggered when user logs out
+        });
+     });
+</script>
+
+<script type="text/javascript">
+    twttr.anywhere(function (T) {
+	   T("#tweet").hovercards({ expanded: true });
+     });
+</script>
+
+        <div class="wrapper blockCenter header">
+        <div class="wrapper">
+        
+        <div class="floatRight socialLinks">
+                <ul>
+               
+                    <li class="floatLeft fb">
+                    <div class="fb-like" data-href="http://www.facebook.com/NZonthefence" data-send="true" data-width="450" data-show-faces="false"></div>
+                    </li>            
+                    <li class="floatRight">
+                        <a href="http://www.facebook.com/NZonthefence" target="_blank">
+                            <img class="bounce" src="images/facebook_link.png" alt="Facebook" width="60" height="89"/>
+                        </a>
+                    </li>
+                    <li class="floatRight">
+                        <a href="http://twitter.com/NZonthefence" target="_blank">
+                            <img class="bounce" src="images/twitter_link.png" alt="Twitter" width="60" height="89"/>
+                        </a></li></ul></div></div>
+          <div class="floatLeft">
+                <div class="info">
+                <a href="index.htm">
+                  <img src="images/logo.png" class="bounce" width="302" height="320" alt="On the Fence Logo" />
+                </a>
+                </div>
+                
+            </div>
+       
+        </div>
+      
+        <div class="lightBlue clear">
+            <div class="wrapper banner">
+                <img src="images/banner_disabled.png" width="975" height="250" alt="On the Fence Banner" />
+            </div>
+            <div class="wrapper launch">
+           
+            <ul>
+                <li class="floatLeft">
+                <!--[if IE]>
+                 
+                    <img src="images/launch_disabled.png" width="178" height="44" alt="Launch it!" />
+                    
+                <![endif]-->   
+                    
+                <![if !IE]>
+                
+                    <img src="images/launch_disabled.png" width="178" height="44" alt="Launch it!" />
+                 
+                <![endif]>
+                </li>
+                
+                <li class="floatRight">
+                <!--[if IE]>
+                <a href="http://player.vimeo.com/video/32394055" target="_new">
+                <img class="bounce" src="images/tutorial.png" width="178" height="44" alt="Tutorial" />
+                </a>
+                <![endif]-->
+                
+                <![if !IE]>
+                <a href="http://player.vimeo.com/video/32394055?placeValuesBeforeTB_=savedValues&TB_iframe=true&height=617&width=996&vimeo=true" class="thickbox">
+                <img class="bounce" src="images/tutorial.png" width="178" height="44" alt="Tutorial" />
+                </a>
+                <![endif]>
+                </li>
+            </ul>
+           
+            </div>
+        </div>
+        <div class="darkBlue clear">
+          <div class="wrapper blockCenter">
+                <div class="about column floatLeft">
+                    <span class="title">WHAT IS IT?</span>
+                    <div class="break"></div>
+               <p class="plainText highlight">
+                       It's a nifty new web tool, designed to make your election vote count.
+                  </p>
+                    <p class="plainText">Voting can be difficult, but it shouldn't be a chore. It's a rare chance to be an individual, to express yourself and your values.
+                    </p>
+                    <p class="plainText">
+                    	 It's election day! How exciting! The sheep's a bit tied up at the moment but we'll let him loose again after 7pm, so stay tuned!</p>
+                    <p class="plainText floatLeft"><a href="theproject.htm" class="clear" target="_parent"><img src="images/about.png" class="bounce" alt="The Project" /></a></p>
+            </div>
+                <div class="ourTwitts column floatLeft leftSpacer">
+                    <span class="title">OUR TWEETS</span>
+                    <div class="break">&nbsp;</div>
+                   <div id="content">
+
+<!-- Begin Twitter Feed Area  -->
+<div class="twitterfeed">
+
+<img src="images/feed_disabled.png" />
+
+
+
+</div>
+<!-- End Twitter Feed Area  -->
+
+</div>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check this out - it's a nifty new web tool designed to make your election vote count! #votenz" data-count="horizontal" data-url="http://www.onthefence.co.nz" data-via="NZonthefence" data-related="nowthatsmint">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script> &nbsp; <a href="http://twitter.com/NZonthefence" class="followUsURL floatRight" target="_blank">follow us on twitter</a>
+                </div>
+                <div class="contactUs column floatLeft leftSpacer">
+                    <span class="title">MEDIA</span>
+                    <div class="break"></div>
+                    <a href="&#104;&#116;&#116;&#112;&#58;&#47;&#47;&#112;&#108;&#97;&#121;&#101;&#114;&#46;&#118;&#105;&#109;&#101;&#111;&#46;&#99;&#111;&#109;&#47;&#118;&#105;&#100;&#101;&#111;&#47;&#51;&#49;&#54;&#54;&#54;&#52;&#57;&#55;&#63;&#112;&#108;&#97;&#99;&#101;&#86;&#97;&#108;&#117;&#101;&#115;&#66;&#101;&#102;&#111;&#114;&#101;&#84;&#66;&#95;&#61;&#115;&#97;&#118;&#101;&#100;&#86;&#97;&#108;&#117;&#101;&#115;&#38;&#84;&#66;&#95;&#105;&#102;&#114;&#97;&#109;&#101;&#61;&#116;&#114;&#117;&#101;&#38;&#104;&#101;&#105;&#103;&#104;&#116;&#61;&#53;&#56;&#56;&#38;&#119;&#105;&#100;&#116;&#104;&#61;&#57;&#53;&#49;&#38;&#118;&#105;&#109;&#101;&#111;&#61;&#116;&#114;&#117;&#101;" class="thickbox"><img src="images/promovideo.jpg" class="border" width="250" height="230" alt="On the Fence Promo Video" /></a><br /> 
+                    
+                    <br />
+                    <div id="vimeo">
+  <div id="videos"></div>
+  <div id="thumbs">Loading videos...</div>
+</div> 
+
+                    <a href="http://www.vimeo.com/nzonthefence" class="followUsURLVim floatRight clear" target="_blank">see more on vimeo</a></div>
+                </div>
+                <div class="clear">&nbsp;</div>
+            </div>
+    
+        <div class="wrapper blockCenter footer clear">
+        
+            <div id="thumb" class="footerCol copyright floatLeft">A big thank you to <a href="http://247hosting.co.nz" target="_blank">24/7 Hosting</a>.<br /> 
+                Powered by 
+                <a href="http://www.pcunited.co.nz" target="_blank">PC United</a>.
+            </div>
+            
+
+            
+            
+            
+            <div id="vote" class="footerCol copyright floatLeft">
+            Not enrolled to vote?<br /> 
+                Visit 
+                <a href="http://www.elections.org.nz" target="_blank">Elections.org.nz</a>.
+
+            
+            </div>
+
+            
+            <div class="copyright footerCol floatLeft endBlock">
+           
+                
+                <ul>
+                
+                 	<li id="firstItem" class="menuItem floatLeft">
+                        	There's more!<br />
+                            Find us on:
+                      
+                    </li>
+               
+                    <li class="menuItem floatLeft">
+                        <a href="http://www.youtube.com/NZonthefence" target="_blank">
+                            <img src="images/youtube.png" alt="RSS" />
+                        </a>
+                    </li>
+                    <li class="menuItem floatLeft">
+                        <a href="http://twitter.com/NZonthefence" target="_blank">
+                            <img src="images/twitter.png" alt="Twitter" />
+                        </a>
+                    </li>
+                    <li class="menuItem floatLeft">
+                        <a href="http://www.vimeo.com/nzonthefence" target="_blank">
+                            <img src="images/vimeo.png" alt="Skype" />
+                        </a>
+                    </li>
+                    <li class="menuItem floatLeft">
+                        <a href="http://www.facebook.com/NZonthefence" target="_blank">
+                            <img src="images/facebook.png" alt="Facebook" />
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        
+             <div class="wrapper blockCenter subfooter clear">
+                     <div class="promoter floatLeft">
+                     Authorised by <a href="http://www.pcunited.co.nz" target="_blank">P.C. United</a>,  Kieran Stowers, Museum Building, Buckle St. Wellington, New Zealand. <br />
+                    
+          			 </div>         
+          	 </div>
+           
+    </body>
+</html>

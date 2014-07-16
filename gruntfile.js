@@ -154,7 +154,7 @@ module.exports = function(grunt) {
                 files: [{               // Dictionary of files
                     expand: true,       // Enable dynamic expansion.
                     cwd: '<%= pkg.sourceFolder %>/img/svgsrc',     // Src matches are relative to this path.
-                    src: ['**/*.svg'],  // Actual pattern(s) to match.
+                    src: ['*.svg'],  // Actual pattern(s) to match.
                     dest: '<%= pkg.sourceFolder %>/img/svgmin',    // Destination path prefix.
                     ext: '.svg'
                     // ie: optimise img/src/branding/logo.svg and store it in img/branding/logo.min.svg
@@ -225,7 +225,10 @@ module.exports = function(grunt) {
                   {expand: true, cwd: '<%= pkg.sourceFolder %>/', src: ['js/vendor/**.js'], dest: '<%= pkg.distFolder %>/js/vendor', flatten: true},
 
                   // stock html
-                  {expand: true, cwd: '<%= pkg.sourceFolder %>/', src: ['*.*', '!*.md'], dest: '<%= pkg.distFolder %>/', filter: 'isFile'}
+                  {expand: true, cwd: '<%= pkg.sourceFolder %>/', src: ['*.*', '!*.md'], dest: '<%= pkg.distFolder %>/', filter: 'isFile'},
+
+                  // 2011
+                  {expand: true, cwd: '<%= pkg.sourceFolder %>/2011', src: ['*.*'], dest: '<%= pkg.distFolder %>/2011'}
 
                 ]
             }

@@ -1,0 +1,77 @@
+/* TWITTER FEED CSS */
+
+#content .twitterfeed	{	
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#888;
+	font-style:italic;
+	float: left;
+
+	width: 290px;
+
+}
+#content .twitterfeed a{
+	color:#f1c45a;
+	text-decoration:underline;
+}
+
+#content .twitterfeed a:hover{
+	text-decoration:none;
+}
+
+#content img	{
+	margin: 5px 0px 0px 10px;
+}
+
+#content h3	{
+	float: right;
+	color: #000;
+	background-color: #f2f2f2;
+	font-size: 18px;
+	font-weight: bold;
+	width: 235px;
+	padding: 10px 5px 10px 10px;
+	margin: 10px 10px 25px 0px;
+	text-shadow: 0 1px 0 #fff;
+	border: 1px solid #d8d8d8; 
+}
+
+#content h3 a {
+	text-decoration: none;
+}
+
+#content hr	{
+    width: 90%;
+    height: 1px;
+	background:none;
+	border:none;
+border-bottom:#44342C 1.5px dashed;
+	margin: 20px 0px 20px 18px;
+}
+
+#tweet	{
+	float: none;
+	clear: both;
+}
+
+#tweet p {
+	margin: 15px 15px 10px 15px;
+}
+
+#web_intent	{
+	margin: 0px 0px 0px 15px;
+}
+
+#web_intent	a:link, #web_intent	a:visited, #web_intent a:active {
+	margin: 0px 10px 0px 0px;
+}
+
+#web_intent img {
+	margin: 0px 3px 0px 0px;
+	position: relative;
+	top: 2px;
+}
+
+#web_intent .time {
+	margin: 0px 10px 0px 0px;
+}
+

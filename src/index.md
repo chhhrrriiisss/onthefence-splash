@@ -33,17 +33,16 @@
         <!-- /build -->
 
         <!-- Icons -->
-        <link rel="shortcut icon" href="img/icons/favicon.ico?v=5" type="image/x-icon" />
+        <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon" />
         <!-- Apple Touch Icons -->
         <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png" />
         <link rel="apple-touch-icon" sizes="57x57" href="img/icons/apple-touch-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="img/icons/apple-touch-icon-76x76.png" />
         <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="img/icons/apple-touch-icon-120x120.png" />
         <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-touch-icon-144x144.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="img/icons/apple-touch-icon-60x60.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-touch-icon-120x120.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-76x76.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="img/icons/apple-touch-icon-152x152.png" />
 
         <!-- Main Stylesheet -->
         <link rel="stylesheet" href="css/screen.css">    
@@ -64,12 +63,7 @@
                 small: { range: '601-980', containers: 720, lockViewport: false, grid: { collapse: true } },
                 mobile: { range: "-600", containers: "fluid", lockViewport: false, grid: { collapse: true } }
             }
-        };
-
-        window.load = function() {
-
-            skel.init();
-        }
+        };        
         </script>        
 
         <!-- Fallbacks -->
@@ -104,18 +98,21 @@
 
             <div class="container">         
 
-                <div class="row flush">
+                <div class="row flush no-collapse">
                     <!-- Header -->       
 
                     <div class="6u">
+                        <a href="#" id="menu-toggle" class="menu-link">
+                                <span class="one"></span><span class="two"></span><span class="three"></span>
+                        </a>
 
-                        <nav id="nav">
-                            <a href="#" id="nav-toggle" class="toggle">Menu</a>
-                              
-                            <a href="#about">About</a> 
-                            <a href="#play">2011 Version</a>          
-                            <a href="http://designdemocracy.ac.nz/onthefence" target="_new">Dev Blog</a>                     
-                        </nav> 
+                        <nav id="menu" role="navigation">
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">2011 Version</a></li>
+                                <li><a href="http://designdemocracy.ac.nz/onthefence" target="_new">Dev Blog</a>  </li>
+                            </ul>
+                        </nav>
 
                     </div> 
 
@@ -223,33 +220,8 @@
 
                                 <div class="12u">
                                    
-                                    <div class="plaque-wrapper">   
-
-                                        <span class="image-corner top left"></span>   
-                                        <span class="image-corner top right"></span>
-                                        <span class="image-bar image-twirl top">
-                                        <span class="image-twirl"></span>
-                                        </span>
-
-                                        <div class="content flush">
-
-                                        <img src="img/designdemocracy_logo.png" alt="Design &amp; Democracy" style="max-width:500px; margin: 0 auto;"/>
-
-                                        <h3 class="title" style="max-width:600px; margin:0 auto; ">A STRATEGIC RESEARCH UNIT WITHIN MASSEY UNIVERSITY'S COLLEGE OF CREATIVE ARTS</h3>
-
-                                        <p><div class="button large green"><a href="http://designdemocracy.ac.nz" target="_new">VISIT WEBSITE</a></div></a></p>       
-
-                                        </div>
-
-                                        <span class="image-bar image-twirl bottom">
-                                        <span class="image-twirl"></span>
-                                        </span>
-                                        <span class="image-corner bottom left"></span>       
-                                        <span class="image-corner bottom right"></span>
-
-                                    </div>                                
+                                    <a href="http://designdemocracy.ac.nz" target="_new"><img src="img/designdemocracy_logo.png" alt="Design &amp; Democracy" style="max-width:500px; margin: 0 auto;" /></a>         
                                     
-
                                 </div>
 
                             </div>  
@@ -367,8 +339,6 @@
 
             <section id="spacer" class="spacer">   
 
-                <div class="static image-sheep_seedy"></div>  
-
             </section>
 
             <section id="play" class="play">   
@@ -421,7 +391,7 @@
 
                                     <p>In 2011 we released a desktop-only version of On The Fence that has (and continues to be) helpful for heaps of young voters. We're keeping it available for use while the new version is in development and because our sheep is seemingly always hungry.</p>
 
-                                    <p><div class="button large green"><a id="launch-button" href="app/loader.html">LAUNCH 2011 VERSION</a></div></p>
+                                    <p><div class="button large green"><a id="launch-button" href="./2011/index.htm" target="_new">LAUNCH 2011 VERSION</a></div></p>
 
                     <!--                  <p>Be sure to check our development blog for updates, flick us a message on twitter and facebook, or alternatively email us at <a class="link" href="#" target="_new">&#102;&#101;&#101;&#100;&#098;&#097;&#097;&#097;&#099;&#107;&#064;&#111;&#110;&#116;&#104;&#101;&#102;&#101;&#110;&#099;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a></p> -->
 
