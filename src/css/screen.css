@@ -1522,13 +1522,13 @@ article.main-wrapper section.play .image-sheep_debris {
   color: rgba(0, 0, 0, 0.3);
   font-family: 'Otari', sans-serif;
   font-size: 0.8em;
-  display: inline-block;
+  display: block;
+  float: left;
   width: 100%;
-  height: 100%;
+  margin-top: 15px;
   line-height: 1.35em;
   cursor: pointer;
-  text-align: left;
-  padding-top: 25px;
+  text-align: center;
   -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
   -o-transition: all 0.1s;
@@ -1537,9 +1537,6 @@ article.main-wrapper section.play .image-sheep_debris {
 .footer-wrapper .container .row a:hover,
 .footer-wrapper .container .row a:active {
   color: rgba(0, 0, 0, 0.7);
-}
-.footer-wrapper .container .row div:last-child a {
-  text-align: right;
 }
 /* 
 	Banner Slider Styles 	

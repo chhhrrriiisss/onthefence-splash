@@ -73,6 +73,13 @@ article.main-wrapper section.hill .image-sheep_fence {
 .footer-wrapper .container .row a {
   text-align: center;
 }
+.plaque-wrapper {
+  width: 98%;
+}
+.plaque-wrapper .content {
+  padding: 5px 15px;
+  padding-top: 20px;
+}
 .plaque-wrapper .content .image-decoration,
 .plaque-wrapper .content .image-shell {
   display: none;

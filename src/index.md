@@ -19,7 +19,7 @@
         <meta name="copyright" content="Copyright © 2014 <%= name %>">  
         <meta name="author" content="<%= name %>"> 
         <meta name="last-modified" content="<%= date %>"> 
-        <meta name="viewport" content="initial-scale=1, user-scalable=no">
+        <meta name="viewport" content="initial-scale=1 initial-width=device-width">
 
         <!-- Facebook Opengraph -->
         <meta property="og:title" content="<%= title %>"/>
@@ -443,23 +443,13 @@
     
 
         <div class="footer-wrapper">
-            <div class="container center">
+            <div class="container">
 
-                <div class="row flush no-collapse">
+                <div class="row">
 
-                    <div class="4u">
+                    <div class="-4u 8u">
                        
-                        <a class="null" href="#" style="max-width:340px;">Authorised by Kieran Stowers, Design &amp; Democracy Project, Te Ara Hihiko, Wellington.</a>    
-
-                    </div>
-
-                    <div class="4u">
-                        &nbsp;
-                    </div>
-                    
-                    <div class="4u">
-                       
-                        <a class="link" href="#">&#102;&#101;&#101;&#100;&#098;&#097;&#099;&#107;&#064;<span class="obfuscate">null</span>&#111;&#110;&#116;&#104;&#101;&#102;&#101;&#110;&#099;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a>
+                        <a class="null" href="#">Authorised by Kieran Stowers, Design &amp; Democracy Project, Te Ara Hihiko, Wellington.</a> <a class="link" href="#">&#102;&#101;&#101;&#100;&#098;&#097;&#099;&#107;&#064;<span class="obfuscate">null</span>&#111;&#110;&#116;&#104;&#101;&#102;&#101;&#110;&#099;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a>
 
                     </div>   
                  
