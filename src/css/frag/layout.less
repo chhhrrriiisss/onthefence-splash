@@ -269,7 +269,7 @@ div.button {
 		position:relative;
 		top:0px;
 
-		.no-select();
+
 
 		&.flush {
 
@@ -437,11 +437,12 @@ div.button {
 		margin-left:-300px;
 		background-size:100% 100%;
 	}
+
 	&.chicken {
-		width:150px;
-		height:180px;
-		margin-top:-90px;
-		margin-left:-75px;
+		width:320px;
+		height:420px;
+		margin-top:-210px;
+		margin-left:-160px;
 		background-size:100% 100%;
 	}
 
@@ -500,11 +501,6 @@ div.button {
 
 	}
 
-	&.image-vote_box {
-		width:300px;
-		height:200px;
-	}
-
 	&.image-hill_center {
 
 
@@ -548,40 +544,6 @@ div.button {
 		height:400px;
 		display:block;
 		
-
-	}
-
-	&.image-signpost {
-		
-		top:730px;
-		left:50%;
-		margin-left:-520px;
-		width:30px;
-		height:340px;
-		display:block;
-		z-index:206;
-		.transform(rotate(-3deg));
-		.transform-origin(50% 100%);
-
-		cursor:pointer;
-
-	
-		.image-enrol_sign {
-			position:absolute;
-			left:50%;
-			top:-35px;
-			width:135px;
-			height:80px;
-			z-index:203;
-			.transition(all .2s);
-			.transform-origin(0% 100%);
-			cursor:pointer;
-
-			&:hover {
-				.transform(rotate(3deg));
-			}
-
-		}
 
 	}
 }
@@ -846,7 +808,7 @@ body {
 nav[role=navigation] {
 
 	z-index:900;
-	width:auto;
+	width:100%;
 	position:relative;
 	.no-select();
 
@@ -864,10 +826,11 @@ nav[role=navigation] {
 			height:55px;
 			background: #2b160e;
 
+
 			float:left;
 			clear:both;
 
-			border-bottom:1px rgba(255,255,255,.1) solid;
+			border-bottom:1px lighten(#2b160e, 5%) solid;
 
 			a {
 
@@ -1146,6 +1109,7 @@ article.main-wrapper {
 				text-align:center;
 				width:100%;
 				margin:0 auto;
+				padding:0px 20px;
 			}
 
 			.image-onthefence_logo {

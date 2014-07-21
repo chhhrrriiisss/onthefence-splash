@@ -583,12 +583,6 @@ div.button a:before {
   margin: 0 4px;
   position: relative;
   top: 0px;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   /*	
 		&:after {
 			.woodTexture();
@@ -738,10 +732,10 @@ div.button a:before {
   background-size: 100% 100%;
 }
 .character.chicken {
-  width: 150px;
-  height: 180px;
-  margin-top: -90px;
-  margin-left: -75px;
+  width: 320px;
+  height: 420px;
+  margin-top: -210px;
+  margin-left: -160px;
   background-size: 100% 100%;
 }
 .static {
@@ -784,10 +778,6 @@ div.button a:before {
 .static.image-bluebird#br2,
 .static.image-brownbird#br2 {
   margin-left: 300px;
-}
-.static.image-vote_box {
-  width: 300px;
-  height: 200px;
 }
 .static.image-hill_center {
   left: 50%;
@@ -842,51 +832,6 @@ div.button a:before {
   width: 800px;
   height: 400px;
   display: block;
-}
-.static.image-signpost {
-  top: 730px;
-  left: 50%;
-  margin-left: -520px;
-  width: 30px;
-  height: 340px;
-  display: block;
-  z-index: 206;
-  -webkit-transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg);
-  -ms-transform: rotate(-3deg);
-  -o-transform: rotate(-3deg);
-  transform: rotate(-3deg);
-  -webkit-transform-origin: 50% 100%;
-  -moz-transform-origin: 50% 100%;
-  -o-transform-origin: 50% 100%;
-  -ms-transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
-  cursor: pointer;
-}
-.static.image-signpost .image-enrol_sign {
-  position: absolute;
-  left: 50%;
-  top: -35px;
-  width: 135px;
-  height: 80px;
-  z-index: 203;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-  -webkit-transform-origin: 0% 100%;
-  -moz-transform-origin: 0% 100%;
-  -o-transform-origin: 0% 100%;
-  -ms-transform-origin: 0% 100%;
-  transform-origin: 0% 100%;
-  cursor: pointer;
-}
-.static.image-signpost .image-enrol_sign:hover {
-  -webkit-transform: rotate(3deg);
-  -moz-transform: rotate(3deg);
-  -ms-transform: rotate(3deg);
-  -o-transform: rotate(3deg);
-  transform: rotate(3deg);
 }
 /* Red Flag Banner */
 div.flag_banner {
@@ -1158,7 +1103,7 @@ nav[role=navigation] ul li a {
 /* Mobile State */
 nav[role=navigation] {
   z-index: 900;
-  width: auto;
+  width: 100%;
   position: relative;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -1178,7 +1123,7 @@ nav[role=navigation] ul li {
   background: #2b160e;
   float: left;
   clear: both;
-  border-bottom: 1px rgba(255, 255, 255, 0.1) solid;
+  border-bottom: 1px #3e2014 solid;
 }
 nav[role=navigation] ul li a {
   z-index: 902;
@@ -1433,6 +1378,7 @@ article.main-wrapper section.banner .welcome {
   text-align: center;
   width: 100%;
   margin: 0 auto;
+  padding: 0px 20px;
 }
 article.main-wrapper section.banner .image-onthefence_logo {
   height: 350px;
