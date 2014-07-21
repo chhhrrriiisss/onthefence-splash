@@ -13,11 +13,11 @@
 */
 /* Custom mixin for delayed animation stacks */
 .animated-title {
-  -webkit-transform: translateX(-50%) scale(0.75) !important;
-  -moz-transform: translateX(-50%) scale(0.75) !important;
-  -ms-transform: translateX(-50%) scale(0.75) !important;
-  -o-transform: translateX(-50%) scale(0.75) !important;
-  transform: translateX(-50%) scale(0.75) !important;
+  -webkit-transform: translateX(-50%) scale(0.6) !important;
+  -moz-transform: translateX(-50%) scale(0.6) !important;
+  -ms-transform: translateX(-50%) scale(0.6) !important;
+  -o-transform: translateX(-50%) scale(0.6) !important;
+  transform: translateX(-50%) scale(0.6) !important;
 }
 .header-wrapper {
   min-width: 320px;
@@ -54,18 +54,37 @@
   -o-transition: opacity 0.4s;
   transition: opacity 0.4s;
 }
+article.main-wrapper section.banner .slide-wrapper #comingBanner,
+article.main-wrapper section.banner .slide-wrapper #comingTitle {
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  -o-transform: scale(0.75);
+  transform: scale(0.75);
+}
+article.main-wrapper section.banner .slide-wrapper #comingBanner {
+  z-index: 200;
+}
+article.main-wrapper section.banner .slide-wrapper .welcome {
+  font-size: 1.8em;
+  margin-top: -80px;
+}
 article.main-wrapper section.banner .welcome {
   width: 300px;
 }
 article.main-wrapper section.banner .arrow.left,
 article.main-wrapper section.banner .arrow.right {
   top: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  background-size: 100% 100%;
 }
 article.main-wrapper section.banner .arrow.left {
-  left: 25px;
+  left: 55px;
 }
 article.main-wrapper section.banner .arrow.right {
-  right: 25px;
+  right: 55px;
 }
 article.main-wrapper section.hill .image-sheep_fence {
   margin-left: -360px;

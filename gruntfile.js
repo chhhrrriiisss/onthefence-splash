@@ -77,7 +77,7 @@ module.exports = function(grunt) {
         concat: {
       
             dist: {
-                    src: ['<%= pkg.sourceFolder %>/js/src/main.js', '<%= pkg.sourceFolder %>/js/src/plugins.js'],
+                    src: ['<%= pkg.sourceFolder %>/js/src/plugins.js', '<%= pkg.sourceFolder %>/js/src/main.js'],
                     dest: '<%= pkg.sourceFolder %>/js/script.js'
             },
         },
@@ -115,7 +115,7 @@ module.exports = function(grunt) {
 
         svgmin: {
 
-            dev: {       
+            devMain: {       
                 options: {
                      plugins: [
                         { cleanupAttrs: true },
@@ -159,23 +159,83 @@ module.exports = function(grunt) {
                     ext: '.svg'
                     // ie: optimise img/src/branding/logo.svg and store it in img/branding/logo.min.svg
                 }]
+            },
+            devMobile: {       
+                options: {
+                     plugins: [
+                        { cleanupAttrs: true },
+                        { cleanupEnableBackground: true },
+                        { cleanupIDs: true },
+                        { cleanupNumericValues: true },
+                        { collapseGroups: true },
+                        { convertColors: true },
+                        { convertPathData: true },
+                        { convertShapeToPath: true },
+                        { convertStyleToAttrs: true },
+                        { convertTransform: true },
+                        { mergePaths: true },
+                        { moveElemsAttrsToGroup: true },
+                        { moveGroupAttrsToElems: true },
+                        { removeComments: true },
+                        { removeDoctype: true },
+                        { removeEditorsNSData: true },
+                        { removeEmptyAttrs: true },
+                        { removeEmptyContainers: true },
+                        { removeEmptyText: true },
+                        { removeHiddenElems: true },
+                        { removeMetadata: true },
+                        { removeNonInheritableGroupAttrs: true },
+                        { removeRasterImages: false }, //Keep raster images with the svg
+                        { removeTitle: true },
+                        { removeUnknownsAndDefaults: true },
+                        { removeUnusedNS: true },
+                        { removeUselessStrokeAndFill: false }, //Enabling this may case small details to be removed
+                        { removeViewBox: false }, //I keep the view box because that's where illustrator hides the SVG dimensions
+                        { removeXMLProcInst: false }, //Enabling this breaks grunticon because it removes the XML header
+                        { sortAttrs: true },
+                        { transformsWithOnePath: false } //Enabling this breaks Illustrator SVGs with complex text?
+                    ]
+                },                              // Target
+                files: [{               // Dictionary of files
+                    expand: true,       // Enable dynamic expansion.
+                    cwd: '<%= pkg.sourceFolder %>/img/svgsrc/mobile',     // Src matches are relative to this path.
+                    src: ['*.svg'],  // Actual pattern(s) to match.
+                    dest: '<%= pkg.sourceFolder %>/img/svgmin/mobile',    // Destination path prefix.
+                    ext: '.svg'
+                    // ie: optimise img/src/branding/logo.svg and store it in img/branding/logo.min.svg
+                }]
             }
 
         },
 
         grunticon: {
-            dev: {
+            devMain: {
                 files: [{  
-                    expand: true,         
-                    cwd: '<%= pkg.sourceFolder %>/img/svgsrc',
-                    src: ['**/*.svg'],
-                    dest: "<%= pkg.sourceFolder %>/img"
+                expand: true,         
+                cwd: '<%= pkg.sourceFolder %>/img/svgmin',
+                src: ['**/*.svg'],
+                dest: "<%= pkg.sourceFolder %>/img"
                 }],
                 options: {
                     cssprefix: ".image-",
                     datasvgcss: "images.data.svg.css",
                     datapngcss: "images.data.png.css",
                     urlpngcss: "images.fallback.css"                    
+                }                           
+            },
+
+            devMobile: {
+                files: [{  
+                expand: true,         
+                cwd: '<%= pkg.sourceFolder %>/img/svgmin/mobile',
+                src: ['**/*.svg'],
+                dest: "<%= pkg.sourceFolder %>/img"
+                }],
+                options: {
+                    cssprefix: ".image-",
+                    datasvgcss: "images-min.data.svg.css",
+                    datapngcss: "images-min.data.png.css",
+                    urlpngcss: "images-min.fallback.css"                    
                 }
             },
 
@@ -238,7 +298,7 @@ module.exports = function(grunt) {
         watch: {
 
             svgs: {
-                files: ['<%= pkg.sourceFolder %>/img/svgsrc/**'],
+                files: ['<%= pkg.sourceFolder %>/img/svgsrc/**/*.svg'],
                 tasks: ['defaultSVG'],
                 options: {
                     debounceDelay: 1000
@@ -278,7 +338,7 @@ module.exports = function(grunt) {
     grunt.registerTask('defaultHTML', ['processhtml:dev']);
     grunt.registerTask('defaultCSS', ['less:dev']);
     grunt.registerTask('defaultJS', ['uglify:dev']);
-    grunt.registerTask('defaultSVG', ['svgmin:dev', 'grunticon:dev', 'clean:svgdev']);
+    grunt.registerTask('defaultSVG', ['svgmin:devMain', 'svgmin:devMobile', 'grunticon:devMain', 'grunticon:devMobile', 'clean:svgdev']);
     grunt.registerTask('dist', ['clean:dist', 'grunticon:dist', 'clean:svgdist', 'copy:dist', 'processhtml:dist', 'concat:dist', 'uglify:dist', 'less:dist']);
    
 };

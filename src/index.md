@@ -61,7 +61,7 @@
                 wide: { range: "1200-1399", containers: 1200, grid: { gutters: 50 } },           
                 narrow: { range: '981-1199', containers: 930 },
                 small: { range: '601-980', containers: 720, lockViewport: false, grid: { collapse: true } },
-                mobile: { range: "-600", containers: "fluid", lockViewport: false, grid: { collapse: true } }
+                mobile: { range: "-600", containers: "fluid", lockViewport: true, grid: { collapse: true } }
             }
         };        
         </script>        
@@ -108,8 +108,8 @@
 
                         <nav id="menu" role="navigation">
                             <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">2011 Version</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#play">2011 Version</a></li>
                                 <li><a href="http://designdemocracy.ac.nz/onthefence" target="_new">Dev Blog</a>  </li>
                             </ul>
                         </nav>
@@ -133,14 +133,10 @@
 
         <article class="main-wrapper">
 
-        <a name="top" class="anchor"></a>
-
         <div class="static image-clouds"></div>        
         <div id="center1" class="static image-hill_center"></div>       
         <div id="center2" class="static image-hill_center"></div>   
        
-        <div id="gr1" class="static image-grass"></div>    
-
         <section id="banner" class="banner">      
 
                 <div class="arrow image-arrow left" id="slider-prev"></div><div class="arrow image-arrow right" id="slider-next"></div>
@@ -154,11 +150,11 @@
                                 <div class="-3u 6u">
 
                                                       
-                                <div class="flag_banner image-flag_banner">                                       
-                                    <h4>COMING SOON</h4>
-                                </div>
+                                    <div id="comingBanner" class="flag_banner image-flag_banner">                                       
+                                        <h4>COMING SOON</h4>
+                                    </div>
 
-                                <div class="title image-onthefence_logo"></div>                              
+                                    <div id="comingTitle" class="title image-onthefence_logo"></div>                              
                                                                               
 
                                 </div>
@@ -242,7 +238,7 @@
 
             <section id="about" class="about">
 
-                <a name="play" class="anchor"></a>
+                <a name="about" class="anchor">&nbsp;</a>
 
                 <div class="container center">
 
@@ -343,7 +339,7 @@
 
             <section id="play" class="play">   
 
-                <a name="play" class="anchor"></a>
+                <a name="play" class="anchor">&nbsp;</a>
 
                 <div class="container center">
 
@@ -363,7 +359,7 @@
                                     </span>
 
                                 </div>
-                                <div class="title image-onthefence_title"></div>
+                                <div class="title image-onthefence_title" style="background-position:0px 50px;"></div>
 
                                 <div class="flag flag-right image-flag flush">
                                     
@@ -445,11 +441,11 @@
         <div class="footer-wrapper">
             <div class="container">
 
-                <div class="row">
+                <div class="row no-collapse">
 
-                    <div class="-4u 8u">
+                    <div class="-2u 8u">
                        
-                        <a class="null" href="#">Authorised by Kieran Stowers, Design &amp; Democracy Project, Te Ara Hihiko, Wellington.</a> <a class="link" href="#">&#102;&#101;&#101;&#100;&#098;&#097;&#099;&#107;&#064;<span class="obfuscate">null</span>&#111;&#110;&#116;&#104;&#101;&#102;&#101;&#110;&#099;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a>
+                        <a class="null" href="#">Authorised by Kieran Stowers, Design &amp; Democracy Project, Te Ara Hihiko, Wellington.</a>
 
                     </div>   
                  

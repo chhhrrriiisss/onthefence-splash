@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75px"
+	 height="95px" viewBox="0 0 75 95" enable-background="new 0 0 75 95" xml:space="preserve">
+<g id="Layer_1">
+</g>
+<g id="Layer_2">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="37.3281" y1="4.8306" x2="38.1427" y2="87.9145">
+		<stop  offset="0" style="stop-color:#6275AB"/>
+		<stop  offset="1" style="stop-color:#31488A"/>
+	</linearGradient>
+	<path fill="url(#SVGID_1_)" d="M1.16-0.024c0,0,2.176,43.124,0,95.024l0,0c0,0,20.175-4.072,35.796-3.394
+		C52.577,92.286,74.333,95,74.333,95s-4.248-42.761,0-95.024"/>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="5.5444" y1="46.6274" x2="70.085" y2="46.6274">
+		<stop  offset="0" style="stop-color:#293E70"/>
+		<stop  offset="1" style="stop-color:#31488A"/>
+	</linearGradient>
+	<path opacity="0.3" fill="url(#SVGID_2_)" d="M5.544,4.048c0,0,3.13,40.457,0,84.162c0,0,17.979-1.002,31.969-1.613
+		c22.199,1.764,32.572,3.787,32.572,3.787s-6.851-39.501-0.646-87.049c0.666-5.119-7.852,32.75-1.821,83.893
+		c0,0-16.506-2.659-30.516-2.396c-14.388,0.271-28.132,0.474-29.81,0.869C7.292,85.701,10.889,40.394,5.544,4.048z"/>
+	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="37.8149" y1="10" x2="37.8149" y2="0">
+		<stop  offset="0.4166" style="stop-color:#000000;stop-opacity:0"/>
+		<stop  offset="0.8422" style="stop-color:#020000;stop-opacity:0.4377"/>
+		<stop  offset="0.9954" style="stop-color:#090000;stop-opacity:0.5952"/>
+		<stop  offset="1" style="stop-color:#090000;stop-opacity:0.6"/>
+	</linearGradient>
+	<polygon opacity="0.5" fill="url(#SVGID_3_)" points="1.296,0 2.119,10 73.188,10 74.333,0 	"/>
+	<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="36.8413" y1="38.9858" x2="36.8413" y2="58.277">
+		<stop  offset="0" style="stop-color:#FCFCFC"/>
+		<stop  offset="1" style="stop-color:#D4D4D4"/>
+	</linearGradient>
+	<path fill="url(#SVGID_4_)" d="M40.318,34.31h4.638v-5.688h-4.638c-3.833,0-6.954,3.35-6.954,7.465v2.872h-4.637v5.705h4.637
+		v13.816h5.797V44.663h5.795v-5.705h-5.795v-2.925C39.161,35.047,39.772,34.31,40.318,34.31z"/>
+	<g>
+		<rect x="28.727" y="38.958" fill="#404D89" width="4.637" height="1.148"/>
+		<path fill="#404D89" d="M40.318,28.621c-3.833,0-6.954,3.35-6.954,7.465v1.148c0-4.115,3.121-7.465,6.954-7.465h4.638v-1.148
+			H40.318z"/>
+		<rect x="39.161" y="38.958" fill="#404D89" width="5.795" height="1.148"/>
+	</g>
+</g>
+</svg>
