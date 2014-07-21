@@ -52,13 +52,16 @@
 article.main-wrapper section.banner {
   height: 400px;
 }
+article.main-wrapper section.banner .slide-wrapper {
+  height: 400px;
+}
 article.main-wrapper section.banner .slide-wrapper #comingBanner,
 article.main-wrapper section.banner .slide-wrapper #comingTitle {
-  -webkit-transform: scale(0.7) translateX(-20px);
-  -moz-transform: scale(0.7) translateX(-20px);
-  -ms-transform: scale(0.7) translateX(-20px);
-  -o-transform: scale(0.7) translateX(-20px);
-  transform: scale(0.7) translateX(-20px);
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -o-transform: scale(0.7);
+  transform: scale(0.7);
 }
 article.main-wrapper section.banner .slide-wrapper .animated-title {
   margin-top: -50px;
@@ -91,6 +94,7 @@ article.main-wrapper section.banner .arrow.right {
 }
 article.main-wrapper section.hill .image-sheep_fence {
   margin-left: -420px;
+  margin-top: 100px;
 }
 .footer-wrapper .container .row a {
   text-align: center;

@@ -14,11 +14,39 @@
 	}
 }
 
+.slide-wrapper {
+
+	height:400px;
+}
+
 article.main-wrapper {
 
 	section {
 
 		&.banner {
+
+			.slide-wrapper {
+
+				height:400px;
+
+				#comingBanner, #comingTitle {
+					.transform(scale(0.8) );
+				}
+
+
+
+				#comingBanner {
+					z-index:200;
+				}
+
+				.welcome {
+					font-size:1.6em;
+					margin-top:-20px;
+
+			
+				}
+			}
+
 
 			.arrow.left, .arrow.right {				
 				top:50%;

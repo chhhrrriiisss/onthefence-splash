@@ -1,0 +1,6 @@
+/* IE Only Conditional styles */
+
+span.button a:before {
+    display:none !important;
+    border:0;
+}

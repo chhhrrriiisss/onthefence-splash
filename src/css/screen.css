@@ -185,9 +185,9 @@ a:visited .obfuscate {
 /*  
 	Useful Modules
 */
-div.button,
-div.button a,
-div.button a:before {
+span.button,
+span.button a,
+span.button a:before {
   -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 5px;
@@ -195,7 +195,7 @@ div.button a:before {
   border-radius: 5px;
   background-clip: padding-box;
 }
-div.button {
+span.button {
   position: relative;
   margin: 0 auto;
   max-width: 400px;
@@ -211,13 +211,13 @@ div.button {
   -o-transition: all 0.1s;
   transition: all 0.1s;
 }
-div.button:hover {
+span.button:hover {
   padding: 2px;
 }
-div.button:active {
+span.button:active {
   padding: 3px;
 }
-div.button.green a {
+span.button.green a {
   background: #99bc4c;
   /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -237,7 +237,7 @@ div.button.green a {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99bc4c', endColorstr='#81a338', GradientType=0);
   /* IE6-8 */
 }
-div.button.yellow a {
+span.button.yellow a {
   background: #efce6c;
   /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -257,7 +257,7 @@ div.button.yellow a {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efce6c', endColorstr='#eab459', GradientType=0);
   /* IE6-8 */
 }
-div.button a {
+span.button a {
   position: relative;
   z-index: 19;
   -webkit-text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
@@ -280,13 +280,13 @@ div.button a {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-div.button a:hover {
+span.button a:hover {
   color: #222;
 }
-div.button a:active {
+span.button a:active {
   color: #222;
 }
-div.button a:before {
+span.button a:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -297,7 +297,6 @@ div.button a:before {
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  margin: ;
   display: block;
   content: '';
   border: 1px #222 dashed;
@@ -551,6 +550,7 @@ div.button a:before {
 .static.image-sheep_debris {
   width: 1200px;
   height: 650px;
+  z-index: 1;
 }
 .static.image-sheep_seedy {
   margin-left: -150px;
@@ -1006,7 +1006,7 @@ div.sticky-wrapper {
   content: '';
 }
 .header-wrapper:before {
-  background: url('../img/twirl.png?v=2') repeat-x;
+  background: url('../img/twirl.png') repeat-x;
   z-index: 200;
 }
 .header-wrapper:after {
@@ -1179,6 +1179,12 @@ article.main-wrapper section.banner .welcome {
   width: 100%;
   margin: 0 auto;
   padding: 0px 20px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 article.main-wrapper section.banner .image-onthefence_logo {
   height: 350px;
@@ -1249,6 +1255,7 @@ article.main-wrapper section.play .image-sheep_debris {
   position: relative;
   top: 400px;
   left: 0px;
+  z-index: 1;
   margin-left: -300px;
 }
 .footer-wrapper {
@@ -1302,7 +1309,7 @@ article.main-wrapper section.play .image-sheep_debris {
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 100%;
+  height: 800px;
 }
 .slide-wrapper .container {
   display: none;

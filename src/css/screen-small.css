@@ -17,6 +17,27 @@
 .plaque-wrapper .content {
   padding: 20px 30px;
 }
+.slide-wrapper {
+  height: 400px;
+}
+article.main-wrapper section.banner .slide-wrapper {
+  height: 400px;
+}
+article.main-wrapper section.banner .slide-wrapper #comingBanner,
+article.main-wrapper section.banner .slide-wrapper #comingTitle {
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
+}
+article.main-wrapper section.banner .slide-wrapper #comingBanner {
+  z-index: 200;
+}
+article.main-wrapper section.banner .slide-wrapper .welcome {
+  font-size: 1.6em;
+  margin-top: -20px;
+}
 article.main-wrapper section.banner .arrow.left,
 article.main-wrapper section.banner .arrow.right {
   top: 50%;

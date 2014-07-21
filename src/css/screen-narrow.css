@@ -20,6 +20,9 @@
 .plaque-wrapper .content .image-decoration {
   width: 175px;
 }
+.slide-wrapper {
+  height: 600px;
+}
 article.main-wrapper section.play .image-sheep_debris {
   margin-left: -350px;
 }
