@@ -7,6 +7,7 @@ module.exports = function(grunt) {
         'grunt-processhtml',
         'grunt-svgmin',
         'grunt-grunticon',
+        'grunt-contrib-cssmin',
         'grunt-contrib-clean',
         'grunt-lesslint',        
         'grunt-contrib-uglify',
@@ -31,8 +32,8 @@ module.exports = function(grunt) {
                     keywords: '<%= pkg.meta.keywords %>',
                     thumbnail: {
                         src: '<%= pkg.meta.thumbnail %>',
-                        width: '300',
-                        height: '300'
+                        width: '400',
+                        height: '400'
                     },
                     analytics: '<%= pkg.meta.analytics %>',
                     date: grunt.template.today('yyyy-mm-dd@hh:mm:ss TMZ'),
@@ -99,7 +100,8 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     cleancss: true,
-                    compress: true
+                    compress: true,
+                    ieCompat: true
                 },
                 files: {
                    '<%= pkg.distFolder %>/css/screen.css': '<%= pkg.sourceFolder %>/css/frag/screen.less',

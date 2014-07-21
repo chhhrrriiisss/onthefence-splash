@@ -9,8 +9,6 @@
 
 	Typography 
 
-	~	chrisnicholls.co.nz
-
 */
 @font-face {
   font-family: 'Otari';
@@ -69,186 +67,6 @@ a:visited {
   font-style: none;
 }
 /*
-    Colorbox Core Style:
-    The following CSS is consistent between example themes and should not be altered.
-*/
-#colorbox,
-#cboxOverlay,
-#cboxWrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  overflow: hidden;
-}
-#cboxWrapper {
-  max-width: none;
-}
-#cboxOverlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.71) 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0, 0, 0, 0.42)), color-stop(100%, rgba(0, 0, 0, 0.71)));
-  /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.71) 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.71) 100%);
-  /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.71) 100%);
-  /* IE10+ */
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.71) 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b000000', endColorstr='#b5000000', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
-}
-#cboxMiddleLeft,
-#cboxBottomLeft {
-  clear: left;
-}
-#cboxContent {
-  position: relative;
-  border: 3px #3e271b solid;
-}
-#cboxLoadedContent {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-#cboxTitle {
-  margin: 0;
-}
-#cboxLoadingOverlay,
-#cboxLoadingGraphic {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-#cboxPrevious,
-#cboxNext,
-#cboxClose,
-#cboxSlideshow {
-  cursor: pointer;
-}
-.cboxPhoto {
-  float: left;
-  margin: auto;
-  border: 0;
-  display: block;
-  max-width: none;
-  -ms-interpolation-mode: bicubic;
-}
-.cboxIframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
-#colorbox,
-#cboxContent,
-#cboxLoadedContent {
-  box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-}
-/* 
-    User Style:
-    Change the following styles to modify the appearance of Colorbox.  They are
-    ordered & tabbed in a way that represents the nesting of the generated HTML.
-*/
-#colorbox {
-  outline: 0;
-  overflow: visible !important;
-}
-#cboxContent,
-.cboxIframe {
-  background: #90a73e;
-  overflow: visible;
-}
-#cboxError {
-  padding: 50px;
-  border: 1px solid #ccc;
-}
-#cboxTitle {
-  position: absolute;
-  bottom: 4px;
-  left: 0;
-  text-align: center;
-  width: 100%;
-  color: #949494;
-}
-#cboxCurrent {
-  position: absolute;
-  bottom: 4px;
-  left: 58px;
-  color: #949494;
-}
-/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
-#cboxPrevious,
-#cboxNext,
-#cboxSlideshow,
-#cboxClose {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  width: auto;
-  background: none;
-}
-/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
-#cboxPrevious:active,
-#cboxNext:active,
-#cboxSlideshow:active,
-#cboxClose:active {
-  outline: 0;
-}
-#cboxSlideshow {
-  position: absolute;
-  bottom: 4px;
-  right: 30px;
-  color: #0092ef;
-}
-#cboxClose {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: -25px;
-  right: -25px;
-  display: block;
-  z-index: 9999;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-#cboxClose:hover {
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  -o-transform: scale(1.05);
-  transform: scale(1.05);
-}
-#cboxClose:active {
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-  transform: scale(0.9);
-}
-div.image-close {
-  width: 50px;
-  height: 50px;
-  display: block;
-  z-index: 9999;
-}
-#cboxClose:hover {
-  background-position: -25px -25px;
-}
-/*
 
   Less Mixin Library  
   Lesshat plus extras
@@ -257,12 +75,6 @@ div.image-close {
 
 */
 /* Custom mixin for delayed animation stacks */
-/*!
-Animate.css - http://daneden.me/animate
-Licensed under the MIT license - http://opensource.org/licenses/MIT
-
-Copyright (c) 2013 Daniel Eden
-*/
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -321,11 +133,8 @@ lesshat-selector {
 }
 /*
 
-~chrisnicholls.co.nz
-
-*/
-/*
 	Global Styles
+
 */
 *,
 *:after,
@@ -583,10 +392,6 @@ div.button a:before {
   margin: 0 4px;
   position: relative;
   top: 0px;
-  /*	
-		&:after {
-			.woodTexture();
-		}*/
 }
 .plaque-wrapper .content.flush {
   padding: 0px 10px;
@@ -1338,11 +1143,6 @@ article.main-wrapper section .container {
   -ms-transform: translateY(-50%) translateX(-50%) !important;
   -o-transform: translateY(-50%) translateX(-50%) !important;
   transform: translateY(-50%) translateX(-50%) !important;
-  /* Debug */
-  /*			
-			div {
-				background:rgba(0,0,0,.3);
-			}*/
 }
 article.main-wrapper section .container img {
   width: 100%;
@@ -1442,7 +1242,6 @@ article.main-wrapper section#spacer2 {
   height: 200px;
 }
 article.main-wrapper section.play {
-  /*background:#90a73e;*/
   top: 0px;
   height: 700px;
 }
@@ -1506,6 +1305,7 @@ article.main-wrapper section.play .image-sheep_debris {
   height: 100%;
 }
 .slide-wrapper .container {
+  display: none;
   -webkit-transform: translateX(200%);
   -moz-transform: translateX(200%);
   -ms-transform: translateX(200%);
@@ -1546,6 +1346,7 @@ article.main-wrapper section.play .image-sheep_debris {
   -ms-transform: none;
   -o-transform: none;
   transform: none;
+  display: block;
 }
 .slide-wrapper .container.active-slide-left .row:nth-child( 0) {
   -webkit-animation: bounceInLeft 0.5s ease 1;
@@ -1619,7 +1420,6 @@ article.main-wrapper section.play .image-sheep_debris {
   -o-animation: bounceInRight 1s ease 1;
   animation: bounceInRight 1s ease 1;
 }
-/* Retina ----------- */
 @media only screen and (min-height: 600px) {
   article.main-wrapper section.banner {
     height: 700px;

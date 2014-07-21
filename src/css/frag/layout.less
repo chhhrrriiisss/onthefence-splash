@@ -1,16 +1,11 @@
 /*
 
-~chrisnicholls.co.nz
-
-*/
-
-/*
 	Global Styles
+
 */
 
 *, *:after, *:before {
-	.box-sizing(border-box);
-	
+	.box-sizing(border-box);	
 }
 
 *:active, *:hover {
@@ -340,14 +335,8 @@ div.button {
 				.transform(scaleX(-1));
 			}
 		}
-/*	
-		&:after {
-			.woodTexture();
-		}*/
 
 	}
-
-	
 
 
 	span.image-bar {
@@ -1065,13 +1054,6 @@ article.main-wrapper {
 				padding:0;
 				border:0;
 			}
-
-			
-			/* Debug */
-			/*			
-			div {
-				background:rgba(0,0,0,.3);
-			}*/
 		}
 
 		&.tweets {
@@ -1196,7 +1178,6 @@ article.main-wrapper {
 
 		&.play {
 
-			/*background:#90a73e;*/
 			top:0px;
 			height:700px;
 
@@ -1271,11 +1252,6 @@ article.main-wrapper {
 			
 		}
 	}
-
-
-
-
-
 }
 
 
@@ -1293,6 +1269,7 @@ article.main-wrapper {
 
 	.container {
 
+		display:none;
 		.transform(translateX(200%));
 		.opacity(0);
 		.no-select();
@@ -1318,6 +1295,7 @@ article.main-wrapper {
 		&.active-slide-left, &.active-slide-right {
 			.opacity(100);
 			.transform(none);
+			display:block;
 		}
 
 		&.active-slide-left {					

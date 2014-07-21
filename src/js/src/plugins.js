@@ -157,20 +157,7 @@ var skel=function(){var _={config:{prefix:null,preloadStyleSheets:!1,pollOnce:!1
         // On Window Resize Handler
         $navNext.click($s.next); 
         $navPrev.click($s.prev); 
-
-        $container.swipe({
-            swipe:function(event, direction, distance, duration, fingerCount){
-                if (direction == "right") {
-                    $s.prev();
-                }
-                if (direction == "left") {
-                    $s.next();
-                }
-            },
-            threshold:100,
-            allowPageScroll: 'vertical'
-        });
-
+        
         return $s;
 
     }

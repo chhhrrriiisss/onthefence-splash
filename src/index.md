@@ -6,7 +6,7 @@
 
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />        
         
         <!-- build:template -->           
             
@@ -14,12 +14,12 @@
 
         <title><%= title %></title>
 
-        <meta name="description" content="<%= description %>">
-        <meta name="keywords" content="<%= keywords %>">
-        <meta name="copyright" content="Copyright © 2014 <%= name %>">  
-        <meta name="author" content="<%= name %>"> 
-        <meta name="last-modified" content="<%= date %>"> 
-        <meta name="viewport" content="initial-scale=1">
+        <meta name="description" content="<%= description %>" />
+        <meta name="keywords" content="<%= keywords %>" />
+        <meta name="copyright" content="Copyright © 2014 <%= name %>" />  
+        <meta name="author" content="<%= name %>" /> 
+        <meta name="last-modified" content="<%= date %>" /> 
+        <meta name="viewport" content="initial-scale=1" />
 
         <!-- Facebook Opengraph -->
         <meta property="og:title" content="<%= title %>"/>
@@ -44,12 +44,13 @@
         <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-touch-icon-144x144.png" />
         <link rel="apple-touch-icon" sizes="152x152" href="img/icons/apple-touch-icon-152x152.png" />
 
-        <!-- Main Stylesheet -->
+        <!-- Stylesheet -->
         <link rel="stylesheet" href="css/screen.css">    
 
-        <!-- Load web fonts -->
+        <!-- Web fonts -->
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 
+        <!-- Skel Config -->
         <script>
         window._skel_config = {
             prefix: "css/screen",
@@ -71,7 +72,7 @@
             <link rel="stylesheet" href="css/no-script-skel.css" />
             <link rel="stylesheet" href="css/screen.css" />
             <link rel="stylesheet" href="css/screen-wide.css" />
-            <link href="img/icons.fallback.css" rel="stylesheet" />
+            <link href="img/images-min.fallback.css" rel="stylesheet" />
         </noscript>        
 
         <!--[if lt IE 9]>
@@ -271,7 +272,7 @@
 
                                     <p> We'll be back with a better, faster, stronger On the Fence web tool in early August, but for more information on what we're up to <a class="link" href="https://twitter.com/NZonthefence" target="_blank">follow us on twitter,</a> <a class="link" href="https://facebook.com/nzonthefence" target="_blank">check our facebook page</a>or for the latest developments and updates follow our blog.</p>    
 
-                                    <p><div class="button large yellow"><a href="http://designdemocracy.ac.nz/onthefence" target="_blank">VIEW BLOG</a></div></p>    
+                                    <div class="button large yellow"><a href="http://designdemocracy.ac.nz/onthefence" target="_blank">VIEW BLOG</a></div>  
 
                                     <div class="image-shell left"></div><div class="image-shell right"></div><div class="image-decoration center"></div>
 
@@ -337,8 +338,7 @@
                                 
                                     <h3 class="title">CAN'T WAIT? &nbsp;WE'VE GOT YOU COVERED.</h3>
                                     <p>In 2011 we released a desktop-only version of On The Fence that has (and continues to be) helpful for heaps of young voters. We're keeping it available for use while the new version is in development, so feel free to check it out. </p>
-                                    <p><div class="button large green"><a id="launch-button" href="./2011/index.htm" target="_blank">LAUNCH 2011 VERSION</a></div></p>
-                                    <!--                  <p>Be sure to check our development blog for updates, flick us a message on twitter and facebook, or alternatively email us at <a class="link" href="#" target="_new">&#102;&#101;&#101;&#100;&#098;&#097;&#097;&#097;&#099;&#107;&#064;&#111;&#110;&#116;&#104;&#101;&#102;&#101;&#110;&#099;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a></p> -->
+                                    <div class="button large green"><a id="launch-button" href="./2011/" target="_blank">LAUNCH 2011 VERSION</a></div>                                 
 
                                 </div>
 
