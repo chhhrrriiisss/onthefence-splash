@@ -17,11 +17,8 @@
 .plaque-wrapper .content {
   padding: 20px 30px;
 }
-.slide-wrapper {
-  height: 400px;
-}
 article.main-wrapper section.banner .slide-wrapper {
-  height: 400px;
+  height: 600px;
 }
 article.main-wrapper section.banner .slide-wrapper #comingBanner,
 article.main-wrapper section.banner .slide-wrapper #comingTitle {
@@ -43,10 +40,10 @@ article.main-wrapper section.banner .arrow.right {
   top: 50%;
 }
 article.main-wrapper section.banner .arrow.left {
-  left: 25px;
+  left: 45px;
 }
 article.main-wrapper section.banner .arrow.right {
-  right: 25px;
+  right: 45px;
 }
 article.main-wrapper section.hill .image-sheep_fence {
   margin-left: -360px;

@@ -290,7 +290,7 @@ module.exports = function(grunt) {
                   {expand: true, cwd: '<%= pkg.sourceFolder %>/', src: ['*.*', '!*.md'], dest: '<%= pkg.distFolder %>/', filter: 'isFile'},
 
                   // 2011
-                  {expand: true, cwd: '<%= pkg.sourceFolder %>/2011', src: ['*.*'], dest: '<%= pkg.distFolder %>/2011'}
+                  {expand: true, cwd: '<%= pkg.sourceFolder %>/2011/', src: ['**/*.*', '!**/src/'], dest: '<%= pkg.distFolder %>/2011'}
 
                 ]
             }

@@ -1193,6 +1193,7 @@ article.main-wrapper section.banner .image-onthefence_logo {
 }
 article.main-wrapper section.hill {
   top: 0px;
+  margin-top: -100px;
   height: 600px;
   background-position: center center;
   background-repeat: repeat-x;
@@ -1427,19 +1428,63 @@ article.main-wrapper section.play .image-sheep_debris {
   -o-animation: bounceInRight 1s ease 1;
   animation: bounceInRight 1s ease 1;
 }
-@media only screen and (min-height: 600px) {
-  article.main-wrapper section.banner {
-    height: 700px;
-  }
-  article.main-wrapper section.hill {
-    top: -100px;
-  }
-}
-@media only screen and (max-height: 599px) {
-  article.main-wrapper section.banner {
+@media only screen and (max-height: 600px) {
+  section.banner .slide-wrapper {
     height: 500px;
   }
-  article.main-wrapper section.hill {
-    top: 0px;
+  section.banner .slide-wrapper #comingBanner,
+  section.banner .slide-wrapper #comingTitle {
+    -webkit-transform: scale(0.8) translateY(50px);
+    -moz-transform: scale(0.8) translateY(50px);
+    -ms-transform: scale(0.8) translateY(50px);
+    -o-transform: scale(0.8) translateY(50px);
+    transform: scale(0.8) translateY(50px);
+  }
+  section.banner .slide-wrapper #comingBanner {
+    z-index: 200;
+  }
+  section.banner .slide-wrapper .welcome {
+    font-size: 1.7em;
+    margin-top: -20px;
+  }
+  section.hill {
+    margin-top: -200px;
   }
 }
+/*
+article.main-wrapper {
+
+		section {
+
+			&.banner {
+				height:700px;
+			}
+
+			&.hill {
+
+				top:-100px;
+			}
+		}
+	}
+
+
+}
+
+@media only screen and (max-height : 599px) {
+
+	article.main-wrapper {
+
+		section {
+
+			&.banner {
+				height:500px;
+			}
+
+			&.hill {
+
+				top:0px;
+			}
+		}
+	}
+
+}*/

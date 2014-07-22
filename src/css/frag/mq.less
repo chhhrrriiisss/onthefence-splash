@@ -3,9 +3,48 @@
 
 }
 
-@media only screen and (min-height : 600px) {
+@media only screen and (max-height : 600px) {
+	
 
-	article.main-wrapper {
+	section {
+
+		&.banner {
+
+			.slide-wrapper {
+
+				height:500px;
+
+				#comingBanner, #comingTitle {
+					.transform(scale(0.8) translateY(50px));
+
+
+
+				}
+
+				#comingBanner {
+					z-index:200;
+				}
+
+				.welcome {
+					font-size:1.7em;
+					margin-top:-20px;
+
+				
+				}
+
+			}
+		}
+
+		&.hill {
+			margin-top:-200px;
+		}
+
+		
+	}
+}
+
+/*
+article.main-wrapper {
 
 		section {
 
@@ -40,4 +79,4 @@
 		}
 	}
 
-}
+}*/
